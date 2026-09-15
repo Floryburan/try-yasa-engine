@@ -1,0 +1,23 @@
+{
+  "entryPoints": [
+    {
+      "filePath": "/views.py",
+      "functionName": "user_detail",
+      "type": "functionCall",
+      "attribute": "HTTP",
+      "funcLocStart": 1,
+      "funcLocEnd": 3,
+      "location": {
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 43
+        },
+        "sourcefile": "views.py"
+      }
+    }
+  ]
+}

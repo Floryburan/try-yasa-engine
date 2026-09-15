@@ -1,5 +1,10 @@
 [
   {
+    "checkerId": "taint_flow_generated",
+    "checkerPath": "checker/generated-checker.ts",
+    "description": "LLM 生成的框架 checker（固定输出路径）"
+  },
+  {
     "checkerId": "antql_getbaseclass",
     "checkerPath": "checker/antql/rules/antql-getbaseclass.ts",
     "description": "antql_getbaseclass"

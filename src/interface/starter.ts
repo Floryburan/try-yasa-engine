@@ -341,6 +341,9 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
     .option('--analyzer <analyzer>', '指定框架', (f: any) => {
       Config.analyzer = f
     })
+    .option('--frameworkModeler', '使用 LLM 生成 FrameworkSpec 并注册通用框架 Checker', () => {
+      Config.frameworkModeler = true
+    })
     .option('--single', '单文件模式', () => {
       Config.single = true
     })
@@ -364,6 +367,9 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
         Config.entryPointMode = mode
       }
       yasaLog(`EntrypointMode set: ${mode}`, 'init')
+    })
+    .option('--generatedChecker <file>', '装载生成的 checker 文件（TS 开发入口或编译后的 JS）', (file: string) => {
+      Config.generatedChecker = path.resolve(file)
     })
     .option('--checkerIds <list>', '指定检查器id列表（逗号分隔）', (list: any) => {
       const checkerIds = list.split(',')
@@ -862,6 +868,30 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
 }
 
 /**
+ * 生成 FrameworkSpec，并把 GenericFrameworkChecker 实例注册到当前 Analyzer。
+ * @param analyzer 当前 Analyzer
+ * @param processingDir 待分析项目目录
+ */
+async function registerGeneratedFrameworkChecker(analyzer: any, processingDir: string): Promise<void> {
+  const FrameworkModeler = require('../checker/meta/framework-modeler')
+  const GenericFrameworkChecker = require('../checker/meta/generic-framework-checker')
+
+  const spec = await new FrameworkModeler().build({
+    rootDir: processingDir,
+    language: Config.language,
+    parserOptions: {
+      uastSDKPath: Config.uastSDKPath,
+    },
+  })
+
+  const checkerManager = analyzer.getCheckerManager()
+  const resultManager = checkerManager.resultManagerProxy || checkerManager.getResultManager()
+  const checker = new GenericFrameworkChecker(resultManager, spec)
+  const checkerId = checkerManager.registerCheckerInstance(checker, `LLM generated checker for ${spec.framework}`)
+  yasaLog(`Registered generated framework checker: ${checkerId}`, 'frameworkModeler')
+}
+
+/**
  * Execute analyzer
  * @param {any} analyzer - The analyzer instance
  * @param {any} processingDir - Directory to process
@@ -869,6 +899,10 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
  */
 async function executeAnalyzer(analyzer: any, processingDir: any): Promise<number> {
   try {
+    if (Config.frameworkModeler) {
+      await registerGeneratedFrameworkChecker(analyzer, processingDir)
+    }
+
     if (Config.single) {
       const source = fs.readFileSync(processingDir, 'utf8')
       const singleFileResult = await analyzer.analyzeSingleFile(source, processingDir)

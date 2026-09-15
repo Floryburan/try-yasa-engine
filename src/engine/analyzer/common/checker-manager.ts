@@ -219,6 +219,13 @@ class CheckerManager {
           }
         }
       }
+      // 生成 checker 走同一注册过程，包括继承的钩子；无需新增全局 checker-config 条目。
+      if (this.options.generatedChecker) {
+        const generatedPath = path.resolve(this.options.generatedChecker)
+        const names = this.registerAllCheckers(this, generatedPath, 'LLM generated checker', resultManagerProxy)
+        if (!names?.length) throw new Error(`Generated checker failed to load: ${generatedPath}`)
+        loadCheckerNames.push(...names)
+      }
       // 0 个 checker 加载成功时抛出异常，无法继续分析
       if (loadCheckerNames.length === 0) {
         throw new Error('No checker loaded successfully, cannot proceed with analysis')
@@ -227,6 +234,7 @@ class CheckerManager {
       yasaLog(`Successfully loaded ${checkerCount} checker(s): [${loadCheckerNames.join(', ')}]`, 'init')
     } catch (e) {
       handleException(e, 'Error occurred in CheckerManager_ctor', 'Error occurred in CheckerManager_ctor')
+      if (this.options.generatedChecker) throw e
     }
   }
 
@@ -235,6 +243,36 @@ class CheckerManager {
    */
   getResultManager() {
     return this.resultManager
+  }
+
+  /**
+   * 注册一个已经创建好的 Checker 实例，供运行时生成 Spec 的 Checker 使用。
+   * @param checker Checker 实例
+   * @param desc Checker 描述
+   * @returns {string} 注册后的 Checker ID
+   */
+  registerCheckerInstance(checker: any, desc = 'runtime checker'): string {
+    const checkerName = checker.getCheckerId()
+    checker.desc = desc
+    this.registered_checkers[checkerName] = checker
+
+    const triggerMap: Record<string, { checkpoint: string; method: string }> = {
+      compileUnit: { checkpoint: 'check_at_compile_unit', method: 'triggerAtCompileUnit' },
+      endOfCompileUnit: { checkpoint: 'check_at_end_compileunit', method: 'triggerAtEndOfCompileUnit' },
+      assignment: { checkpoint: 'check_at_assignment', method: 'triggerAtAssignment' },
+      functionCallBefore: { checkpoint: 'check_at_function_call_before', method: 'triggerAtFunctionCallBefore' },
+      functionCallAfter: { checkpoint: 'check_at_function_call_after', method: 'triggerAtFunctionCallAfter' },
+      memberAccess: { checkpoint: 'check_at_member_access', method: 'triggerAtMemberAccess' },
+    }
+
+    for (const trigger of checker.getSubscriptions()) {
+      const registration = triggerMap[trigger]
+      if (registration && typeof checker[registration.method] === 'function') {
+        this.checkpoints[registration.checkpoint].push(checker)
+      }
+    }
+
+    return checkerName
   }
 
   /**

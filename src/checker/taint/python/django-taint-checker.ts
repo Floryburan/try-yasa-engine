@@ -341,6 +341,7 @@ class DjangoTaintChecker extends PythonTaintAbstractChecker {
         } else if (callee.type === 'Identifier') {
           methodName = callee.name || null
         }
+        // 只处理Django路由函数
         if (methodName !== 'path' && methodName !== 're_path' && methodName !== 'url') {
           continue
         }

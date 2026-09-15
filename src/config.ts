@@ -47,6 +47,8 @@ export interface IConfig {
   language?: string
   analyzer?: string
   uastSDKPath?: string
+  frameworkModeler?: boolean
+  generatedChecker?: string // 本次分析显式装载的生成 checker 文件
 
   // Subject
   ignoredDirs?: string[]
@@ -153,6 +155,7 @@ const configObject: IConfig = {
   // EggAnalyzer | JavaScriptAnalyzer | JavaAnalyzer | SpringAnalyzer | GoAnalyzer | PythonAnalyzer
   analyzer: '',
   uastSDKPath: '',
+  frameworkModeler: false,
   //* *****************************  subject  *********************************
 
   // ignored directories
