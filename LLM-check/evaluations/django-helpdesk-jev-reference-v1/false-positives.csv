@@ -1,0 +1,2 @@
+﻿function,file,start_line,outcome,gold_entrypoint,predicted_entrypoint,gold_formations,predicted_formations,extra_formations,missing_formations,unknown_formation_labels,accepted_kinds,predicted_kind,formation_exact,kind_correct,gold_subtypes,gold_reason,evidence_locations,error
+helpdesk.views.staff.redirect_from_chosen_ticket,src/helpdesk/views/staff.py,1012,fp,False,True,,,,,configuration,,http,False,False,view_internal_helper,视图内部直接调用的权限、查询、格式化或跳转辅助函数；目标本身不是 URL 绑定对象或已确认的框架调度方法。,src/helpdesk/views/staff.py:1012-1104,

@@ -1,0 +1,10 @@
+{
+  "previous_evaluation": "/data/fyn/yasa/YASA-Engine/LLM-check/evaluations/django-helpdesk-jev-reference-v1",
+  "previous_successes_unchanged": 398,
+  "previous_successes_changed": 0,
+  "recovered_functions": 27,
+  "recovered_entrypoints": 7,
+  "recovered_non_entrypoints": 20,
+  "cumulative_recorded_run_seconds": 1301.774263,
+  "api_called_for_evaluation": false
+}

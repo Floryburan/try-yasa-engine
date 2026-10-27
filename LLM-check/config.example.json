@@ -1,0 +1,11 @@
+{
+  "api_url": "http://127.0.0.1:8000/v1/chat/completions",
+  "model": "replace-with-your-model-name",
+  "api_key_env": "LLM_API_KEY",
+  "require_api_key": true,
+  "timeout": 120,
+  "retries": 2,
+  "temperature": 0,
+  "max_tokens": 1800,
+  "json_mode": true
+}

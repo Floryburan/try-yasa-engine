@@ -1,0 +1,1024 @@
+[
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 70,
+    "expression": "staff.dashboard",
+    "registration": "path",
+    "target_function_ids": [
+      "function:6cce1a6b6d191f9ca81b"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 71,
+    "expression": "staff.ticket_list",
+    "registration": "path",
+    "target_function_ids": [
+      "function:8c91fd923363194fa849"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 72,
+    "expression": "staff.mass_update",
+    "registration": "path",
+    "target_function_ids": [
+      "function:74d0bf026714dd29f658"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 73,
+    "expression": "staff.merge_tickets",
+    "registration": "path",
+    "target_function_ids": [
+      "function:479266f904f501ef8baf"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 74,
+    "expression": "staff.view_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:0e3fa68bfacfa41c03e1"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 75,
+    "expression": "staff.followup_edit",
+    "registration": "path",
+    "target_function_ids": [
+      "function:7b1406183e431eacc38f"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 80,
+    "expression": "staff.followup_delete",
+    "registration": "path",
+    "target_function_ids": [
+      "function:65777059a7c149c71d4c"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 85,
+    "expression": "staff.edit_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:46cdc7266a41acec7382"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 86,
+    "expression": "staff.update_ticket_view",
+    "registration": "path",
+    "target_function_ids": [
+      "function:110f5be3573a20c22963"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 89,
+    "expression": "staff.delete_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:1bf32c2b73067e23ee5e"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 90,
+    "expression": "staff.hold_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:60d161a6136df8b664b2"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 91,
+    "expression": "staff.unhold_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:c4a191545dbfabf9d5f0"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 92,
+    "expression": "staff.ticket_cc",
+    "registration": "path",
+    "target_function_ids": [
+      "function:8169b912ef840768e867"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 93,
+    "expression": "staff.ticket_cc_add",
+    "registration": "path",
+    "target_function_ids": [
+      "function:56a01a6c6ab1e0f1b20c"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 96,
+    "expression": "staff.ticket_cc_del",
+    "registration": "path",
+    "target_function_ids": [
+      "function:6fff181251bf08098818"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 101,
+    "expression": "staff.ticket_resolves_add",
+    "registration": "path",
+    "target_function_ids": [
+      "function:b981bd7bb269552b132c"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 106,
+    "expression": "staff.ticket_resolves_del",
+    "registration": "path",
+    "target_function_ids": [
+      "function:5544e19392afd91c5850"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 111,
+    "expression": "staff.attachment_del",
+    "registration": "path",
+    "target_function_ids": [
+      "function:80d767e40e1c36461c0a"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 116,
+    "expression": "staff.attachment_preview",
+    "registration": "path",
+    "target_function_ids": [
+      "function:a77c356d09ac76ca9b3a"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 121,
+    "expression": "staff.edit_ticket_checklist",
+    "registration": "path",
+    "target_function_ids": [
+      "function:42460e5cb362c8605e7b"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 126,
+    "expression": "staff.delete_ticket_checklist",
+    "registration": "path",
+    "target_function_ids": [
+      "function:11a2c3b058b4c4f5b7be"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 131,
+    "expression": "staff.raw_details",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:760cb6a7c4e8522d2e6e"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 132,
+    "expression": "staff.rss_list",
+    "registration": "path",
+    "target_function_ids": [
+      "function:d67c4a5a1afb8f08780f"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 133,
+    "expression": "staff.report_index",
+    "registration": "path",
+    "target_function_ids": [
+      "function:2977b6e5c003e4f101f0"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 134,
+    "expression": "staff.run_report",
+    "registration": "path",
+    "target_function_ids": [
+      "function:4b2de3e8c9b4171670c7"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 135,
+    "expression": "staff.saved_searches_list",
+    "registration": "path",
+    "target_function_ids": [
+      "function:07cdebcee7213b17a007"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 136,
+    "expression": "staff.save_query",
+    "registration": "path",
+    "target_function_ids": [
+      "function:071dfc27cf7de3273e8b"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 137,
+    "expression": "staff.delete_saved_query",
+    "registration": "path",
+    "target_function_ids": [
+      "function:492a9f8222d74d5b2834"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 138,
+    "expression": "staff.EditUserSettingsView.as_view()",
+    "registration": "path",
+    "target_function_ids": [
+      "function:d2502f0eac2b5b98c1ca",
+      "function:ed316c5da028c42343fa"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 139,
+    "expression": "staff.email_ignore",
+    "registration": "path",
+    "target_function_ids": [
+      "function:b1985e235fd5330ac446"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 140,
+    "expression": "staff.email_ignore_add",
+    "registration": "path",
+    "target_function_ids": [
+      "function:48da9a7c9b85047c4c24"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 141,
+    "expression": "staff.email_ignore_del",
+    "registration": "path",
+    "target_function_ids": [
+      "function:7009fbcb9818ec8f5b92"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 146,
+    "expression": "staff.checklist_templates",
+    "registration": "path",
+    "target_function_ids": [
+      "function:ce87ad53fe0ef0f1bb71"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 151,
+    "expression": "staff.checklist_templates",
+    "registration": "path",
+    "target_function_ids": [
+      "function:ce87ad53fe0ef0f1bb71"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 156,
+    "expression": "staff.delete_checklist_template",
+    "registration": "path",
+    "target_function_ids": [
+      "function:bf860b8da4ab2846147a"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 161,
+    "expression": "staff.datatables_ticket_list",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:d8a6b0dc755b2bfff0a5"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 166,
+    "expression": "staff.timeline_ticket_list",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:ef08436580fed31f8d54"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 171,
+    "expression": "protect_view(public.Homepage.as_view())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:0b274092619e97b9351a",
+      "function:19328400fe7a043b4153",
+      "function:6135d5126bbdc4f850b3",
+      "function:6b2496552a7810f08278",
+      "function:9150788463156dc03ed3",
+      "function:a6b22a8a7ca6c390b865",
+      "function:f0469eb2f2cef477c9b3",
+      "function:f0cb45824757457d0ec9",
+      "function:f2086cbaaa4f39cf5071"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 172,
+    "expression": "protect_view(public.MyTickets.as_view())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:a7f13d24ac77d2f14aa9"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 177,
+    "expression": "public.create_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:eaf69ad5d60ea61cb54f"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 178,
+    "expression": "protect_view(public.CreateTicketIframeView.as_view())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:0b274092619e97b9351a",
+      "function:2c84a031040d7d87b814",
+      "function:6135d5126bbdc4f850b3",
+      "function:6b2496552a7810f08278",
+      "function:9150788463156dc03ed3",
+      "function:a6b22a8a7ca6c390b865",
+      "function:d5fec32630ff052d0ae5",
+      "function:f0469eb2f2cef477c9b3",
+      "function:f2086cbaaa4f39cf5071"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 183,
+    "expression": "protect_view(public.SuccessIframeView.as_view())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:48cc366efcc2a9121285"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 188,
+    "expression": "protect_view(public.ViewTicket.as_view())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:af2b46c212c20b77cd1f"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 189,
+    "expression": "public.change_language",
+    "registration": "path",
+    "target_function_ids": [
+      "function:b30f2ee13ba7dca81754"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 193,
+    "expression": "staff.kanban_board",
+    "registration": "path",
+    "target_function_ids": [
+      "function:e20ec5d7a8a79299e3fd"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED",
+      "helpdesk_settings.HELPDESK_KANBAN_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 194,
+    "expression": "staff.kanban_update_ticket",
+    "registration": "path",
+    "target_function_ids": [
+      "function:e4fc6403d1abfb9686cf"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED",
+      "helpdesk_settings.HELPDESK_KANBAN_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 202,
+    "expression": "staff.ticket_dependency_add",
+    "registration": "path",
+    "target_function_ids": [
+      "function:d829a7a03f70176de11d"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED",
+      "helpdesk_settings.HELPDESK_ENABLE_DEPENDENCIES_ON_TICKET"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 207,
+    "expression": "staff.ticket_dependency_del",
+    "registration": "path",
+    "target_function_ids": [
+      "function:d22a7295d7191ddfbab5"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_UI_ENABLED",
+      "helpdesk_settings.HELPDESK_ENABLE_DEPENDENCIES_ON_TICKET"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 215,
+    "expression": "helpdesk_staff_member_required(feeds.OpenTicketsByUser())",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:1bc570043d7a877f4c05",
+      "function:2026288c1bbeb6fd29e8",
+      "function:58a8f767080e8f9ccd01",
+      "function:5aff6d2099f2364ca047",
+      "function:ab1bed8f01343b278f17",
+      "function:b90fff8c8282f236ab91",
+      "function:cc054aad9b219973a3ac"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 220,
+    "expression": "helpdesk_staff_member_required(feeds.OpenTicketsByUser())",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:1bc570043d7a877f4c05",
+      "function:2026288c1bbeb6fd29e8",
+      "function:58a8f767080e8f9ccd01",
+      "function:5aff6d2099f2364ca047",
+      "function:ab1bed8f01343b278f17",
+      "function:b90fff8c8282f236ab91",
+      "function:cc054aad9b219973a3ac"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 225,
+    "expression": "helpdesk_staff_member_required(feeds.OpenTicketsByQueue())",
+    "registration": "re_path",
+    "target_function_ids": [
+      "function:5bf0afae873d514274d9",
+      "function:8cd56ea4f0395485bda3",
+      "function:bc74d5e2ce97aae61453",
+      "function:d8add2eda07122c692ba",
+      "function:df30921fec2b9d5a276d",
+      "function:ea691c02f94ed9cf20fd",
+      "function:ee9a7e4ae4c48c5f99af"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 230,
+    "expression": "helpdesk_staff_member_required(feeds.UnassignedTickets())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:2a217447ada505236b5a",
+      "function:3322e4baa00e44e2a8de",
+      "function:bdbe786688f759b7dd5f",
+      "function:c0e008c5cc8432b9fba3"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 235,
+    "expression": "helpdesk_staff_member_required(feeds.RecentFollowUps())",
+    "registration": "path",
+    "target_function_ids": [
+      "function:31c6068562a6477c84fb",
+      "function:ce3a652cf229c81daf3a"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 244,
+    "expression": "kb.index",
+    "registration": "path",
+    "target_function_ids": [
+      "function:aa7ca9b15960af488db3"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 245,
+    "expression": "kb.category",
+    "registration": "path",
+    "target_function_ids": [
+      "function:544e95e1d3fe9b3ed362"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 246,
+    "expression": "kb.category_iframe",
+    "registration": "path",
+    "target_function_ids": [
+      "function:a71bc7480590e3d63a88"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 247,
+    "expression": "kb.vote",
+    "registration": "path",
+    "target_function_ids": [
+      "function:c2bb8cf1f7665a918ac0"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 256,
+    "expression": "TicketViewSet",
+    "registration": "router.register",
+    "target_function_ids": [
+      "function:151348c5b990eac30e73",
+      "function:8a1f3ff3545cfde22f48",
+      "function:b80f81966e030871c03b"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 257,
+    "expression": "UserTicketViewSet",
+    "registration": "router.register",
+    "target_function_ids": [
+      "function:9c8c758452476e4652c2"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 258,
+    "expression": "FollowUpViewSet",
+    "registration": "router.register",
+    "target_function_ids": [
+      "function:37af90db2c490ab20027",
+      "function:954fddb241a17b11c96d",
+      "function:ec79b524ccc04c9179c9"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 259,
+    "expression": "FollowUpAttachmentViewSet",
+    "registration": "router.register",
+    "target_function_ids": [
+      "function:4aed05a14d14e8011864",
+      "function:6d4b17d7344615565cc7"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 264,
+    "expression": "CreateUserView",
+    "registration": "router.register",
+    "target_function_ids": [],
+    "resolution": "external_inherited_actions",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 265,
+    "expression": "include(router.urls)",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "included_router",
+    "enclosing_conditions": [
+      "helpdesk_settings.HELPDESK_API_ENABLED"
+    ]
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 269,
+    "expression": "login",
+    "registration": "path",
+    "target_function_ids": [
+      "function:6afc180537c5e07df05f"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 270,
+    "expression": "logout",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 271,
+    "expression": "password_change",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 272,
+    "expression": "password_change_done",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 276,
+    "expression": "password_reset",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 277,
+    "expression": "password_reset_done",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 278,
+    "expression": "password_reset_confirm",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 283,
+    "expression": "password_reset_complete",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 297,
+    "expression": "TemplateView.as_view(template_name='helpdesk/help_context.html')",
+    "registration": "path",
+    "target_function_ids": [],
+    "resolution": "external_framework_callable",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "start_line": 302,
+    "expression": "login_required(DirectTemplateView.as_view(template_name='helpdesk/system_settings.html'))",
+    "registration": "path",
+    "target_function_ids": [
+      "function:c8df6e561040e7006641"
+    ],
+    "resolution": "local_source_definitions",
+    "enclosing_conditions": []
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "start_line": 42,
+    "expression": "staff.CreateTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.staff.CreateTicketView",
+    "target_function_ids": [
+      "function:6135d5126bbdc4f850b3",
+      "function:7949374290e6fe85780b",
+      "function:9150788463156dc03ed3",
+      "function:ae0e2327dd471317c62c",
+      "function:d33078588ac15f2c2b88",
+      "function:d3756eb40dcd453a4f63",
+      "function:ed316c5da028c42343fa"
+    ]
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "start_line": 44,
+    "expression": "CreateTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.public.CreateTicketView",
+    "target_function_ids": [
+      "function:0b274092619e97b9351a",
+      "function:19328400fe7a043b4153",
+      "function:6135d5126bbdc4f850b3",
+      "function:6b2496552a7810f08278",
+      "function:9150788463156dc03ed3",
+      "function:a6b22a8a7ca6c390b865",
+      "function:f0469eb2f2cef477c9b3",
+      "function:f2086cbaaa4f39cf5071"
+    ]
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "start_line": 224,
+    "expression": "SearchForTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.public.SearchForTicketView",
+    "target_function_ids": [
+      "function:28a502eaf6d5ca2757f9",
+      "function:2fd84e9fde5e9a834778"
+    ]
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "start_line": 226,
+    "expression": "SearchForTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.public.SearchForTicketView",
+    "target_function_ids": [
+      "function:28a502eaf6d5ca2757f9",
+      "function:2fd84e9fde5e9a834778"
+    ]
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "start_line": 239,
+    "expression": "SearchForTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.public.SearchForTicketView",
+    "target_function_ids": [
+      "function:28a502eaf6d5ca2757f9",
+      "function:2fd84e9fde5e9a834778"
+    ]
+  },
+  {
+    "file": "src/helpdesk/views/staff.py",
+    "start_line": 761,
+    "expression": "UpdateTicketView.as_view()",
+    "registration": "as_view",
+    "receiver": "helpdesk.views.staff.UpdateTicketView",
+    "target_function_ids": [
+      "function:0520b6718033d09008fe",
+      "function:29bfa2df167e8216c805",
+      "function:6135d5126bbdc4f850b3",
+      "function:9150788463156dc03ed3",
+      "function:dc1091c9b239dd5dec9e",
+      "function:e0dbe606e9d551fe59f4",
+      "function:e65579d71ea16aeb45a6",
+      "function:ed316c5da028c42343fa"
+    ]
+  }
+]

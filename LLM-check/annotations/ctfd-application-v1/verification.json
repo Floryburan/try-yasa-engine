@@ -1,0 +1,25 @@
+{
+  "functions": 847,
+  "files": 154,
+  "labels": {
+    "entrypoint": 392,
+    "non_entrypoint": 413,
+    "uncertain": 42
+  },
+  "source_evidence_files_verified": 184,
+  "policy_and_builder_hashes_verified": true,
+  "all_labels_have_source_evidence": true,
+  "csv_json_coverage_matches": true,
+  "case_ids_unique": true,
+  "model_predictions_used": false,
+  "real_api_called": false,
+  "independent_human_review": false,
+  "artifact_sha256": {
+    "annotations.json": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1",
+    "annotations.csv": "778bc4f2c5258992be883767cb73a0e37f6d679f840528e3e8635edc6eed5b46",
+    "entrypoints.csv": "06b1c1d71566d306adb90c44f51102923f0797e016c1556696b786242c413d5a",
+    "non-entrypoints.csv": "2a3332f40a0cef0355a11038d430373c4ccb9036f38f1c07775897e8cdfdf0c7",
+    "uncertain.csv": "5d64f35b7439d4e01b73458f1ee31a7638cd822b8943642a11a13267da5d3e2b",
+    "POLICY.md": "de1d30c4d492334fd121a98c708e7bc60ce7a27edaae7bd4d1a33ae6b5ebac75"
+  }
+}

@@ -1,0 +1,1090 @@
+{
+  "ground_truth_total": 425,
+  "ground_truth_positives": 203,
+  "ground_truth_negatives": 218,
+  "excluded_gold_unknown": 4,
+  "predictions_available": 425,
+  "successful_predictions": 425,
+  "tp": 92,
+  "fp": 1,
+  "fn": 111,
+  "tn": 217,
+  "model_unknown": 0,
+  "request_errors": 0,
+  "not_attempted": 0,
+  "binary_decisions_scored": 421,
+  "decision_coverage": 1.0,
+  "precision": 0.989247311827957,
+  "recall_on_decided_positives": 0.45320197044334976,
+  "recall_on_all_gold_positives": 0.45320197044334976,
+  "f1_on_decided": 0.6216216216216216,
+  "f1_with_all_positive_recall": 0.6216216216216216,
+  "accuracy_on_decided": 0.7339667458432304,
+  "correct_fraction_of_all_binary_gold": 0.7339667458432304,
+  "false_positive_rate_on_decided_negatives": 0.0045871559633027525,
+  "unresolved_gold_positive": 0,
+  "unresolved_gold_negative": 0,
+  "excluded_gold_unknown_predictions": {
+    "False": 4
+  },
+  "classification": {
+    "true_positive_functions": 92,
+    "formation_exact_count": 6,
+    "formation_exact_on_true_positives": 0.06521739130434782,
+    "formation_exact_on_all_gold_positives": 0.029556650246305417,
+    "kind_correct_count": 72,
+    "kind_accuracy_on_true_positives": 0.782608695652174,
+    "kind_correct_on_all_gold_positives": 0.35467980295566504,
+    "formation_conditional_on_true_positives": {
+      "counts": {
+        "tp": 134,
+        "fp": 100,
+        "fn": 10
+      },
+      "micro_precision": 0.5726495726495726,
+      "micro_recall": 0.9305555555555556,
+      "micro_f1": 0.708994708994709,
+      "per_label": {
+        "registration": {
+          "tp": 68,
+          "fp": 6,
+          "fn": 2,
+          "unknown": 0,
+          "support": 70,
+          "precision": 0.918918918918919,
+          "recall": 0.9714285714285714,
+          "f1": 0.9444444444444444
+        },
+        "inheritance": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "unknown": 0,
+          "support": 22,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "interface_implementation": {
+          "tp": 0,
+          "fp": 17,
+          "fn": 0,
+          "unknown": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "configuration": {
+          "tp": 1,
+          "fp": 72,
+          "fn": 3,
+          "unknown": 2,
+          "support": 4,
+          "precision": 0.0136986301369863,
+          "recall": 0.25,
+          "f1": 0.025974025974025976
+        },
+        "callback": {
+          "tp": 36,
+          "fp": 3,
+          "fn": 3,
+          "unknown": 0,
+          "support": 39,
+          "precision": 0.9230769230769231,
+          "recall": 0.9230769230769231,
+          "f1": 0.9230769230769231
+        },
+        "decorator": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 1,
+          "unknown": 0,
+          "support": 8,
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058
+        },
+        "other": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unknown": 0,
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "formation_end_to_end_on_binary_gold": {
+      "counts": {
+        "tp": 134,
+        "fp": 100,
+        "fn": 301
+      },
+      "micro_precision": 0.5726495726495726,
+      "micro_recall": 0.3080459770114943,
+      "micro_f1": 0.40059790732436473,
+      "per_label": {
+        "registration": {
+          "tp": 68,
+          "fp": 6,
+          "fn": 54,
+          "unknown": 0,
+          "support": 122,
+          "precision": 0.918918918918919,
+          "recall": 0.5573770491803278,
+          "f1": 0.6938775510204082
+        },
+        "inheritance": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 82,
+          "unknown": 0,
+          "support": 104,
+          "precision": 1.0,
+          "recall": 0.21153846153846154,
+          "f1": 0.3492063492063492
+        },
+        "interface_implementation": {
+          "tp": 0,
+          "fp": 17,
+          "fn": 2,
+          "unknown": 0,
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "configuration": {
+          "tp": 1,
+          "fp": 72,
+          "fn": 39,
+          "unknown": 3,
+          "support": 40,
+          "precision": 0.0136986301369863,
+          "recall": 0.025,
+          "f1": 0.017699115044247787
+        },
+        "callback": {
+          "tp": 36,
+          "fp": 3,
+          "fn": 113,
+          "unknown": 0,
+          "support": 149,
+          "precision": 0.9230769230769231,
+          "recall": 0.24161073825503357,
+          "f1": 0.3829787234042553
+        },
+        "decorator": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 10,
+          "unknown": 0,
+          "support": 17,
+          "precision": 0.7777777777777778,
+          "recall": 0.4117647058823529,
+          "f1": 0.5384615384615384
+        },
+        "other": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unknown": 0,
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "by_primary_kind": {
+    "cli": {
+      "gold_positives": 10,
+      "tp": 10,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "event": {
+      "gold_positives": 4,
+      "tp": 4,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "http": {
+      "gold_positives": 103,
+      "tp": 55,
+      "fn": 48,
+      "unresolved": 0,
+      "recall": 0.5339805825242718
+    },
+    "lifecycle": {
+      "gold_positives": 24,
+      "tp": 14,
+      "fn": 10,
+      "unresolved": 0,
+      "recall": 0.5833333333333334
+    },
+    "other": {
+      "gold_positives": 62,
+      "tp": 9,
+      "fn": 53,
+      "unresolved": 0,
+      "recall": 0.14516129032258066
+    }
+  },
+  "by_subtype": {
+    "attachment_path_implementation": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "celery_shared_task": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "configured_settings_callback": {
+      "gold_positives": 3,
+      "tp": 0,
+      "fn": 3,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_admin_delete_hook": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "django_admin_display": {
+      "gold_positives": 4,
+      "tp": 1,
+      "fn": 3,
+      "unresolved": 0,
+      "recall": 0.25
+    },
+    "django_app_ready": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "django_authorization_predicate": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_class_view_hook": {
+      "gold_positives": 28,
+      "tp": 5,
+      "fn": 23,
+      "unresolved": 0,
+      "recall": 0.17857142857142858
+    },
+    "django_data_migration": {
+      "gold_positives": 13,
+      "tp": 12,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.9230769230769231
+    },
+    "django_feed_hook": {
+      "gold_positives": 20,
+      "tp": 1,
+      "fn": 19,
+      "unresolved": 0,
+      "recall": 0.05
+    },
+    "django_field_default": {
+      "gold_positives": 7,
+      "tp": 0,
+      "fn": 7,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_field_upload_to": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "django_field_validators": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_form_clean_hook": {
+      "gold_positives": 3,
+      "tp": 0,
+      "fn": 3,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_management_command": {
+      "gold_positives": 9,
+      "tp": 9,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "django_manager_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_model_absolute_url": {
+      "gold_positives": 4,
+      "tp": 0,
+      "fn": 4,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_model_clean_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_model_delete_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_model_save_hook": {
+      "gold_positives": 6,
+      "tp": 0,
+      "fn": 6,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "django_signal_receiver": {
+      "gold_positives": 3,
+      "tp": 3,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "django_template_registration": {
+      "gold_positives": 13,
+      "tp": 5,
+      "fn": 8,
+      "unresolved": 0,
+      "recall": 0.38461538461538464
+    },
+    "django_url_function": {
+      "gold_positives": 46,
+      "tp": 46,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "drf_serializer_hook": {
+      "gold_positives": 5,
+      "tp": 2,
+      "fn": 3,
+      "unresolved": 0,
+      "recall": 0.4
+    },
+    "drf_serializer_method_field": {
+      "gold_positives": 16,
+      "tp": 0,
+      "fn": 16,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "drf_viewset_hook": {
+      "gold_positives": 9,
+      "tp": 3,
+      "fn": 6,
+      "unresolved": 0,
+      "recall": 0.3333333333333333
+    },
+    "markdown_extension_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "python_module_main": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    }
+  },
+  "by_scope_partition": {
+    "migrations": {
+      "ground_truth_total": 16,
+      "ground_truth_positives": 13,
+      "ground_truth_negatives": 3,
+      "excluded_gold_unknown": 0,
+      "predictions_available": 16,
+      "successful_predictions": 16,
+      "tp": 12,
+      "fp": 0,
+      "fn": 1,
+      "tn": 3,
+      "model_unknown": 0,
+      "request_errors": 0,
+      "not_attempted": 0,
+      "binary_decisions_scored": 16,
+      "decision_coverage": 1.0,
+      "precision": 1.0,
+      "recall_on_decided_positives": 0.9230769230769231,
+      "recall_on_all_gold_positives": 0.9230769230769231,
+      "f1_on_decided": 0.96,
+      "f1_with_all_positive_recall": 0.96,
+      "accuracy_on_decided": 0.9375,
+      "correct_fraction_of_all_binary_gold": 0.9375,
+      "false_positive_rate_on_decided_negatives": 0.0,
+      "unresolved_gold_positive": 0,
+      "unresolved_gold_negative": 0,
+      "excluded_gold_unknown_predictions": {},
+      "classification": {
+        "true_positive_functions": 12,
+        "formation_exact_count": 1,
+        "formation_exact_on_true_positives": 0.08333333333333333,
+        "formation_exact_on_all_gold_positives": 0.07692307692307693,
+        "kind_correct_count": 0,
+        "kind_accuracy_on_true_positives": 0.0,
+        "kind_correct_on_all_gold_positives": 0.0,
+        "formation_conditional_on_true_positives": {
+          "counts": {
+            "tp": 24,
+            "fp": 19,
+            "fn": 0
+          },
+          "micro_precision": 0.5581395348837209,
+          "micro_recall": 1.0,
+          "micro_f1": 0.7164179104477612,
+          "per_label": {
+            "registration": {
+              "tp": 12,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 12,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "inheritance": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "interface_implementation": {
+              "tp": 0,
+              "fp": 8,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": 0.0
+            },
+            "configuration": {
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": 0.0
+            },
+            "callback": {
+              "tp": 12,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 12,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "decorator": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          }
+        },
+        "formation_end_to_end_on_binary_gold": {
+          "counts": {
+            "tp": 24,
+            "fp": 19,
+            "fn": 2
+          },
+          "micro_precision": 0.5581395348837209,
+          "micro_recall": 0.9230769230769231,
+          "micro_f1": 0.6956521739130435,
+          "per_label": {
+            "registration": {
+              "tp": 12,
+              "fp": 0,
+              "fn": 1,
+              "unknown": 0,
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.96
+            },
+            "inheritance": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "interface_implementation": {
+              "tp": 0,
+              "fp": 8,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": 0.0
+            },
+            "configuration": {
+              "tp": 0,
+              "fp": 11,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": 0.0
+            },
+            "callback": {
+              "tp": 12,
+              "fp": 0,
+              "fn": 1,
+              "unknown": 0,
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.96
+            },
+            "decorator": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            }
+          }
+        }
+      },
+      "by_primary_kind": {
+        "lifecycle": {
+          "gold_positives": 13,
+          "tp": 12,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.9230769230769231
+        }
+      },
+      "by_subtype": {
+        "django_data_migration": {
+          "gold_positives": 13,
+          "tp": 12,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.9230769230769231
+        }
+      }
+    },
+    "runtime_application": {
+      "ground_truth_total": 409,
+      "ground_truth_positives": 190,
+      "ground_truth_negatives": 215,
+      "excluded_gold_unknown": 4,
+      "predictions_available": 409,
+      "successful_predictions": 409,
+      "tp": 80,
+      "fp": 1,
+      "fn": 110,
+      "tn": 214,
+      "model_unknown": 0,
+      "request_errors": 0,
+      "not_attempted": 0,
+      "binary_decisions_scored": 405,
+      "decision_coverage": 1.0,
+      "precision": 0.9876543209876543,
+      "recall_on_decided_positives": 0.42105263157894735,
+      "recall_on_all_gold_positives": 0.42105263157894735,
+      "f1_on_decided": 0.5904059040590406,
+      "f1_with_all_positive_recall": 0.5904059040590406,
+      "accuracy_on_decided": 0.725925925925926,
+      "correct_fraction_of_all_binary_gold": 0.725925925925926,
+      "false_positive_rate_on_decided_negatives": 0.004651162790697674,
+      "unresolved_gold_positive": 0,
+      "unresolved_gold_negative": 0,
+      "excluded_gold_unknown_predictions": {
+        "False": 4
+      },
+      "classification": {
+        "true_positive_functions": 80,
+        "formation_exact_count": 5,
+        "formation_exact_on_true_positives": 0.0625,
+        "formation_exact_on_all_gold_positives": 0.02631578947368421,
+        "kind_correct_count": 72,
+        "kind_accuracy_on_true_positives": 0.9,
+        "kind_correct_on_all_gold_positives": 0.37894736842105264,
+        "formation_conditional_on_true_positives": {
+          "counts": {
+            "tp": 110,
+            "fp": 81,
+            "fn": 10
+          },
+          "micro_precision": 0.5759162303664922,
+          "micro_recall": 0.9166666666666666,
+          "micro_f1": 0.707395498392283,
+          "per_label": {
+            "registration": {
+              "tp": 56,
+              "fp": 6,
+              "fn": 2,
+              "unknown": 0,
+              "support": 58,
+              "precision": 0.9032258064516129,
+              "recall": 0.9655172413793104,
+              "f1": 0.9333333333333333
+            },
+            "inheritance": {
+              "tp": 22,
+              "fp": 0,
+              "fn": 0,
+              "unknown": 0,
+              "support": 22,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "interface_implementation": {
+              "tp": 0,
+              "fp": 9,
+              "fn": 0,
+              "unknown": 0,
+              "support": 0,
+              "precision": 0.0,
+              "recall": null,
+              "f1": 0.0
+            },
+            "configuration": {
+              "tp": 1,
+              "fp": 61,
+              "fn": 3,
+              "unknown": 2,
+              "support": 4,
+              "precision": 0.016129032258064516,
+              "recall": 0.25,
+              "f1": 0.030303030303030304
+            },
+            "callback": {
+              "tp": 24,
+              "fp": 3,
+              "fn": 3,
+              "unknown": 0,
+              "support": 27,
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888
+            },
+            "decorator": {
+              "tp": 7,
+              "fp": 2,
+              "fn": 1,
+              "unknown": 0,
+              "support": 8,
+              "precision": 0.7777777777777778,
+              "recall": 0.875,
+              "f1": 0.8235294117647058
+            },
+            "other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "unknown": 0,
+              "support": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "formation_end_to_end_on_binary_gold": {
+          "counts": {
+            "tp": 110,
+            "fp": 81,
+            "fn": 299
+          },
+          "micro_precision": 0.5759162303664922,
+          "micro_recall": 0.26894865525672373,
+          "micro_f1": 0.36666666666666664,
+          "per_label": {
+            "registration": {
+              "tp": 56,
+              "fp": 6,
+              "fn": 53,
+              "unknown": 0,
+              "support": 109,
+              "precision": 0.9032258064516129,
+              "recall": 0.5137614678899083,
+              "f1": 0.6549707602339181
+            },
+            "inheritance": {
+              "tp": 22,
+              "fp": 0,
+              "fn": 82,
+              "unknown": 0,
+              "support": 104,
+              "precision": 1.0,
+              "recall": 0.21153846153846154,
+              "f1": 0.3492063492063492
+            },
+            "interface_implementation": {
+              "tp": 0,
+              "fp": 9,
+              "fn": 2,
+              "unknown": 0,
+              "support": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "configuration": {
+              "tp": 1,
+              "fp": 61,
+              "fn": 39,
+              "unknown": 3,
+              "support": 40,
+              "precision": 0.016129032258064516,
+              "recall": 0.025,
+              "f1": 0.0196078431372549
+            },
+            "callback": {
+              "tp": 24,
+              "fp": 3,
+              "fn": 112,
+              "unknown": 0,
+              "support": 136,
+              "precision": 0.8888888888888888,
+              "recall": 0.17647058823529413,
+              "f1": 0.294478527607362
+            },
+            "decorator": {
+              "tp": 7,
+              "fp": 2,
+              "fn": 10,
+              "unknown": 0,
+              "support": 17,
+              "precision": 0.7777777777777778,
+              "recall": 0.4117647058823529,
+              "f1": 0.5384615384615384
+            },
+            "other": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "unknown": 0,
+              "support": 1,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "by_primary_kind": {
+        "cli": {
+          "gold_positives": 10,
+          "tp": 10,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "event": {
+          "gold_positives": 4,
+          "tp": 4,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "http": {
+          "gold_positives": 103,
+          "tp": 55,
+          "fn": 48,
+          "unresolved": 0,
+          "recall": 0.5339805825242718
+        },
+        "lifecycle": {
+          "gold_positives": 11,
+          "tp": 2,
+          "fn": 9,
+          "unresolved": 0,
+          "recall": 0.18181818181818182
+        },
+        "other": {
+          "gold_positives": 62,
+          "tp": 9,
+          "fn": 53,
+          "unresolved": 0,
+          "recall": 0.14516129032258066
+        }
+      },
+      "by_subtype": {
+        "attachment_path_implementation": {
+          "gold_positives": 2,
+          "tp": 0,
+          "fn": 2,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "celery_shared_task": {
+          "gold_positives": 1,
+          "tp": 1,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "configured_settings_callback": {
+          "gold_positives": 3,
+          "tp": 0,
+          "fn": 3,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_admin_delete_hook": {
+          "gold_positives": 1,
+          "tp": 1,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "django_admin_display": {
+          "gold_positives": 4,
+          "tp": 1,
+          "fn": 3,
+          "unresolved": 0,
+          "recall": 0.25
+        },
+        "django_app_ready": {
+          "gold_positives": 1,
+          "tp": 1,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "django_authorization_predicate": {
+          "gold_positives": 1,
+          "tp": 0,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_class_view_hook": {
+          "gold_positives": 28,
+          "tp": 5,
+          "fn": 23,
+          "unresolved": 0,
+          "recall": 0.17857142857142858
+        },
+        "django_feed_hook": {
+          "gold_positives": 20,
+          "tp": 1,
+          "fn": 19,
+          "unresolved": 0,
+          "recall": 0.05
+        },
+        "django_field_default": {
+          "gold_positives": 7,
+          "tp": 0,
+          "fn": 7,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_field_upload_to": {
+          "gold_positives": 1,
+          "tp": 1,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "django_field_validators": {
+          "gold_positives": 2,
+          "tp": 0,
+          "fn": 2,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_form_clean_hook": {
+          "gold_positives": 3,
+          "tp": 0,
+          "fn": 3,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_management_command": {
+          "gold_positives": 9,
+          "tp": 9,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "django_manager_hook": {
+          "gold_positives": 1,
+          "tp": 0,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_model_absolute_url": {
+          "gold_positives": 4,
+          "tp": 0,
+          "fn": 4,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_model_clean_hook": {
+          "gold_positives": 1,
+          "tp": 0,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_model_delete_hook": {
+          "gold_positives": 1,
+          "tp": 0,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_model_save_hook": {
+          "gold_positives": 6,
+          "tp": 0,
+          "fn": 6,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "django_signal_receiver": {
+          "gold_positives": 3,
+          "tp": 3,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "django_template_registration": {
+          "gold_positives": 13,
+          "tp": 5,
+          "fn": 8,
+          "unresolved": 0,
+          "recall": 0.38461538461538464
+        },
+        "django_url_function": {
+          "gold_positives": 46,
+          "tp": 46,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        },
+        "drf_serializer_hook": {
+          "gold_positives": 5,
+          "tp": 2,
+          "fn": 3,
+          "unresolved": 0,
+          "recall": 0.4
+        },
+        "drf_serializer_method_field": {
+          "gold_positives": 16,
+          "tp": 0,
+          "fn": 16,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "drf_viewset_hook": {
+          "gold_positives": 9,
+          "tp": 3,
+          "fn": 6,
+          "unresolved": 0,
+          "recall": 0.3333333333333333
+        },
+        "markdown_extension_hook": {
+          "gold_positives": 1,
+          "tp": 0,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.0
+        },
+        "python_module_main": {
+          "gold_positives": 1,
+          "tp": 1,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        }
+      }
+    }
+  }
+}

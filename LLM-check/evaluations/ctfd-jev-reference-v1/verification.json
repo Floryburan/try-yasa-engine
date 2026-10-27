@@ -1,0 +1,17 @@
+{
+  "matched_functions": 847,
+  "ground_truth_unknown_excluded": 42,
+  "scored_binary_decisions": 804,
+  "model_unknown_separate": 1,
+  "confusion_matrix_independently_recomputed": {
+    "fn": 138,
+    "tn": 412,
+    "tp": 253,
+    "excluded": 42,
+    "fp": 1,
+    "unknown": 1
+  },
+  "snapshot_hashes_verified": true,
+  "csv_cohort_sizes_verified": true,
+  "api_called": false
+}

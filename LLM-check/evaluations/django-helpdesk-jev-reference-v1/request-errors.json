@@ -1,0 +1,7 @@
+{
+  "functions": 27,
+  "counts": {
+    "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>": 27
+  },
+  "note": "Request failures are not converted to negative verdicts or false negatives."
+}

@@ -1,0 +1,53 @@
+{
+  "description": "固定的 4 正 + 4 负 CTFd 开发样本。人工复核的应用边界标签用于比较流程和提示词，不作为模型输入；不是独立测试集。形成方式沿用首轮定义并允许重叠。",
+  "label_policy": "应用框架/运行环境直接调度的处理函数是入口。被入口调用的普通辅助函数不是入口；注册另一个处理函数的辅助函数本身不自动成为入口。普通 HTTP 路由与生命周期回调分别标注。无独立接口契约时 Resource 继承不额外标接口实现。",
+  "cases": [
+    {
+      "id": "case_01", "function": "CTFd.views.notifications", "supporting_prefix": 8,
+      "supplement": [["classes", "CTFd/__init__.py", 51], ["imports", "CTFd/__init__.py", 9]],
+      "expected": {"is_entrypoint": true, "formation_types": ["decorator"], "entrypoint_kind": "http"},
+      "review": "CTFd/views.py:300 的 views.route 装饰目标函数；CTFd/__init__.py:336 将 views Blueprint 注册到应用。"
+    },
+    {
+      "id": "case_02", "function": "CTFd.api.v1.challenges.ChallengeList.get", "supporting_prefix": 0,
+      "supplement": [["classes", "CTFd/api/v1/challenges.py", 109], ["imports", "CTFd/api/v1/challenges.py", 6], ["assignments", "CTFd/api/v1/challenges.py", 81], ["calls", "CTFd/api/v1/challenges.py", 81], ["calls", "CTFd/api/v1/challenges.py", 108], ["calls", "CTFd/api/__init__.py", 56], ["assignments", "CTFd/api/__init__.py", 35], ["assignments", "CTFd/api/__init__.py", 34], ["calls", "CTFd/api/__init__.py", 34], ["calls", "CTFd/api/__init__.py", 35], ["imports", "CTFd/api/__init__.py", 1], ["imports", "CTFd/api/__init__.py", 2], ["imports", "CTFd/api/__init__.py", 7], ["calls", "CTFd/__init__.py", 342]],
+      "expected": {"is_entrypoint": true, "formation_types": ["inheritance", "decorator"], "entrypoint_kind": "http"},
+      "review": "CTFd/api/v1/challenges.py:108-109 的 Namespace.route 与 Resource 子类；get 为该类 HTTP GET 处理方法；Namespace 接到 API 和应用。"
+    },
+    {
+      "id": "case_03", "function": "CTFd.plugins.register_plugin_assets_directory.assets_handler", "supporting_prefix": 25, "supplement": [],
+      "expected": {"is_entrypoint": true, "formation_types": ["registration"], "entrypoint_kind": "http"},
+      "review": "CTFd/plugins/__init__.py:42 的 add_url_rule 将 view_func 指向 assets_handler；flags/load 在 :83 调用注册辅助函数。"
+    },
+    {
+      "id": "case_04", "function": "CTFd.utils.initialization.init_request_processors.needs_setup", "supporting_prefix": 6,
+      "supplement": [["classes", "CTFd/__init__.py", 51], ["imports", "CTFd/__init__.py", 9]],
+      "expected": {"is_entrypoint": true, "formation_types": ["decorator", "callback"], "entrypoint_kind": "lifecycle"},
+      "review": "CTFd/utils/initialization/__init__.py:224 的 app.before_request 绑定 needs_setup；CTFd/__init__.py:319 调用外层初始化函数。"
+    },
+    {
+      "id": "case_05", "function": "CTFd.utils.encoding.hexencode", "supporting_prefix": 8,
+      "supplement": [["imports", "CTFd/utils/encoding/__init__.py", 2], ["imports", "CTFd/utils/encoding/__init__.py", 4], ["functions", "CTFd/utils/security/csrf.py", 6]],
+      "expected": {"is_entrypoint": false, "formation_types": [], "entrypoint_kind": null},
+      "review": "CTFd/utils/encoding/__init__.py:7 的编码辅助函数；csrf/generate_nonce :7 和 security/email 等直接调用。源码未见该函数作为框架 handler 注册。"
+    },
+    {
+      "id": "case_06", "function": "CTFd.utils.formatters.safe_format", "supporting_prefix": 4,
+      "supplement": [["imports", "CTFd/utils/formatters/__init__.py", 1], ["functions", "CTFd/utils/formatters/__init__.py", 17]],
+      "expected": {"is_entrypoint": false, "formation_types": [], "entrypoint_kind": null},
+      "review": "CTFd/utils/formatters/__init__.py:6 的字符串替换辅助函数；safe_html_format :23 和页面/邮件工具函数直接调用。内部 re.sub lambda 不是外部框架入口绑定。"
+    },
+    {
+      "id": "case_07", "function": "CTFd.utils.helpers.markup", "supporting_prefix": 10,
+      "supplement": [["imports", "CTFd/utils/helpers/__init__.py", 4], ["functions", "CTFd/views.py", 308]],
+      "expected": {"is_entrypoint": false, "formation_types": [], "entrypoint_kind": null},
+      "review": "CTFd/utils/helpers/__init__.py:7 只包装 markupsafe.Markup；views/settings :317 等调用它。settings 的路由装饰器属于调用者，不能转移给 markup。"
+    },
+    {
+      "id": "case_08", "function": "CTFd.plugins.register_plugin_assets_directory", "supporting_prefix": 10,
+      "supplement": [["functions", "CTFd/plugins/__init__.py", 38], ["calls", "CTFd/plugins/__init__.py", 42], ["functions", "CTFd/plugins/flags/__init__.py", 82]],
+      "expected": {"is_entrypoint": false, "formation_types": [], "entrypoint_kind": null},
+      "review": "CTFd/plugins/__init__.py:25 的辅助函数由 plugins/flags.load 等直接调用；它注册的 view_func 是内层 assets_handler，本身没有被绑定为 HTTP handler。与 case_03 构成目标身份对照。"
+    }
+  ]
+}

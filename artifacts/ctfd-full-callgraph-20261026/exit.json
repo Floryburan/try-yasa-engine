@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 29.161,
+  "finished_at": "2026-10-26T02:58:08.946141+00:00",
+  "nodes": 8356,
+  "edges": 20417,
+  "graph_sha256": "d6231a28988d117e6fadedc274f16d82886ac630bb42fa04a63cb68a3172dfa4"
+}

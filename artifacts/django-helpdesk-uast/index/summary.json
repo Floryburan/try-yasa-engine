@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-26T12:22:14.051750+00:00",
+  "source_roots": [
+    "src"
+  ],
+  "application_roots": [
+    "src/helpdesk"
+  ],
+  "repository": "/data/fyn/yasa/YASA-Engine/django-helpdesk",
+  "commit": "8c7b9ff92f018a394c6faa972e4328ad178b80b9",
+  "ast_directory": "/data/fyn/yasa/YASA-Engine/artifacts/django-helpdesk-uast/ast",
+  "coverage": {
+    "parsed": 172,
+    "missing": []
+  },
+  "counts": {
+    "files": 172,
+    "functions": 1124,
+    "classes": 290,
+    "imports": 1322,
+    "calls": 8375,
+    "assignments": 4129
+  },
+  "function_origins": {
+    "source_definition": 1103,
+    "lambda": 20,
+    "parser_generated": 1
+  },
+  "counts_by_area": {
+    "files": {
+      "scripts_or_other": 16,
+      "application": 92,
+      "tests": 64
+    },
+    "functions": {
+      "scripts_or_other": 4,
+      "application": 430,
+      "tests": 690
+    },
+    "classes": {
+      "application": 185,
+      "tests": 105
+    },
+    "imports": {
+      "scripts_or_other": 37,
+      "application": 655,
+      "tests": 630
+    },
+    "calls": {
+      "scripts_or_other": 106,
+      "application": 3513,
+      "tests": 4756
+    },
+    "assignments": {
+      "scripts_or_other": 120,
+      "application": 1946,
+      "tests": 2063
+    }
+  },
+  "node_types": {
+    "Identifier": 44777,
+    "MemberAccess": 13699,
+    "Literal": 13695,
+    "CallExpression": 8375,
+    "VariableDeclaration": 7936,
+    "DynamicType": 7846,
+    "AssignmentExpression": 4129,
+    "ExpressionStatement": 2700,
+    "ScopedStatement": 2624,
+    "ObjectProperty": 2356,
+    "BinaryExpression": 1652,
+    "ImportExpression": 1322,
+    "FunctionDefinition": 1124,
+    "ObjectExpression": 977,
+    "ThisExpression": 843,
+    "TupleExpression": 788,
+    "IfStatement": 664,
+    "ReturnStatement": 579,
+    "ClassDefinition": 290,
+    "RangeStatement": 271,
+    "Sequence": 227,
+    "PrimitiveType": 187,
+    "CompileUnit": 172,
+    "UnaryExpression": 158,
+    "CatchClause": 127,
+    "TryStatement": 125,
+    "Noop": 99,
+    "ScopedType": 99,
+    "SpreadElement": 99,
+    "ThrowStatement": 58,
+    "SuperExpression": 56,
+    "ConditionalExpression": 45,
+    "DereferenceExpression": 40,
+    "SliceExpression": 32,
+    "ContinueStatement": 20,
+    "ArrayType": 6,
+    "WhileStatement": 5,
+    "MapType": 3,
+    "BreakStatement": 2,
+    "YieldExpression": 1
+  },
+  "import_resolution": {
+    "external_or_unresolved": 805,
+    "repository_module": 517
+  },
+  "diagnostics": [],
+  "limitations": [
+    "Syntactic UAST index, not a resolved call graph or entrypoint verdict.",
+    "Import matching uses repository paths; dynamic imports and re-exports need further analysis.",
+    "Argument name lookups can include same-name symbols from unrelated scopes; verify file and scope.",
+    "Configured package roots define application scope, including nested migrations."
+  ]
+}

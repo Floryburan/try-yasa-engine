@@ -1,0 +1,537 @@
+{
+  "ground_truth_total": 847,
+  "ground_truth_positives": 392,
+  "ground_truth_negatives": 413,
+  "excluded_gold_unknown": 42,
+  "predictions_available": 847,
+  "successful_predictions": 847,
+  "tp": 253,
+  "fp": 1,
+  "fn": 138,
+  "tn": 412,
+  "model_unknown": 1,
+  "request_errors": 0,
+  "not_attempted": 0,
+  "binary_decisions_scored": 804,
+  "decision_coverage": 0.9987577639751553,
+  "precision": 0.9960629921259843,
+  "recall_on_decided_positives": 0.6470588235294118,
+  "recall_on_all_gold_positives": 0.6454081632653061,
+  "f1_on_decided": 0.7844961240310078,
+  "f1_with_all_positive_recall": 0.7832817337461301,
+  "accuracy_on_decided": 0.8271144278606966,
+  "correct_fraction_of_all_binary_gold": 0.8260869565217391,
+  "false_positive_rate_on_decided_negatives": 0.002421307506053269,
+  "unresolved_gold_positive": 1,
+  "unresolved_gold_negative": 0,
+  "excluded_gold_unknown_predictions": {
+    "False": 40,
+    "True": 2
+  },
+  "classification": {
+    "true_positive_functions": 253,
+    "formation_exact_count": 1,
+    "formation_exact_on_true_positives": 0.003952569169960474,
+    "formation_exact_on_all_gold_positives": 0.002551020408163265,
+    "kind_correct_count": 242,
+    "kind_accuracy_on_true_positives": 0.9565217391304348,
+    "kind_correct_on_all_gold_positives": 0.6173469387755102,
+    "formation_conditional_on_true_positives": {
+      "counts": {
+        "tp": 403,
+        "fp": 460,
+        "fn": 26
+      },
+      "micro_precision": 0.46697566628041715,
+      "micro_recall": 0.9393939393939394,
+      "micro_f1": 0.6238390092879257,
+      "per_label": {
+        "registration": {
+          "tp": 3,
+          "fp": 238,
+          "fn": 0,
+          "unknown": 0,
+          "support": 3,
+          "precision": 0.012448132780082987,
+          "recall": 1.0,
+          "f1": 0.02459016393442623
+        },
+        "inheritance": {
+          "tp": 146,
+          "fp": 0,
+          "fn": 16,
+          "unknown": 0,
+          "support": 162,
+          "precision": 1.0,
+          "recall": 0.9012345679012346,
+          "f1": 0.948051948051948
+        },
+        "interface_implementation": {
+          "tp": 2,
+          "fp": 7,
+          "fn": 0,
+          "unknown": 0,
+          "support": 2,
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.36363636363636365
+        },
+        "configuration": {
+          "tp": 1,
+          "fp": 200,
+          "fn": 8,
+          "unknown": 6,
+          "support": 9,
+          "precision": 0.004975124378109453,
+          "recall": 0.1111111111111111,
+          "f1": 0.009523809523809525
+        },
+        "callback": {
+          "tp": 17,
+          "fp": 15,
+          "fn": 1,
+          "unknown": 0,
+          "support": 18,
+          "precision": 0.53125,
+          "recall": 0.9444444444444444,
+          "f1": 0.68
+        },
+        "decorator": {
+          "tp": 234,
+          "fp": 0,
+          "fn": 0,
+          "unknown": 0,
+          "support": 234,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "other": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unknown": 0,
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "formation_end_to_end_on_binary_gold": {
+      "counts": {
+        "tp": 403,
+        "fp": 462,
+        "fn": 330
+      },
+      "micro_precision": 0.4658959537572254,
+      "micro_recall": 0.5497953615279673,
+      "micro_f1": 0.5043804755944932,
+      "per_label": {
+        "registration": {
+          "tp": 3,
+          "fp": 239,
+          "fn": 31,
+          "unknown": 0,
+          "support": 34,
+          "precision": 0.012396694214876033,
+          "recall": 0.08823529411764706,
+          "f1": 0.021739130434782608
+        },
+        "inheritance": {
+          "tp": 146,
+          "fp": 0,
+          "fn": 55,
+          "unknown": 0,
+          "support": 201,
+          "precision": 1.0,
+          "recall": 0.7263681592039801,
+          "f1": 0.8414985590778098
+        },
+        "interface_implementation": {
+          "tp": 2,
+          "fp": 7,
+          "fn": 18,
+          "unknown": 0,
+          "support": 20,
+          "precision": 0.2222222222222222,
+          "recall": 0.1,
+          "f1": 0.13793103448275862
+        },
+        "configuration": {
+          "tp": 1,
+          "fp": 201,
+          "fn": 93,
+          "unknown": 6,
+          "support": 94,
+          "precision": 0.0049504950495049506,
+          "recall": 0.010638297872340425,
+          "f1": 0.006756756756756757
+        },
+        "callback": {
+          "tp": 17,
+          "fp": 15,
+          "fn": 110,
+          "unknown": 0,
+          "support": 127,
+          "precision": 0.53125,
+          "recall": 0.13385826771653545,
+          "f1": 0.2138364779874214
+        },
+        "decorator": {
+          "tp": 234,
+          "fp": 0,
+          "fn": 22,
+          "unknown": 0,
+          "support": 256,
+          "precision": 1.0,
+          "recall": 0.9140625,
+          "f1": 0.9551020408163265
+        },
+        "other": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unknown": 0,
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "by_primary_kind": {
+    "cli": {
+      "gold_positives": 6,
+      "tp": 6,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "event": {
+      "gold_positives": 6,
+      "tp": 2,
+      "fn": 4,
+      "unresolved": 0,
+      "recall": 0.3333333333333333
+    },
+    "http": {
+      "gold_positives": 225,
+      "tp": 224,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.9955555555555555
+    },
+    "lifecycle": {
+      "gold_positives": 28,
+      "tp": 17,
+      "fn": 11,
+      "unresolved": 0,
+      "recall": 0.6071428571428571
+    },
+    "other": {
+      "gold_positives": 127,
+      "tp": 4,
+      "fn": 122,
+      "unresolved": 1,
+      "recall": 0.031496062992125984
+    }
+  },
+  "by_subtype": {
+    "application_factory": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "babel_locale_selector": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "challenge_plugin_method": {
+      "gold_positives": 12,
+      "tp": 4,
+      "fn": 8,
+      "unresolved": 0,
+      "recall": 0.3333333333333333
+    },
+    "challenge_scoring_strategy": {
+      "gold_positives": 4,
+      "tp": 0,
+      "fn": 4,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "cli_subcommand_dispatch": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "click_command": {
+      "gold_positives": 5,
+      "tp": 5,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "configparser_interpolation": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "configured_email_provider": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "configured_event_manager": {
+      "gold_positives": 6,
+      "tp": 2,
+      "fn": 4,
+      "unresolved": 0,
+      "recall": 0.3333333333333333
+    },
+    "configured_uploader_method": {
+      "gold_positives": 12,
+      "tp": 0,
+      "fn": 12,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "flag_plugin_method": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "flask_caching_key_callback": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "flask_environment_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "flask_error_handler": {
+      "gold_positives": 1,
+      "tp": 1,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "flask_request_factory": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "flask_request_hook": {
+      "gold_positives": 11,
+      "tp": 8,
+      "fn": 3,
+      "unresolved": 0,
+      "recall": 0.7272727272727273
+    },
+    "flask_restx_resource_method": {
+      "gold_positives": 155,
+      "tp": 155,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "flask_route": {
+      "gold_positives": 66,
+      "tp": 66,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "flask_session_interface": {
+      "gold_positives": 2,
+      "tp": 2,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "flask_url_adapter_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "gevent_task": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_environment_factory": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_environment_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_filter": {
+      "gold_positives": 6,
+      "tp": 0,
+      "fn": 6,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_global_function": {
+      "gold_positives": 30,
+      "tp": 0,
+      "fn": 30,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_loader_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "jinja_namespace_member": {
+      "gold_positives": 30,
+      "tp": 0,
+      "fn": 30,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "marshmallow_field_deserializer": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "marshmallow_field_validator": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "marshmallow_hook": {
+      "gold_positives": 14,
+      "tp": 0,
+      "fn": 14,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "marshmallow_nested_schema_factory": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "marshmallow_validator": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "plugin_loader_hook": {
+      "gold_positives": 3,
+      "tp": 3,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "plugin_migration_upgrade": {
+      "gold_positives": 3,
+      "tp": 3,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "registered_asset_handler": {
+      "gold_positives": 2,
+      "tp": 2,
+      "fn": 0,
+      "unresolved": 0,
+      "recall": 1.0
+    },
+    "social_share_strategy": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 1,
+      "recall": 0.0
+    },
+    "sqlalchemy_attribute_validator": {
+      "gold_positives": 2,
+      "tp": 0,
+      "fn": 2,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "sqlalchemy_compiler_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "sqlalchemy_connect_listener": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "streaming_response_body": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "wtforms_bound_field_factory": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    },
+    "wtforms_csrf_hook": {
+      "gold_positives": 1,
+      "tp": 0,
+      "fn": 1,
+      "unresolved": 0,
+      "recall": 0.0
+    }
+  }
+}

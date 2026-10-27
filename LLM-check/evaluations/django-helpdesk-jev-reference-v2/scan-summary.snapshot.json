@@ -1,0 +1,81 @@
+{
+  "selected_functions": 425,
+  "prepared_functions": 425,
+  "preparation_errors": 0,
+  "attempted_functions": 425,
+  "successful_functions": 425,
+  "entrypoints": 93,
+  "non_entrypoints": 332,
+  "unknown": 0,
+  "request_failed_functions": 0,
+  "not_attempted_functions": 0,
+  "formation_counts": {
+    "inheritance": 22,
+    "configuration": 73,
+    "callback": 39,
+    "decorator": 9,
+    "interface_implementation": 17,
+    "registration": 74
+  },
+  "kind_counts": {
+    "http": 60,
+    "lifecycle": 1,
+    "cli": 22,
+    "none": 2,
+    "event": 4,
+    "other": 2,
+    "unknown": 2
+  },
+  "has_ground_truth": false,
+  "definition_aliases_merged": 0,
+  "functions_with_binding_sites": 198,
+  "functions_with_inherited_receivers": 20,
+  "terminal_statistics": {
+    "source": {
+      "language": "python",
+      "files_in_scope": 92,
+      "source_lines_in_scope": 14598,
+      "files_with_targets": 48
+    },
+    "saved_result_usage": {
+      "attempts": 1169,
+      "http_successes": 1169,
+      "http_errors": 0,
+      "transport_errors": 0,
+      "input_tokens": 1569513,
+      "output_tokens": 51425,
+      "total_tokens": 1620938,
+      "responses_missing_input_tokens": 0,
+      "responses_missing_output_tokens": 0,
+      "responses_missing_total_tokens": 0,
+      "latency_avg_ms": null,
+      "latency_p70_p99_max_ms": null
+    },
+    "last_invocation": {
+      "invocation_id": "20261027T015046-1b7460a7",
+      "started_at": "2026-10-27T01:50:46.951305+00:00",
+      "status": "completed",
+      "resumed_functions": 398,
+      "functions_processed_this_invocation": 27,
+      "elapsed_seconds": 57.435941,
+      "usage": {
+        "attempts": 80,
+        "http_successes": 80,
+        "http_errors": 0,
+        "transport_errors": 0,
+        "input_tokens": 73976,
+        "output_tokens": 3538,
+        "total_tokens": 77514,
+        "responses_missing_input_tokens": 0,
+        "responses_missing_output_tokens": 0,
+        "responses_missing_total_tokens": 0,
+        "latency_avg_ms": 701.8351475009695,
+        "latency_p70_p99_max_ms": [
+          681.0614001005888,
+          1229.3600887060165,
+          1229.3600887060165
+        ]
+      }
+    }
+  }
+}

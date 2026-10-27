@@ -1,0 +1,43 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=16384",
+    "--require",
+    "/data/fyn/yasa/YASA-Engine/node_modules/tsx/dist/cjs/index.cjs",
+    "/data/fyn/yasa/YASA-Engine/src/main.ts",
+    "--sourcePath",
+    "/data/fyn/yasa/YASA-Engine/CTFd",
+    "--language",
+    "python",
+    "--analyzer",
+    "PythonAnalyzer",
+    "--checkerPackIds",
+    "taint-flow-python-default",
+    "--ruleConfigFile",
+    "/data/fyn/yasa/YASA-Engine/resource/example-rule-config/rule_config_python.json",
+    "--uastSDKPath",
+    "/data/fyn/yasa/YASA-Engine/my-release-bundle/uast4py-linux-amd64",
+    "--incremental",
+    "false",
+    "--taintTraceOutputStrategy",
+    "full",
+    "--enablePerformanceLogging",
+    "--report",
+    "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-yasa-baseline-20261025-194747/report"
+  ],
+  "cwd": "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-yasa-baseline-20261025-194747",
+  "runtime": "current TypeScript source through tsx",
+  "repository": "/data/fyn/yasa/YASA-Engine/CTFd",
+  "repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+  "started_at": "2026-10-25T11:49:27.213775+00:00",
+  "scope": "All Python source under CTFd, including tests and migrations",
+  "node_heap_limit_mb": 16384,
+  "default_entrypoint_and_scan_budgets_preserved": true,
+  "sha256": {
+    "src/main.ts": "866748ad30864ec977cddeeb2d0ec35e562c299c4af9d461424f3dfbf97fa9b2",
+    "src/config.ts": "80283968e9ddb8b664dd78f8ad312d31eb83adee7b9842badcb0a3cf75531560",
+    "resource/checker/checker-pack-config.json": "acb53546332963b003eed333649b2ba2dc4cc039a9c9efc06b444b124a84a9dc",
+    "resource/example-rule-config/rule_config_python.json": "410ade9a71f419c56cb2e85fc38929bdb7807eaf0804161d007762caad4cdb2b",
+    "my-release-bundle/uast4py-linux-amd64": "1b122c999ccaea0833c2ad33f3f15bd674cbf18502724b48ef1b2a97d8abda0b"
+  }
+}

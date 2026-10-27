@@ -1,0 +1,33 @@
+{
+  "description": "人工选取的四个已讨论正样例，用于检查提示词和推理链路。预期标签不发送给模型；不是准确率评测集。supporting_prefix 表示已有通用上下文的前 N 个记录；supplement 从全局 UAST 索引按表、文件、行号选取额外记录，不添加人工推断的调用边。",
+  "cases": [
+    {
+      "id": "case_01",
+      "function": "CTFd.views.notifications",
+      "supporting_prefix": 8,
+      "supplement": [["classes", "CTFd/__init__.py", 51], ["imports", "CTFd/__init__.py", 9]],
+      "expected": {"is_entrypoint": true, "required_formations": ["decorator"], "entrypoint_kind": "http"}
+    },
+    {
+      "id": "case_02",
+      "function": "CTFd.api.v1.challenges.ChallengeList.get",
+      "supporting_prefix": 20,
+      "supplement": [["assignments", "CTFd/api/__init__.py", 34], ["calls", "CTFd/api/__init__.py", 34], ["calls", "CTFd/api/__init__.py", 35], ["imports", "CTFd/api/__init__.py", 1], ["imports", "CTFd/api/__init__.py", 2], ["calls", "CTFd/__init__.py", 342]],
+      "expected": {"is_entrypoint": true, "required_formations": ["inheritance", "decorator"], "entrypoint_kind": "http"}
+    },
+    {
+      "id": "case_03",
+      "function": "CTFd.plugins.register_plugin_assets_directory.assets_handler",
+      "supporting_prefix": 25,
+      "supplement": [],
+      "expected": {"is_entrypoint": true, "required_formations": ["registration"], "entrypoint_kind": "http"}
+    },
+    {
+      "id": "case_04",
+      "function": "CTFd.utils.initialization.init_request_processors.needs_setup",
+      "supporting_prefix": 6,
+      "supplement": [["classes", "CTFd/__init__.py", 51], ["imports", "CTFd/__init__.py", 9]],
+      "expected": {"is_entrypoint": true, "required_formations": ["decorator", "callback"], "entrypoint_kind": "lifecycle"}
+    }
+  ]
+}

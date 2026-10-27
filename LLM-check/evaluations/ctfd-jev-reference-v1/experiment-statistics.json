@@ -1,0 +1,109 @@
+{
+  "collected_at": "2026-10-26T10:11:52.122986+00:00",
+  "evaluation_manifest": {
+    "created_at": "2026-10-26T09:05:26.900060+00:00",
+    "repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+    "model_alias": "jev-latest",
+    "resolved_models": [
+      "jev-1.14.0"
+    ],
+    "ground_truth": "/data/fyn/yasa/YASA-Engine/LLM-check/annotations/ctfd-application-v1",
+    "prediction_run": "/data/fyn/yasa/YASA-Engine/LLM-check/runs/jev-ctfd-application-bindings-v3",
+    "ground_truth_sha256": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1",
+    "predictions_sha256": "51140e8773bc95ce08c6e4391d920a939a3dff4808f1e5274d3d4eedf7a815bd",
+    "prepared_sha256": "a1f3a0152b74a8f143bcc4d05d7dac486510c225f69daafccb8b2d96e58650c5",
+    "evaluator_sha256": "376728d463a7ab843cd274794f5e3d68159a8a84cd829c9a827d8df07cfcef59",
+    "ground_truth_use": "user_accepted_for_current_experiment",
+    "api_called": false,
+    "unknown_gold_policy": "exclude from scored binary/classification cohorts; retain separate rows",
+    "model_unresolved_policy": "not silently changed to no; counted separately and not recovered in all-positive recall"
+  },
+  "scan_source_statistics": {
+    "language": "python",
+    "files_in_scope": 185,
+    "source_lines_in_scope": 23156,
+    "files_with_targets": 154
+  },
+  "scan_selection": {
+    "area": "application",
+    "functions": [],
+    "limit": null,
+    "max_uses": 6,
+    "origin": "source_definition",
+    "max_binding_classes": 12,
+    "max_binding_sites": 24
+  },
+  "invocations": [
+    {
+      "invocation_id": "20261026T055405-b927a9aa",
+      "started_at": "2026-10-26T05:54:05.564481+00:00",
+      "status": "interrupted",
+      "resumed_functions": 0,
+      "functions_processed_this_invocation": 479,
+      "elapsed_seconds": 3363.342419
+    },
+    {
+      "invocation_id": "20261026T065020-6777f710",
+      "started_at": "2026-10-26T06:50:20.579446+00:00",
+      "status": "finished_with_errors",
+      "resumed_functions": 195,
+      "functions_processed_this_invocation": 652,
+      "elapsed_seconds": 1733.585544
+    },
+    {
+      "invocation_id": "20261026T075427-73b75921",
+      "started_at": "2026-10-26T07:54:27.588922+00:00",
+      "status": "completed",
+      "resumed_functions": 761,
+      "functions_processed_this_invocation": 86,
+      "elapsed_seconds": 347.441712
+    }
+  ],
+  "recorded_run_seconds_sum": 5444.369675,
+  "all_recorded_api_attempts": {
+    "attempts": 3266,
+    "http_successes": 2895,
+    "http_errors": 0,
+    "transport_errors": 371,
+    "input_tokens": 2862666,
+    "output_tokens": 128018,
+    "total_tokens": 2990684,
+    "responses_missing_input_tokens": 0,
+    "responses_missing_output_tokens": 0,
+    "responses_missing_total_tokens": 0,
+    "latency_avg_ms": 1640.5268501631792,
+    "latency_p70_p99_max_ms": [
+      932.8392297029495,
+      6143.923658877611,
+      180235.0773010403
+    ]
+  },
+  "saved_snapshot_usage": {
+    "attempts": 2895,
+    "http_successes": 2895,
+    "http_errors": 0,
+    "transport_errors": 0,
+    "input_tokens": 2862666,
+    "output_tokens": 128018,
+    "total_tokens": 2990684,
+    "responses_missing_input_tokens": 0,
+    "responses_missing_output_tokens": 0,
+    "responses_missing_total_tokens": 0,
+    "latency_avg_ms": null,
+    "latency_p70_p99_max_ms": null
+  },
+  "ground_truth_formation_counts": {
+    "inheritance": 201,
+    "configuration": 94,
+    "callback": 127,
+    "interface_implementation": 20,
+    "other": 1,
+    "decorator": 256,
+    "registration": 34
+  },
+  "predicted_decision_counts": {
+    "False": 590,
+    "True": 256,
+    "None": 1
+  }
+}

@@ -1,0 +1,1378 @@
+[
+  {
+    "file": "demodesk/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "demodesk/config/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "demodesk/config/settings.py",
+    "lines": 272,
+    "sha256": "646a6037287eeeef51c54c0604cf9a3b1a59e914eab5931976386291229a306d",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "demodesk/config/urls.py",
+    "lines": 33,
+    "sha256": "8ad628f44525ffc2c2541ae1e676162ec6e5e410eaa531ef3ee7e3835ad181b0",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "demodesk/config/wsgi.py",
+    "lines": 16,
+    "sha256": "39b65ec50fa9dd7e1cb61aee95b973469d06ee8ea8595f141af6a656bbdc5e83",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/config/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/config/local_settings.py",
+    "lines": 1,
+    "sha256": "1926688cac4b5bd5e1051efd6a22fbc44d2dab576587d3ac896ebdcfe66758d0",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/config/local_urls.py",
+    "lines": 1,
+    "sha256": "da122368ccf514facd5b157b352b13a54dfbec3fa75572fd0222c809ccc29677",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/config/settings.py",
+    "lines": 269,
+    "sha256": "0115969ad7d0016b2503f912006ae9a2c5615b6c47a866710848055b9752d343",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 1
+  },
+  {
+    "file": "dockerized/config/urls.py",
+    "lines": 17,
+    "sha256": "a0fede970aa31aa9a6f2e3c013d80f0c67af1fe24f0be8dd4a60158bea3c2f5a",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/config/wsgi.py",
+    "lines": 16,
+    "sha256": "731727fa792c19126a9d18bc79bcc1008dc991cb7594db744464d238daee51af",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "dockerized/manage.py",
+    "lines": 27,
+    "sha256": "a6118084c3748ba77b57292fcaec70ebed8fdd2460a32a58922dbd9e1d9ff82a",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 1
+  },
+  {
+    "file": "docs/conf.py",
+    "lines": 279,
+    "sha256": "38c72e1f18d788c6eba98daa3aac6fc26b0741b98e8af2953c5295a2427f4b2d",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 1
+  },
+  {
+    "file": "manage.py",
+    "lines": 27,
+    "sha256": "754be54b3088b8fd42d37e9b265fde97bdef51e74ee96ec9081b66d5b21b16e0",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 1
+  },
+  {
+    "file": "quicktest.py",
+    "lines": 36,
+    "sha256": "7388601373a2e06edcaa7d7c7024370f38ec337e73ff87d05d18d3dce2b3537d",
+    "in_scope": false,
+    "partition": "demo_deployment_docs_scripts",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/admin.py",
+    "lines": 161,
+    "sha256": "d35aaec9d4d04f9daf84d167ae602b343632e53c4a52d6f9e633c5a26d846201",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 5
+  },
+  {
+    "file": "src/helpdesk/apps.py",
+    "lines": 13,
+    "sha256": "2c227cd6e05f99017f3cc8c0e0bcfd99a7deb97a3139e64e41530febfc3a9b12",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/copy_followup.py",
+    "lines": 50,
+    "sha256": "2357c96ffac6d94acda29bbb358c92e6a5b15a8bc34a69e9e2c5fb893be9f458",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/decorators.py",
+    "lines": 107,
+    "sha256": "7a329221b92b0120c1189eac58a312f199930336ed0ba9e39ddce5f307154026",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 9
+  },
+  {
+    "file": "src/helpdesk/email.py",
+    "lines": 1190,
+    "sha256": "92346660fac42fc0737f2f7f4dce5106da34b259e4fc53ad1073394930a05f41",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 24
+  },
+  {
+    "file": "src/helpdesk/exceptions.py",
+    "lines": 11,
+    "sha256": "cded451c17a7e6ac01d17decf9d51d6759f4d7d6fc97124157fac326e5c68db1",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/forms.py",
+    "lines": 850,
+    "sha256": "ed3804b2334dfa7ed9753d6f40622b0730e47bffa0bb371527ce83a4d189b631",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 28
+  },
+  {
+    "file": "src/helpdesk/lib.py",
+    "lines": 309,
+    "sha256": "d456ed236e2ac6405d0d680501755b1ce745dc45c95ba9a229a19d1542b17c52",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 10
+  },
+  {
+    "file": "src/helpdesk/management/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/management/commands/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/management/commands/create_escalation_exclusions.py",
+    "lines": 96,
+    "sha256": "cab01d04034874e9b51dfac4499b8dd66a5d7f0a8de779d1bf5756ec9879079b",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/management/commands/create_queue_permissions.py",
+    "lines": 74,
+    "sha256": "5289da4dd1f5f01f66c8e9849abad5866e5d2e6b4ca095ae03dcde867348c203",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/management/commands/create_usersettings.py",
+    "lines": 32,
+    "sha256": "a9f8880ed74c90ec761b81a804054398cca80209ce89c24934596756c76530b6",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/management/commands/escalate_tickets.py",
+    "lines": 118,
+    "sha256": "681570ae9ff4f6ba30dc0f0fe08918e956757318d34c0b263f6546a61baeeac3",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/management/commands/get_email.py",
+    "lines": 48,
+    "sha256": "763c94954dc0ca3df4bb7f4b2fc6d3a248bf46180468f5fdc5656b299502712d",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/migrations/0001_initial.py",
+    "lines": 1153,
+    "sha256": "e267753d28faf225b69fba1a6e03b1f4ea7696cf384089154431a5fd3bc92959",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0002_populate_usersettings.py",
+    "lines": 51,
+    "sha256": "dde6a3b976931b356797752f114cba999a1548fa3071f1abc4d6c279f4063a73",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 3
+  },
+  {
+    "file": "src/helpdesk/migrations/0003_initial_data_import.py",
+    "lines": 41,
+    "sha256": "4f364cee61432e90adc000deb028a45961df97ff8febeae60a50e3d9ef0843c3",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 3
+  },
+  {
+    "file": "src/helpdesk/migrations/0004_add_per_queue_staff_membership.py",
+    "lines": 46,
+    "sha256": "05cb8f21d828b0f4972582e95a2d4bc156633dfe22c3cdd51fe9c3fd34d78910",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0005_queues_no_null.py",
+    "lines": 38,
+    "sha256": "065854e697bbcc23965a10e2ab6033cf70c06401703e4b031ddfe0feaccbb2c4",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0006_email_maxlength.py",
+    "lines": 44,
+    "sha256": "81d44a3187524faa2144df1cf64414a65bc8445d67a7bef2d009dcd5b3dedf4a",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0007_max_length_by_integer.py",
+    "lines": 20,
+    "sha256": "f55355e6578a461d2e3c60fc36c688a6ab64632ba096b67122c8abef89df4c0e",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0008_extra_for_permissions.py",
+    "lines": 22,
+    "sha256": "f7f6805cf011a2343fac13620c3498bd30e26b3c9971a25958f7bbd0423fc0f1",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0009_migrate_queuemembership.py",
+    "lines": 75,
+    "sha256": "d29fb40fa3c54943da059be6cf11ced3acf9e85729894079a292a2164c0df617",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/migrations/0010_remove_queuemembership.py",
+    "lines": 22,
+    "sha256": "71e6577ac043af7c692e2e99c16cf7de46bd27bac087d8ce9003f9c64e1de08c",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0011_admin_related_improvements.py",
+    "lines": 32,
+    "sha256": "c0ec493281d6f21408d528cd2d8c99bff1f111001948ecf10e0073d91469e74e",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0012_queue_default_owner.py",
+    "lines": 27,
+    "sha256": "6b5a2e3dfb62a261fe6dac5a28290448cc213155a2cd01fa9fe83b8f99596ca0",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0013_email_box_local_dir_and_logging.py",
+    "lines": 69,
+    "sha256": "2487f496603ee8e95c0c243fb20908cc05018b2581c26894d87d5e579810a883",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0014_usersettings_related_name.py",
+    "lines": 21,
+    "sha256": "f6fa3474d27de2139c7555b61110ae3c4222bc5452a63dc174b611162e06beaa",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0015_expand_permission_name_size.py",
+    "lines": 24,
+    "sha256": "0bf0b08f7c8d90ec266aa4da12bb79fdd8081c1f50c894346a62b9b5f75ae004",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0016_alter_model_options.py",
+    "lines": 64,
+    "sha256": "be1281310bf5b5ff99f8b40fe52198e044ad66d05f3405f6ffc4be2de55bc44e",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0017_default_owner_on_delete_null.py",
+    "lines": 26,
+    "sha256": "5aae78fbd6016e3940360b1600f869445a8e707c89dd37012e3830b114ca5e88",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0018_ticket_secret_key.py",
+    "lines": 102,
+    "sha256": "1c8f1c6c1e7361128d049e091b35cbdd962faa75bc86ccb2e38f6abc68903feb",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0019_ticket_secret_key.py",
+    "lines": 38,
+    "sha256": "5f08a51d3d27d402c9bc4af60ac246f09a9afeb8c5a639a37ca56b3b54f61f54",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/migrations/0020_depickle_user_settings.py",
+    "lines": 122,
+    "sha256": "605fe69a35408fec859190780da3b2c5adb12a4661cb0ad7a774cb9052fdcfd2",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 3
+  },
+  {
+    "file": "src/helpdesk/migrations/0021_voting_tracker.py",
+    "lines": 108,
+    "sha256": "ec330b2ee218ce68f2153331d8a5fbcb606333dd841ad15591ac5d171be54d6e",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0022_add_submitter_email_id_field_to_ticket.py",
+    "lines": 24,
+    "sha256": "c6516a85c4fcd1953ddbe7f25147b8ec325b19a90f285d5099268f96fa8a2a3b",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0023_add_enable_notifications_on_email_events_to_ticket.py",
+    "lines": 21,
+    "sha256": "96c1189bbbd98ede23dcd8f3390ce650fc0b91f61c51c6d1a2ade591b13f8a92",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0024_time_spent.py",
+    "lines": 19,
+    "sha256": "5aff25dc3ca6dec34d61ebbdde9af41573a4243060c07e5a5856279710c568cf",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0025_queue_dedicated_time.py",
+    "lines": 21,
+    "sha256": "f2bed494d2d769344f77ab02a8e02f570f76058f5de00f81e666b31277e8d395",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0026_kbitem_attachments.py",
+    "lines": 68,
+    "sha256": "148e7709efabbb1c2b960c5f7547cf99ba6ae6398997bf4ff914a3991d9e2dd3",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0027_auto_20200107_1221.py",
+    "lines": 103,
+    "sha256": "8c20d45cafc137b726424dd92b10111ca940eedb1fe57a3e997bf49a12d81945",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0028_kbitem_team.py",
+    "lines": 26,
+    "sha256": "71b54c64116692188f3021f0040e5398837bc6a2c3f45b731e37311cb3a6e6fe",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0029_kbcategory_public.py",
+    "lines": 19,
+    "sha256": "ebc83ee55fd415affc1863310ab5f0662c25422d519456e6d3e18c26d2a9f7ad",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0030_add_kbcategory_name.py",
+    "lines": 45,
+    "sha256": "748b5e2c8e3827f3995c7ec757d913db02b753cae3d09cce0c14ebb80ddc078d",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/migrations/0031_auto_20200225_1440.py",
+    "lines": 27,
+    "sha256": "0d87d42a508a2bfb83ee64730b4286de8edafe66b8716bf9a06404f01130d909",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0032_kbitem_enabled.py",
+    "lines": 19,
+    "sha256": "361efbafd1a056ca51b2c2508735c19bab5a07d8ffc322ba80e2d54cadb80f1f",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0033_ticket_merged_to.py",
+    "lines": 25,
+    "sha256": "09a76c270bac5178881986803b0a81a210d8826621c093ed00d43bc5daa4f5c5",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0034_create_email_template_for_merged.py",
+    "lines": 61,
+    "sha256": "ee1a0d98f59b09b1539ac15d1ab57247acd8a6d58d9bb4497b867b3623357cef",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/migrations/0035_alter_email_on_ticket_change.py",
+    "lines": 22,
+    "sha256": "2e6a808b63446036473e42b4b41860c5dc6e519434ed8895cec3bbff74e67a1c",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0036_add_attachment_validator.py",
+    "lines": 34,
+    "sha256": "9d8bdad9bec973ffeec84fa97d647b35b0e590e9501239dd0aff2eba8e73d669",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0037_alter_queue_email_box_type.py",
+    "lines": 29,
+    "sha256": "cc4f2463b00f6590567328f499e757281a6d27f0ee1167b9970cf2d29d1d7e8d",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0038_checklist_checklisttemplate_checklisttask.py",
+    "lines": 112,
+    "sha256": "afe37cecf349e1130117f5c5b7f69dad1d80e56e54fc97c924848ce031c2e5e9",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0039_alter_ticketchange_field.py",
+    "lines": 17,
+    "sha256": "9fdf21f159b0ee5208bfed9e16bd0e1dce67c4d847642f922ed247e5fdd89b2f",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0040_followup_email_recipients.py",
+    "lines": 23,
+    "sha256": "dac33d60133afbd531e02a3dd4fcea7c17e36894cbdbcf0febfe682639b81c7d",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0041_alter_ticket_created_alter_ticket_modified.py",
+    "lines": 23,
+    "sha256": "4b5b7cdfc79b898bba9567e64ad6abfacce02e46a2e5452e55e11a84d140eb1f",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0042_usersettings_ticket_respond_layout.py",
+    "lines": 39,
+    "sha256": "88416315086a35c520ca0886e5fdbe9c39e0dadeccde0b004692ad6391222b4f",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/0043_fix_on_delete_behaviour.py",
+    "lines": 38,
+    "sha256": "b54d2944a8b3c7971bca7d816715c58e268f640a3a52cf1c93e1f2fa979a43aa",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/migrations/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "migrations",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/models.py",
+    "lines": 2309,
+    "sha256": "938264cd212b29d89c2a3f54fd57077088034f3b666f3c7a97b2aa9c65694b68",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 104
+  },
+  {
+    "file": "src/helpdesk/query.py",
+    "lines": 332,
+    "sha256": "b441825a375468cee0833a7aa0896e8963028e20290db8b0d3552a7e77e23527",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 15
+  },
+  {
+    "file": "src/helpdesk/sanitize.py",
+    "lines": 103,
+    "sha256": "6bf659e1a2c58e14054285fd4aac7d4ff0a24592110fe9b08b5a4f88d5a16620",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 5
+  },
+  {
+    "file": "src/helpdesk/serializers.py",
+    "lines": 310,
+    "sha256": "493726e232c12d40df5272882f3354f4ee74ea310c2b958b9ed1ed0060159afd",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 22
+  },
+  {
+    "file": "src/helpdesk/settings.py",
+    "lines": 595,
+    "sha256": "1f53c7f93f81a0504321c65ebc6867215037a40490f80c9a29b7ab76eac4786d",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 3
+  },
+  {
+    "file": "src/helpdesk/signals.py",
+    "lines": 7,
+    "sha256": "a297362ea4f07375d3528ccfd281a2a264f72a3cee9b435f89a50257a9e1b56f",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/tasks.py",
+    "lines": 8,
+    "sha256": "9c6486e7c9f9b0148349ad28335a3204f6fb254f7a34d7c5546a9a40f6df01c4",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templated_email.py",
+    "lines": 135,
+    "sha256": "4756a8cebefde8bdfd52f5941771e717aefb2236b42f1a7745a5fdf2a61ef730",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/templatetags/bootstrap5_form.py",
+    "lines": 93,
+    "sha256": "7a256868ed74409891a46b6b27f32f75bbf4f1743c5fe4867e77dc5fe214b0c8",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 5
+  },
+  {
+    "file": "src/helpdesk/templatetags/followup_permissions.py",
+    "lines": 38,
+    "sha256": "70613546acdef221aedbf81a1915a36318668c0fa4b03e3b34044a35f2a0acb1",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/templatetags/helpdesk_staff.py",
+    "lines": 22,
+    "sha256": "f6c71584de3ed7d4075757a81bdde7b3ce1d67532ec13c14d279cdf4b723935a",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/helpdesk_util.py",
+    "lines": 46,
+    "sha256": "065d97f251fb093f6ec1580afa6a718b020e8dbb573c05c287541d3b2849daf3",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/templatetags/in_list.py",
+    "lines": 26,
+    "sha256": "cecf67c0b5496f938289f9434a2535d478d6b6127d7834f5cb2d6b44953dffda",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/load_helpdesk_settings.py",
+    "lines": 27,
+    "sha256": "03d777e89f0588addf524ed1711daf6fee3675d12e5bc7a363891f07711876e4",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/saved_queries.py",
+    "lines": 33,
+    "sha256": "6837d2dbf45d7da7b90bb1e93c935639a25c207fdea08da1f574bb23acdfea80",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/ticket_to_link.py",
+    "lines": 53,
+    "sha256": "84ca306712b110c96dbd97ca5c0f45dcf73cad4d46ccfa3713ce9ccc64970e0e",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/templatetags/user_admin_url.py",
+    "lines": 27,
+    "sha256": "5543edbde03b510c848904dac97360f2112302e3576e290058cbd13b3fe0a8c2",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/update_ticket.py",
+    "lines": 465,
+    "sha256": "e894bdc2de91476976224f30fa6b31239920cc4934914e621e19eedcdde43beb",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 8
+  },
+  {
+    "file": "src/helpdesk/urls.py",
+    "lines": 309,
+    "sha256": "6d07cd0b23d0642ec5b09d13d78d04b3f047834859dfbd9a597e2cadc0f18d22",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/user.py",
+    "lines": 141,
+    "sha256": "9ff1dcffa71266bf715ba9c4b06b4ef8d0a4a6d0106632dd923d96f51e4fd6ab",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 12
+  },
+  {
+    "file": "src/helpdesk/validators.py",
+    "lines": 31,
+    "sha256": "8afc89993dde7beb324c143fd40b32479fe154a5576b908d90975b89717cc9ac",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/views/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 0
+  },
+  {
+    "file": "src/helpdesk/views/abstract_views.py",
+    "lines": 43,
+    "sha256": "aacbf3d5d0e75a02166323e202108c590056eb4709fb9c693958ebba28e9f444",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/views/api.py",
+    "lines": 206,
+    "sha256": "5d867a743d9b84d73c21952c1a22d4df2bd5b6db09c255c933617990998a093c",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 11
+  },
+  {
+    "file": "src/helpdesk/views/auth.py",
+    "lines": 66,
+    "sha256": "c92d7f44fe9d5880e8af391d20873b32eb86034ea4e55614fa63565ec3245f4b",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 2
+  },
+  {
+    "file": "src/helpdesk/views/feeds.py",
+    "lines": 185,
+    "sha256": "3fe7a0c1cc42dcc787fce82c58c89ab5f8b27bd26d679725b31b99991a5dae84",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 20
+  },
+  {
+    "file": "src/helpdesk/views/kb.py",
+    "lines": 129,
+    "sha256": "ba9707b24fb8ba01a46bb545dc59bf29856e9135389fca6ee7fc5dbde6afb940",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 4
+  },
+  {
+    "file": "src/helpdesk/views/permissions.py",
+    "lines": 8,
+    "sha256": "a61fe3fdaa8f4291aa23b683cc23efeed682f6748cedb9d5557b39193ce48ee9",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 1
+  },
+  {
+    "file": "src/helpdesk/views/public.py",
+    "lines": 305,
+    "sha256": "fdc30e2f80ac9373e1e13373f8aac54d2f98c41b97f450c25924edd31075f8a7",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 17
+  },
+  {
+    "file": "src/helpdesk/views/staff.py",
+    "lines": 2459,
+    "sha256": "6386677c96c38c67b00387851c8748767d20c38c7a58718e6c56f435004deb59",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 73
+  },
+  {
+    "file": "src/helpdesk/webhooks.py",
+    "lines": 68,
+    "sha256": "d2f58a861ee11f1fd1bc190f4983c809f47990b4673948da6f99cb1f1355db20",
+    "in_scope": true,
+    "partition": "runtime_application",
+    "functions": 4
+  },
+  {
+    "file": "tests/__init__.py",
+    "lines": 9,
+    "sha256": "7318182e91f99052d95931a24500cd11f09548d9254878fc22949e3b14a74411",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 1
+  },
+  {
+    "file": "tests/helpers.py",
+    "lines": 78,
+    "sha256": "061f6fb975fa808f96756f3d63cde128936fe4573ad3652d8580c4d0550f0de0",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 5
+  },
+  {
+    "file": "tests/test_api.py",
+    "lines": 609,
+    "sha256": "3adf882a80f02f039ae5feb05b1cb89e366f069b1b38aede10dce54e47560c0b",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 29
+  },
+  {
+    "file": "tests/test_attachment_html_preview.py",
+    "lines": 157,
+    "sha256": "705953459a8f14284d33e5ecb68e02b7947bdf6641d97203da49bd8de2827b84",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_attachment_html_xss.py",
+    "lines": 158,
+    "sha256": "b370a2321970c6eff2237bd2eda052d715d95c4822917494b9b453d33c1837c3",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 11
+  },
+  {
+    "file": "tests/test_attachments.py",
+    "lines": 264,
+    "sha256": "879621a6e176e6b2d467130a2289a5743b2515db01319737eb4960dc1904e1df",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 13
+  },
+  {
+    "file": "tests/test_checklist.py",
+    "lines": 275,
+    "sha256": "2a1e270b77a4c1adbc7c290de4d39507c5464d3d35c70cf09523a502f5c897c6",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_dashboard_sorting.py",
+    "lines": 83,
+    "sha256": "31326dceb7a08d8cf256a9e9e416c3ed0d54bd34a9e1f1b65dd7f87341da65d5",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 6
+  },
+  {
+    "file": "tests/test_email_ignore.py",
+    "lines": 196,
+    "sha256": "93a434d514b943a5864057e1fde05f3018dea85e05caccaa63357982ce28ad58",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 14
+  },
+  {
+    "file": "tests/test_email_notifications.py",
+    "lines": 660,
+    "sha256": "79b023e457ef1be83162f9a90ff99db20fde62b15b845230688feaea3631dc42",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 15
+  },
+  {
+    "file": "tests/test_email_reopen.py",
+    "lines": 86,
+    "sha256": "081504f570b8620b5e72366d513bf1310aa88175aa3e287721b7cd2e5d384e13",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_followup_copy.py",
+    "lines": 224,
+    "sha256": "3a5c0a7cf0a78a144c854c1532826641b9bc752e0394f3d39f2ab4d130e9d2b5",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 18
+  },
+  {
+    "file": "tests/test_followup_direction.py",
+    "lines": 109,
+    "sha256": "a352838c814bcb667a890554490e0983cf1b4726b033688f098c45ee4f44768e",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_followup_edit.py",
+    "lines": 114,
+    "sha256": "49e5517b2add463ae2e44fb2026da118acb8dab8c4b5814fffabe012fff18b1d",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 8
+  },
+  {
+    "file": "tests/test_followup_menu.py",
+    "lines": 108,
+    "sha256": "48b470ac9b48bfa7a06dc84dff0f6c72720163dbdebf861256cf9db40fd53fe4",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 10
+  },
+  {
+    "file": "tests/test_followup_recipients.py",
+    "lines": 194,
+    "sha256": "0ccd444fa2c89168c9435143638005ed81b50b074512802c77ca0c984f9f1c26",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 13
+  },
+  {
+    "file": "tests/test_form_rendering.py",
+    "lines": 158,
+    "sha256": "06e0f50edb1a190e0a959d8acd6a1f81b3b57892a920b6a909e1fa92ee0892a6",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 17
+  },
+  {
+    "file": "tests/test_get_email.py",
+    "lines": 1694,
+    "sha256": "ebab52a33b286ccc89d8f78f7dfaec5040586e59dd588d20a337c1bf1d945f09",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 37
+  },
+  {
+    "file": "tests/test_help_context_view.py",
+    "lines": 26,
+    "sha256": "40d9e37c65d0128c85c029f0e59717a25f33c1b9b8138a00c75c1e8c0aa12b36",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 3
+  },
+  {
+    "file": "tests/test_kanban.py",
+    "lines": 88,
+    "sha256": "2ace01cecfc4e688d02cb335708ec74e3d98c308a89498afc23bf6a2ec568cf1",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_kb_category_model.py",
+    "lines": 34,
+    "sha256": "9569ae03ed539671a6bdf2bd20a901b29618714e0a3feef3908e7ee02c51638f",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 4
+  },
+  {
+    "file": "tests/test_kb_category_view.py",
+    "lines": 124,
+    "sha256": "82c1b7949d4a238101c49ab8c79228d5fd681119f15f349882bbc29b9b9e6151",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_kb_index_view.py",
+    "lines": 61,
+    "sha256": "73fb98ab2672e48fbb5a79cf3301fd70fb9dd653d9d82e4948ed5c65d2b3e6d7",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 3
+  },
+  {
+    "file": "tests/test_kb_item_model.py",
+    "lines": 115,
+    "sha256": "f31df77b440d7d3060b6b3667c0af7927f2cb44f3046e028996575965edf28b0",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 11
+  },
+  {
+    "file": "tests/test_kb_vote_view.py",
+    "lines": 164,
+    "sha256": "ae630ef8e3b0f14af789ef0743f3f7e6e5c05e67face91beb8314e892c6dd90e",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 8
+  },
+  {
+    "file": "tests/test_lib.py",
+    "lines": 35,
+    "sha256": "098fde96f819092cb6437776384ac56e8a97bc499072ad86e03c3adf6cb46305",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 2
+  },
+  {
+    "file": "tests/test_login.py",
+    "lines": 44,
+    "sha256": "5d39429ed496c2db0a14bd31608139bf407497dce0ac8d6a6ef5152bbf0d11b9",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 5
+  },
+  {
+    "file": "tests/test_markdown.py",
+    "lines": 65,
+    "sha256": "e103f8794c3648ceb12c8a97523550f6aa90cbba6afe54d773d15ba47319935c",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 8
+  },
+  {
+    "file": "tests/test_markdown_injection.py",
+    "lines": 78,
+    "sha256": "bddfadad2013ce63f88ad98d442ad8fc0fb94b9dde02dd7fa5650f69803ae081",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 8
+  },
+  {
+    "file": "tests/test_markdown_url_schemes.py",
+    "lines": 67,
+    "sha256": "8e2dc2332f907d5dd8e9626bf1fbc3a06a83458076c6db170225b2fc042ac59c",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 11
+  },
+  {
+    "file": "tests/test_navigation.py",
+    "lines": 295,
+    "sha256": "a8168f29041ead41183be89fb67c5d18ecf09a1d641de8bc61ccc8c7a24399c0",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 29
+  },
+  {
+    "file": "tests/test_non_staff_full_access.py",
+    "lines": 90,
+    "sha256": "ef209103ed472118f02d186ce30620d2d20729c65f7c06ff1d69444cb2c15ef2",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 11
+  },
+  {
+    "file": "tests/test_password_reset.py",
+    "lines": 84,
+    "sha256": "a7144f8b7ee2419f3465e983e806f33d5b54778f333322cd98e76a96bc6ccc69",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 9
+  },
+  {
+    "file": "tests/test_per_queue_staff_permission.py",
+    "lines": 761,
+    "sha256": "e82bb1eb97d504c7a7c206fe51e9d1bf19e93feaefd88cb95ee9842dbc57f301",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 39
+  },
+  {
+    "file": "tests/test_per_queue_view_sweep.py",
+    "lines": 501,
+    "sha256": "76c595f961f755bad0f0b45f2b691f416aeaaf551df7237aa21d3613616ed252",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 18
+  },
+  {
+    "file": "tests/test_public_actions.py",
+    "lines": 91,
+    "sha256": "ec72bab6679e35d306f205d274626db24a77dbb75333b16767e951371483f364",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 3
+  },
+  {
+    "file": "tests/test_query.py",
+    "lines": 274,
+    "sha256": "4e3c5e1468b5bc429628bd87c2f01de02740f6fb1c1fa35778ca4ce08fd8b40a",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_raw_details_view.py",
+    "lines": 133,
+    "sha256": "4afabce14b27df2595285cb6be0d716a46793fc259abeb0cd240ac36b5d36370",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_report_index_view.py",
+    "lines": 52,
+    "sha256": "14407b202bc85b3251333b2046cc89dd852332a16615b71a5213bee2ffc62772",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 4
+  },
+  {
+    "file": "tests/test_run_report_view.py",
+    "lines": 50,
+    "sha256": "ab95fb97622100c1d4f8bfc666699901f0c860fd95cd71eee90918b0fecbfa54",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 4
+  },
+  {
+    "file": "tests/test_savequery.py",
+    "lines": 32,
+    "sha256": "14760ac75b0b5b8a66280b824ca3556221b38088290762925cb21d8a223709c2",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 2
+  },
+  {
+    "file": "tests/test_settings.py",
+    "lines": 76,
+    "sha256": "dc32a8ea0b914a0bc1cd817f13d7bdc8a6c2b7e215be58d9222bf552d284ac91",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 0
+  },
+  {
+    "file": "tests/test_settings_drift.py",
+    "lines": 176,
+    "sha256": "f32d05867580059f61dbd638823c2166166edf7b50d8d6fdccb9e3cc38894150",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_single_queue_hiding.py",
+    "lines": 77,
+    "sha256": "c647adaae2367e35412b0a516c07036235d19eefd139f084bc6e8c6154dcfc07",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_staff_only_custom_fields.py",
+    "lines": 136,
+    "sha256": "d8bfe8f76911f23f62878b1cb69f38e2e422d72cb9829902de0427a769fcc074",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 10
+  },
+  {
+    "file": "tests/test_staff_ticket_list_view.py",
+    "lines": 173,
+    "sha256": "ce0b51531f9daff75a5db8928fc8a69796a91c4d0da492aa9b162fc18b742475",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 10
+  },
+  {
+    "file": "tests/test_staff_ticket_view.py",
+    "lines": 116,
+    "sha256": "de88d4294be613480c1eceb6400fd3df405ea0b76cc3983fbecb359ceebd1298",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 8
+  },
+  {
+    "file": "tests/test_status_css_classes.py",
+    "lines": 113,
+    "sha256": "24f3505f524aea9f0f1fe63f77923f7ccc01b997c4d166566cb1b11f35303e05",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 9
+  },
+  {
+    "file": "tests/test_ticket_actions.py",
+    "lines": 445,
+    "sha256": "420c48492257d346f96311f63f7d1ec475e46d5399328ab48657e5b729b3f765",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 11
+  },
+  {
+    "file": "tests/test_ticket_backlinks.py",
+    "lines": 253,
+    "sha256": "c1b5d8fc3ae068ace784e77be12b895982b5c6238102367a3e21dad3866bce2f",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 14
+  },
+  {
+    "file": "tests/test_ticket_lookup.py",
+    "lines": 161,
+    "sha256": "4cb11e83005c526daa52843cbcef9465ab7d047427a7cc33639e810167208842",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 9
+  },
+  {
+    "file": "tests/test_ticket_model.py",
+    "lines": 406,
+    "sha256": "a9f1cd89c0a9332dbaefdbd3826ec55e003bd30e470654c653a00c1ccdeb5b5f",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 29
+  },
+  {
+    "file": "tests/test_ticket_respond_layout.py",
+    "lines": 103,
+    "sha256": "e7ab625391bf1f66c0870e099f1dbccf826839d81e608423d43a41ba2bd2382b",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 10
+  },
+  {
+    "file": "tests/test_ticket_submission.py",
+    "lines": 1205,
+    "sha256": "203448cf4c9048515bb085653fd211646abfa3565fc61a0fddee2f067376b348",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 24
+  },
+  {
+    "file": "tests/test_ticket_template_extension.py",
+    "lines": 40,
+    "sha256": "7beb2adf0ef97c931a2d7b2a30ceeff59987bb7cc6a79ec300e5e0744c1fe82c",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 3
+  },
+  {
+    "file": "tests/test_time_spent.py",
+    "lines": 66,
+    "sha256": "92839a80630b25145a694166f6dc3176da4733caf1bfe2aa759c9d9fa769192b",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 2
+  },
+  {
+    "file": "tests/test_time_spent_auto.py",
+    "lines": 451,
+    "sha256": "34fc018685b1c27d6caa8ff37f543eabe7b6e743cabeabcad950bac7156ac36a",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 7
+  },
+  {
+    "file": "tests/test_update_ticket_view.py",
+    "lines": 86,
+    "sha256": "b98ca44fc89b94b3481b6d16e5bebbf07e81fbf0bbfc65e4c20c9ab29f630728",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 4
+  },
+  {
+    "file": "tests/test_user_tickets_api.py",
+    "lines": 112,
+    "sha256": "0b1c8db53847e7ec6c0d98cc6377e843644a99aa351ba3ec6d8fe7564a9198a7",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 6
+  },
+  {
+    "file": "tests/test_usersettings.py",
+    "lines": 23,
+    "sha256": "0294c02137b403cac1e5f31894cfd70e3e7b5863c584a630bd7874b4d98fcec8",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 2
+  },
+  {
+    "file": "tests/test_view_access_guards.py",
+    "lines": 107,
+    "sha256": "6bb686e11a56ccd47bdb50cb18e9449434bcdc371790151330a388aa57dc6d1e",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/test_webhooks.py",
+    "lines": 314,
+    "sha256": "0601ca38d6ca060c73e738dc0dffd9bad4865b0c99950f1821e09f8260971e31",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 12
+  },
+  {
+    "file": "tests/urls.py",
+    "lines": 8,
+    "sha256": "9f496f601ad98093025ee0aba5360771719f3254e55775444a3a4a8676caabbb",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 0
+  },
+  {
+    "file": "tests/utils.py",
+    "lines": 415,
+    "sha256": "8357ba4f19317fe16009909c11d44b42579a061164d674f53df058d38b707fd1",
+    "in_scope": false,
+    "partition": "tests",
+    "functions": 18
+  }
+]

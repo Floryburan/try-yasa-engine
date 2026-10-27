@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "python_verifier": "3.11 (standard ast, verification only)",
+  "python_files": 350,
+  "named_functions_matched": 1716,
+  "classes_matched": 366,
+  "lambdas_matched": 20,
+  "source_hashes_checked": 350,
+  "uast_record_pointers_checked": 35416,
+  "unique_ids_and_scope_links": "passed",
+  "lookup_links": "passed",
+  "evidence_checks": [
+    "Flask route decorator",
+    "Resource class and get method",
+    "cross-file Namespace import",
+    "nested handler passed via view_func keyword"
+  ]
+}

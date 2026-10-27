@@ -1,0 +1,39 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=16384",
+    "--require",
+    "/data/fyn/yasa/YASA-Engine/node_modules/tsx/dist/cjs/index.cjs",
+    "/data/fyn/yasa/YASA-Engine/src/main.ts",
+    "--sourcePath",
+    "/data/fyn/yasa/YASA-Engine/CTFd",
+    "--language",
+    "python",
+    "--analyzer",
+    "PythonAnalyzer",
+    "--checkerIds",
+    "callgraph",
+    "--dumpAllCG",
+    "--dumpEntrypoint",
+    "--uastSDKPath",
+    "/data/fyn/yasa/YASA-Engine/my-release-bundle/uast4py-linux-amd64",
+    "--incremental",
+    "false",
+    "--enablePerformanceLogging",
+    "--report",
+    "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-full-callgraph-20261026/report"
+  ],
+  "cwd": "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-full-callgraph-20261026",
+  "repository": "/data/fyn/yasa/YASA-Engine/CTFd",
+  "repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+  "started_at": "2026-10-26T02:57:39.744181+00:00",
+  "entrypoint_checkers": [],
+  "note": "Only callgraph checker. dumpEntrypoint skips downstream symbolInterpret but retains callgraph generation/endAnalyze. entrypoints.json is not model input.",
+  "engine_sources_sha256": {
+    "src/checker/common/full-callgraph-file-entrypoint.ts": "7d7962f8808a21fc2d6953dc7b41b61468f37f036a9abb3789913b586fae414b",
+    "src/checker/callgraph/callgraph-checker.ts": "b6c0865d96a274a9a4618465e0bed7b1547683eb350b1260738073eb032d0d4a",
+    "src/util/graph.ts": "b868db14dc10f1def8f34bfa6f588a0020e486ac3ba8a766422c53f599d09143",
+    "src/main.ts": "866748ad30864ec977cddeeb2d0ec35e562c299c4af9d461424f3dfbf97fa9b2",
+    "my-release-bundle/uast4py-linux-amd64": "1b122c999ccaea0833c2ad33f3f15bd674cbf18502724b48ef1b2a97d8abda0b"
+  }
+}

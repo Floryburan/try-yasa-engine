@@ -1,0 +1,18 @@
+[
+  {
+    "invocation_id": "20261026T124554-f8a567e2",
+    "started_at": "2026-10-26T12:45:54.627096+00:00",
+    "status": "finished_with_errors",
+    "resumed_functions": 0,
+    "functions_processed_this_invocation": 425,
+    "elapsed_seconds": 1244.338322
+  },
+  {
+    "invocation_id": "20261027T015046-1b7460a7",
+    "started_at": "2026-10-27T01:50:46.951305+00:00",
+    "status": "completed",
+    "resumed_functions": 398,
+    "functions_processed_this_invocation": 27,
+    "elapsed_seconds": 57.435941
+  }
+]

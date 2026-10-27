@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-23T13:34:33.489640+00:00",
+  "repository": "/data/fyn/yasa/YASA-Engine/CTFd",
+  "commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+  "ast_directory": "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-uast/ast",
+  "coverage": {
+    "parsed": 350,
+    "missing": []
+  },
+  "counts": {
+    "files": 350,
+    "functions": 1748,
+    "classes": 366,
+    "imports": 3280,
+    "calls": 21120,
+    "assignments": 8902
+  },
+  "function_origins": {
+    "source_definition": 1716,
+    "lambda": 20,
+    "parser_generated": 12
+  },
+  "counts_by_area": {
+    "files": {
+      "application": 185,
+      "scripts_or_other": 7,
+      "migrations": 37,
+      "tests": 121
+    },
+    "functions": {
+      "application": 873,
+      "migrations": 77,
+      "scripts_or_other": 16,
+      "tests": 782
+    },
+    "classes": {
+      "application": 340,
+      "tests": 26
+    },
+    "imports": {
+      "application": 2105,
+      "scripts_or_other": 46,
+      "migrations": 101,
+      "tests": 1028
+    },
+    "calls": {
+      "application": 7424,
+      "scripts_or_other": 292,
+      "migrations": 988,
+      "tests": 12416
+    },
+    "assignments": {
+      "application": 3787,
+      "scripts_or_other": 120,
+      "migrations": 272,
+      "tests": 4723
+    }
+  },
+  "node_types": {
+    "Identifier": 82059,
+    "Literal": 31586,
+    "CallExpression": 21120,
+    "MemberAccess": 20823,
+    "VariableDeclaration": 12618,
+    "DynamicType": 12510,
+    "AssignmentExpression": 8902,
+    "BinaryExpression": 5555,
+    "ObjectProperty": 5135,
+    "ScopedStatement": 4503,
+    "ExpressionStatement": 4390,
+    "ImportExpression": 3280,
+    "ObjectExpression": 2243,
+    "Sequence": 1750,
+    "FunctionDefinition": 1748,
+    "IfStatement": 1514,
+    "ReturnStatement": 1209,
+    "TupleExpression": 1147,
+    "Noop": 953,
+    "RangeStatement": 448,
+    "ThisExpression": 397,
+    "ClassDefinition": 366,
+    "CompileUnit": 350,
+    "SpreadElement": 172,
+    "UnaryExpression": 167,
+    "TryStatement": 132,
+    "CatchClause": 122,
+    "DereferenceExpression": 108,
+    "ThrowStatement": 108,
+    "PrimitiveType": 83,
+    "SuperExpression": 55,
+    "ConditionalExpression": 53,
+    "ScopedType": 43,
+    "ArrayType": 20,
+    "SliceExpression": 18,
+    "ContinueStatement": 16,
+    "YieldExpression": 15,
+    "WhileStatement": 13,
+    "BreakStatement": 6,
+    "MapType": 2
+  },
+  "import_resolution": {
+    "external_or_unresolved": 862,
+    "repository_module": 2418
+  },
+  "diagnostics": [],
+  "limitations": [
+    "Syntactic UAST index, not a resolved call graph or entrypoint verdict.",
+    "Import matching uses repository paths; dynamic imports and re-exports need further analysis.",
+    "Argument name lookups can include same-name symbols from unrelated scopes; verify file and scope.",
+    "Tests and migration functions are included and labelled separately."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "repository_commit": "8c7b9ff92f018a394c6faa972e4328ad178b80b9",
+  "repository_dirty": false,
+  "created_at": "2026-10-26T12:22:59.822113+00:00",
+  "export_command": [
+    "node",
+    "/data/fyn/yasa/YASA-Engine/dist/main.js",
+    "--sourcePath",
+    "/data/fyn/yasa/YASA-Engine/django-helpdesk",
+    "--language",
+    "python",
+    "--dumpAllAST",
+    "--uastSDKPath",
+    "/data/fyn/yasa/YASA-Engine/my-release-bundle/uast4py-linux-amd64",
+    "--report",
+    "/data/fyn/yasa/YASA-Engine/artifacts/django-helpdesk-uast/ast"
+  ],
+  "index_command": [
+    "/data/fyn/conda_envs/laya/bin/python",
+    "-B",
+    "tools/uast-global-index.py",
+    "--repo",
+    "django-helpdesk",
+    "--ast-dir",
+    "artifacts/django-helpdesk-uast/ast",
+    "--out",
+    "artifacts/django-helpdesk-uast/index",
+    "--source-root",
+    "src",
+    "--application-root",
+    "src/helpdesk"
+  ],
+  "export_diagnostic": "Engine wrapper logged a generic parser error, but exported valid UAST for every one of the 172 Python files. No missing files. Independent native rerun exited 0, 172 successes, 0 failures; see native-verification.log. Python AST also independently verified all 425 in-scope function spans and full source.",
+  "native_verification_command": [
+    "my-release-bundle/uast4py-linux-amd64",
+    "--rootDir",
+    "/data/fyn/yasa/YASA-Engine/django-helpdesk",
+    "--output",
+    "/tmp/helpdesk-uast-native",
+    "-j1"
+  ],
+  "native_verification_exit_code": 0,
+  "sha256": {
+    "tools/uast-global-index.py": "2644c94535dca0a272c17514fe210a82e17b8ad42ec159afbba5ec1f2ba2fc59",
+    "my-release-bundle/uast4py-linux-amd64": "1b122c999ccaea0833c2ad33f3f15bd674cbf18502724b48ef1b2a97d8abda0b",
+    "dist/main.js": "12ab654977928af7065c254e824da4a7e303038953c3c9387511828344d6c21b",
+    "dist/engine/parser/python/python-ast-builder.js": "ba43b08cf2f687a779a49bd56731519ce1582778fa13f6d88125b49538447e8e"
+  }
+}

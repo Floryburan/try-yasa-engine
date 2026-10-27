@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-10-26T12:29:16.409110+00:00",
+  "repository_commit": "8c7b9ff92f018a394c6faa972e4328ad178b80b9",
+  "repository_clean": true,
+  "python_files_verified": 172,
+  "target_function_spans_verified": 425,
+  "target_function_definitions_complete": true,
+  "unique_case_ids": 425,
+  "all_evidence_source_hashes_passed": true,
+  "index_hashes_match_manifest": true,
+  "annotation_sha256": "d6c1355c7d291adba2b052395aa026e522d20ab2e7aed7612f4b6e3b0e29c7a7",
+  "policy_sha256": "2b6f1663f832df587a0febbdaca1fd8d4f01fda67e7a082b45bbf062fa5f5c0a",
+  "unit_tests": {
+    "command": [
+      "/data/fyn/conda_envs/laya/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "LLM-check",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tests": 57,
+    "result": "passed",
+    "log": "unittest.log"
+  },
+  "compact_context_smoke": {
+    "function": "helpdesk.views.api.TicketViewSet.get_queryset",
+    "target_complete": true,
+    "state_characters": 2438
+  },
+  "independent_human_review": false,
+  "model_predictions_read": false,
+  "api_called": false
+}

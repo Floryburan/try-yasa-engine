@@ -1,0 +1,2 @@
+﻿function,file,start_line,outcome,gold_entrypoint,predicted_entrypoint,gold_formations,predicted_formations,extra_formations,missing_formations,unknown_formation_labels,accepted_kinds,predicted_kind,formation_exact,kind_correct,gold_subtypes,gold_reason,evidence_locations,error
+CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,42,fp,False,True,,configuration;registration,,,,,http,False,False,internal_helper,普通业务工具函数或服务对象方法；核对目标角色及静态引用后，没有确认的独立注册/配置/框架调度证据。,CTFd/utils/csv/__init__.py:42-171;CTFd/utils/csv/__init__.py:583-583,
