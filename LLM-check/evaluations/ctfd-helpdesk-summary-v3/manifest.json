@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-10-28T05:23:56.222011+00:00",
+  "policy": "full known-reference cohort, joint entrypoint/category predictions, unresolved not credited as TN",
+  "api_called": false,
+  "predictions_modified": false,
+  "input_hashes": {
+    "CTFd": {
+      "metrics.json": "c0b79cd06fea9db6946d38b293119eff82948e1d0e40e66575724510d9db5f3f",
+      "details.json": "6713e16281a05ede70ac38df22edd0ee4cef5d91873b14ed680bbbb7de3606f4",
+      "ground-truth.snapshot.json": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1"
+    },
+    "django-helpdesk": {
+      "metrics.json": "2dd28e780fca61bd695c1b045aca065b40e65df6c50270082d975200d5702d3b",
+      "details.json": "9e7551a398555b5ddd1d1da3f263938cae8a02b1b0887e11988c538c2483fd26",
+      "ground-truth.snapshot.json": "d6c1355c7d291adba2b052395aa026e522d20ab2e7aed7612f4b6e3b0e29c7a7"
+    }
+  }
+}

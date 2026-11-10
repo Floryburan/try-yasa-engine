@@ -60,6 +60,7 @@ class PythonTaintAbstractChecker extends TaintChecker {
    * @param info
    */
   triggerAtFunctionCallBefore(analyzer: any, scope: any, node: any, state: any, info: any) {
+    if (config.llmInputFile) return
     const { fclos, callInfo } = info
     const funcCallArgTaintSource = this.checkerRuleConfigContent.sources?.FuncCallArgTaintSource
     IntroduceTaint.introduceFuncArgTaintByRuleConfig(fclos?.object, node, callInfo, funcCallArgTaintSource)

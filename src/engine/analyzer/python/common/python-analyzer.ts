@@ -38,6 +38,7 @@ import {
   type MemoryGuardState,
 } from '../../common/memory-guard/entrypoint-memory-guard'
 import { describeEntryPointForLog } from '../../../../util/entrypoint-metrics'
+import { PythonLlmInput } from './llm-input'
 
 const Uuid = require('node-uuid')
 const globby = require('fast-glob')
@@ -181,6 +182,9 @@ class PythonAnalyzer extends Analyzer {
       BasicRuleHandler
     )
     super(checkerManager, options)
+    if (options.llmInputFile) {
+      this.llmInput = new PythonLlmInput(options.llmInputFile, options.maindir, options.reportDir)
+    }
     this.crossCallVisitedEnabled = true
     this.enableNestedSourceLineIsolation = true
     this.enableLibArgToThis = true
@@ -194,6 +198,23 @@ class PythonAnalyzer extends Analyzer {
     this._tryLoadModuleCache = new Map<string, { module: any; field: any } | null>()
     // 规范化文件路径集合，替代 fileList.some() 的 O(n) 线性扫描
     this._normalizedFileSet = new Set<string>()
+  }
+
+  private llmInput?: PythonLlmInput
+
+  override startAnalyze(): void {
+    super.startAnalyze()
+    this.llmInput?.bind(this)
+  }
+
+  override endAnalyze(): void {
+    super.endAnalyze()
+    this.llmInput?.finish(this)
+  }
+
+  override processInstruction(scope: any, node: any, state: any, prePostFlag?: any): any {
+    const result = super.processInstruction(scope, node, state, prePostFlag)
+    return !prePostFlag && this.llmInput ? this.llmInput.mark(this, node, result) : result
   }
 
   /**
@@ -233,7 +254,9 @@ class PythonAnalyzer extends Analyzer {
    *
    */
   async symbolInterpret(): Promise<boolean> {
-    const { entryPoints } = this as { entryPoints?: unknown[] }
+    // Snapshot imported entries so runtime observations cannot append native
+    // framework entries to the active loop.
+    const entryPoints = this.llmInput ? [...(this.entryPoints || [])] : this.entryPoints as unknown[] | undefined
     const state = this.initState(this.topScope)
 
     if (_.isEmpty(entryPoints)) {
@@ -391,6 +414,7 @@ class PythonAnalyzer extends Analyzer {
           }
         }
         this.recordEntryPointLoopMetric(entryPoint, metricStartTime, findingsBefore, skipped, skipReason, overloadCount)
+        this.llmInput?.writeDiagnostics()
         if (memoryAborted) {
           logger.warn(
             `[memory-guard] entrypoint ${epIdx}/${entryPoints?.length ?? 0} skipped due to memory guard: ${epLabel}`
@@ -560,6 +584,7 @@ class PythonAnalyzer extends Analyzer {
       callsiteNode: node,
     }
     callInfo.callArgs!.node = node
+    this.llmInput?.checkSink(this, node, fclos, callInfo, state)
 
     if (argvalues && this.checkerManager) {
       this.checkerManager.checkAtFunctionCallBefore(this, scope, node, state, {
@@ -829,7 +854,7 @@ class PythonAnalyzer extends Analyzer {
     collectedArgs: Array<Instruction | undefined>,
     argvalues: Value[],
     fclos: Value,
-    node: CallExpression
+    node: CallExpression | NewExpression
   ): CallArgs {
     const args: CallArg[] = []
     const len = Math.min(argvalues.length, collectedArgs.length)
@@ -1229,6 +1254,9 @@ class PythonAnalyzer extends Analyzer {
       if (same_args) argvalues = call.arguments
     }
 
+    this.llmInput?.checkSink(this, node, fclos, {
+      callArgs: this.buildPythonCallArgs(call.arguments || [], argvalues, fclos, node), callsiteNode: node,
+    }, state)
     const fdef = fclos.ast?.fdef
     const obj = this.buildNewObject(fdef, fclos, state, node, scope, {
       callArgs: this.buildCallArgs(node, argvalues, fclos),
@@ -2122,6 +2150,7 @@ class PythonAnalyzer extends Analyzer {
       if (!paramVal) continue
       const info = { res: paramVal }
       this.checkerManager?.checkAtIdentifier(this, fscope, pid, state, info)
+      if (this.llmInput) info.res = this.llmInput.mark(this, pid, info.res, true)
       if (info.res && info.res !== paramVal) {
         this.saveVarInCurrentScope(fscope, pid, info.res, state)
       }

@@ -7,11 +7,23 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from jev_config import NAMES, public_settings, read_settings
+from jev_config import NAMES, api_headers, api_url, public_settings, read_settings
 from jev_evaluate import jev_payload
 
 
 class JevConfigTests(unittest.TestCase):
+    def test_root_and_sdk_style_versioned_urls_have_exactly_one_v1(self):
+        for base in ('https://api.example.test', 'https://api.example.test/',
+                     'https://api.example.test/v1', 'https://api.example.test/v1/'):
+            self.assertEqual(api_url(base), 'https://api.example.test/v1/systemone')
+            self.assertEqual(api_url(base, 'models'), 'https://api.example.test/v1/models')
+        self.assertEqual(api_url('https://api.example.test/proxy/v1/'), 'https://api.example.test/proxy/v1/systemone')
+
+    def test_gateway_headers_keep_bearer_auth_and_identify_the_application(self):
+        headers = api_headers('offline-test-token')
+        self.assertEqual(headers['Authorization'], 'Bearer offline-test-token')
+        self.assertEqual(headers['User-Agent'], 'YASA-Jev-Client/1.0')
+
     def test_dotenv_key_is_read_and_not_in_public_settings(self):
         with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ, {name: "" for name in NAMES}):
             path = Path(directory) / ".env"

@@ -1,0 +1,632 @@
+[
+  {
+    "repository": "CTFd",
+    "source_folder": "ctfd-jev-reference-v1",
+    "overall": {
+      "repository": "CTFd",
+      "functions_scanned": 847,
+      "scored_functions": 805,
+      "reference_unknown_excluded": 42,
+      "model_unknown": 1,
+      "accuracy": 0.8260869565217391,
+      "precision": 0.9960629921259843,
+      "recall": 0.6454081632653061,
+      "f1": 0.7832817337461301,
+      "tp": 253,
+      "fp": 1,
+      "fn_decided": 138,
+      "tn": 412
+    },
+    "kinds": {
+      "http": {
+        "support": 224,
+        "tp": 223,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.9867256637168141,
+        "recall": 0.9955357142857143,
+        "f1": 0.9911111111111112,
+        "entrypoint_detection": {
+          "gold_positives": 225,
+          "tp": 224,
+          "fn": 1,
+          "unresolved": 0,
+          "recall": 0.9955555555555555
+        }
+      },
+      "rpc": {
+        "support": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "entrypoint_detection": {
+          "gold_positives": 0,
+          "tp": 0,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": null
+        }
+      },
+      "cli": {
+        "support": 6,
+        "tp": 6,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "entrypoint_detection": {
+          "gold_positives": 6,
+          "tp": 6,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        }
+      },
+      "event": {
+        "support": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "entrypoint_detection": {
+          "gold_positives": 6,
+          "tp": 2,
+          "fn": 4,
+          "unresolved": 0,
+          "recall": 0.3333333333333333
+        }
+      },
+      "lifecycle": {
+        "support": 17,
+        "tp": 13,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.9285714285714286,
+        "recall": 0.7647058823529411,
+        "f1": 0.8387096774193549,
+        "entrypoint_detection": {
+          "gold_positives": 28,
+          "tp": 17,
+          "fn": 11,
+          "unresolved": 0,
+          "recall": 0.6071428571428571
+        }
+      },
+      "other": {
+        "support": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "entrypoint_detection": {
+          "gold_positives": 127,
+          "tp": 4,
+          "fn": 122,
+          "unresolved": 1,
+          "recall": 0.031496062992125984
+        }
+      }
+    },
+    "classification": {
+      "true_positive_functions": 253,
+      "formation_exact_count": 1,
+      "formation_exact_on_true_positives": 0.003952569169960474,
+      "formation_exact_on_all_gold_positives": 0.002551020408163265,
+      "kind_correct_count": 242,
+      "kind_accuracy_on_true_positives": 0.9565217391304348,
+      "kind_correct_on_all_gold_positives": 0.6173469387755102,
+      "formation_conditional_on_true_positives": {
+        "counts": {
+          "tp": 403,
+          "fp": 460,
+          "fn": 26
+        },
+        "micro_precision": 0.46697566628041715,
+        "micro_recall": 0.9393939393939394,
+        "micro_f1": 0.6238390092879257,
+        "per_label": {
+          "registration": {
+            "tp": 3,
+            "fp": 238,
+            "fn": 0,
+            "unknown": 0,
+            "support": 3,
+            "precision": 0.012448132780082987,
+            "recall": 1.0,
+            "f1": 0.02459016393442623
+          },
+          "inheritance": {
+            "tp": 146,
+            "fp": 0,
+            "fn": 16,
+            "unknown": 0,
+            "support": 162,
+            "precision": 1.0,
+            "recall": 0.9012345679012346,
+            "f1": 0.948051948051948
+          },
+          "interface_implementation": {
+            "tp": 2,
+            "fp": 7,
+            "fn": 0,
+            "unknown": 0,
+            "support": 2,
+            "precision": 0.2222222222222222,
+            "recall": 1.0,
+            "f1": 0.36363636363636365
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 200,
+            "fn": 8,
+            "unknown": 6,
+            "support": 9,
+            "precision": 0.004975124378109453,
+            "recall": 0.1111111111111111,
+            "f1": 0.009523809523809525
+          },
+          "callback": {
+            "tp": 17,
+            "fp": 15,
+            "fn": 1,
+            "unknown": 0,
+            "support": 18,
+            "precision": 0.53125,
+            "recall": 0.9444444444444444,
+            "f1": 0.68
+          },
+          "decorator": {
+            "tp": 234,
+            "fp": 0,
+            "fn": 0,
+            "unknown": 0,
+            "support": 234,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "formation_end_to_end_on_binary_gold": {
+        "counts": {
+          "tp": 403,
+          "fp": 462,
+          "fn": 330
+        },
+        "micro_precision": 0.4658959537572254,
+        "micro_recall": 0.5497953615279673,
+        "micro_f1": 0.5043804755944932,
+        "per_label": {
+          "registration": {
+            "tp": 3,
+            "fp": 239,
+            "fn": 31,
+            "unknown": 0,
+            "support": 34,
+            "precision": 0.012396694214876033,
+            "recall": 0.08823529411764706,
+            "f1": 0.021739130434782608
+          },
+          "inheritance": {
+            "tp": 146,
+            "fp": 0,
+            "fn": 55,
+            "unknown": 0,
+            "support": 201,
+            "precision": 1.0,
+            "recall": 0.7263681592039801,
+            "f1": 0.8414985590778098
+          },
+          "interface_implementation": {
+            "tp": 2,
+            "fp": 7,
+            "fn": 18,
+            "unknown": 0,
+            "support": 20,
+            "precision": 0.2222222222222222,
+            "recall": 0.1,
+            "f1": 0.13793103448275862
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 201,
+            "fn": 93,
+            "unknown": 6,
+            "support": 94,
+            "precision": 0.0049504950495049506,
+            "recall": 0.010638297872340425,
+            "f1": 0.006756756756756757
+          },
+          "callback": {
+            "tp": 17,
+            "fp": 15,
+            "fn": 110,
+            "unknown": 0,
+            "support": 127,
+            "precision": 0.53125,
+            "recall": 0.13385826771653545,
+            "f1": 0.2138364779874214
+          },
+          "decorator": {
+            "tp": 234,
+            "fp": 0,
+            "fn": 22,
+            "unknown": 0,
+            "support": 256,
+            "precision": 1.0,
+            "recall": 0.9140625,
+            "f1": 0.9551020408163265
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "source_manifest": {
+      "created_at": "2026-10-26T09:05:26.900060+00:00",
+      "repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+      "model_alias": "jev-latest",
+      "resolved_models": [
+        "jev-1.14.0"
+      ],
+      "ground_truth": "/data/fyn/yasa/YASA-Engine/LLM-check/annotations/ctfd-application-v1",
+      "prediction_run": "/data/fyn/yasa/YASA-Engine/LLM-check/runs/jev-ctfd-application-bindings-v3",
+      "ground_truth_sha256": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1",
+      "predictions_sha256": "51140e8773bc95ce08c6e4391d920a939a3dff4808f1e5274d3d4eedf7a815bd",
+      "prepared_sha256": "a1f3a0152b74a8f143bcc4d05d7dac486510c225f69daafccb8b2d96e58650c5",
+      "evaluator_sha256": "376728d463a7ab843cd274794f5e3d68159a8a84cd829c9a827d8df07cfcef59",
+      "ground_truth_use": "user_accepted_for_current_experiment",
+      "api_called": false,
+      "unknown_gold_policy": "exclude from scored binary/classification cohorts; retain separate rows",
+      "model_unresolved_policy": "not silently changed to no; counted separately and not recovered in all-positive recall"
+    },
+    "input_hashes": {
+      "metrics.json": "c0b79cd06fea9db6946d38b293119eff82948e1d0e40e66575724510d9db5f3f",
+      "details.json": "6713e16281a05ede70ac38df22edd0ee4cef5d91873b14ed680bbbb7de3606f4",
+      "ground-truth.snapshot.json": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1",
+      "manifest.json": "02a8ae93d8491602e1efad37106519ce3b4737ba7c2ad05e530d7a685d11fc73"
+    }
+  },
+  {
+    "repository": "django-helpdesk",
+    "source_folder": "django-helpdesk-jev-reference-v2",
+    "overall": {
+      "repository": "django-helpdesk",
+      "functions_scanned": 425,
+      "scored_functions": 421,
+      "reference_unknown_excluded": 4,
+      "model_unknown": 0,
+      "accuracy": 0.7339667458432304,
+      "precision": 0.989247311827957,
+      "recall": 0.45320197044334976,
+      "f1": 0.6216216216216216,
+      "tp": 92,
+      "fp": 1,
+      "fn_decided": 111,
+      "tn": 217
+    },
+    "kinds": {
+      "http": {
+        "support": 55,
+        "tp": 55,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.9322033898305084,
+        "recall": 1.0,
+        "f1": 0.9649122807017544,
+        "entrypoint_detection": {
+          "gold_positives": 103,
+          "tp": 55,
+          "fn": 48,
+          "unresolved": 0,
+          "recall": 0.5339805825242718
+        }
+      },
+      "rpc": {
+        "support": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "entrypoint_detection": {
+          "gold_positives": 0,
+          "tp": 0,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": null
+        }
+      },
+      "cli": {
+        "support": 10,
+        "tp": 10,
+        "fp": 12,
+        "fn": 0,
+        "precision": 0.45454545454545453,
+        "recall": 1.0,
+        "f1": 0.625,
+        "entrypoint_detection": {
+          "gold_positives": 10,
+          "tp": 10,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        }
+      },
+      "event": {
+        "support": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "entrypoint_detection": {
+          "gold_positives": 4,
+          "tp": 4,
+          "fn": 0,
+          "unresolved": 0,
+          "recall": 1.0
+        }
+      },
+      "lifecycle": {
+        "support": 14,
+        "tp": 1,
+        "fp": 0,
+        "fn": 13,
+        "precision": 1.0,
+        "recall": 0.07142857142857142,
+        "f1": 0.13333333333333333,
+        "entrypoint_detection": {
+          "gold_positives": 24,
+          "tp": 14,
+          "fn": 10,
+          "unresolved": 0,
+          "recall": 0.5833333333333334
+        }
+      },
+      "other": {
+        "support": 9,
+        "tp": 2,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1.0,
+        "recall": 0.2222222222222222,
+        "f1": 0.36363636363636365,
+        "entrypoint_detection": {
+          "gold_positives": 62,
+          "tp": 9,
+          "fn": 53,
+          "unresolved": 0,
+          "recall": 0.14516129032258066
+        }
+      }
+    },
+    "classification": {
+      "true_positive_functions": 92,
+      "formation_exact_count": 6,
+      "formation_exact_on_true_positives": 0.06521739130434782,
+      "formation_exact_on_all_gold_positives": 0.029556650246305417,
+      "kind_correct_count": 72,
+      "kind_accuracy_on_true_positives": 0.782608695652174,
+      "kind_correct_on_all_gold_positives": 0.35467980295566504,
+      "formation_conditional_on_true_positives": {
+        "counts": {
+          "tp": 134,
+          "fp": 100,
+          "fn": 10
+        },
+        "micro_precision": 0.5726495726495726,
+        "micro_recall": 0.9305555555555556,
+        "micro_f1": 0.708994708994709,
+        "per_label": {
+          "registration": {
+            "tp": 68,
+            "fp": 6,
+            "fn": 2,
+            "unknown": 0,
+            "support": 70,
+            "precision": 0.918918918918919,
+            "recall": 0.9714285714285714,
+            "f1": 0.9444444444444444
+          },
+          "inheritance": {
+            "tp": 22,
+            "fp": 0,
+            "fn": 0,
+            "unknown": 0,
+            "support": 22,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "interface_implementation": {
+            "tp": 0,
+            "fp": 17,
+            "fn": 0,
+            "unknown": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 72,
+            "fn": 3,
+            "unknown": 2,
+            "support": 4,
+            "precision": 0.0136986301369863,
+            "recall": 0.25,
+            "f1": 0.025974025974025976
+          },
+          "callback": {
+            "tp": 36,
+            "fp": 3,
+            "fn": 3,
+            "unknown": 0,
+            "support": 39,
+            "precision": 0.9230769230769231,
+            "recall": 0.9230769230769231,
+            "f1": 0.9230769230769231
+          },
+          "decorator": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 1,
+            "unknown": 0,
+            "support": 8,
+            "precision": 0.7777777777777778,
+            "recall": 0.875,
+            "f1": 0.8235294117647058
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "formation_end_to_end_on_binary_gold": {
+        "counts": {
+          "tp": 134,
+          "fp": 100,
+          "fn": 301
+        },
+        "micro_precision": 0.5726495726495726,
+        "micro_recall": 0.3080459770114943,
+        "micro_f1": 0.40059790732436473,
+        "per_label": {
+          "registration": {
+            "tp": 68,
+            "fp": 6,
+            "fn": 54,
+            "unknown": 0,
+            "support": 122,
+            "precision": 0.918918918918919,
+            "recall": 0.5573770491803278,
+            "f1": 0.6938775510204082
+          },
+          "inheritance": {
+            "tp": 22,
+            "fp": 0,
+            "fn": 82,
+            "unknown": 0,
+            "support": 104,
+            "precision": 1.0,
+            "recall": 0.21153846153846154,
+            "f1": 0.3492063492063492
+          },
+          "interface_implementation": {
+            "tp": 0,
+            "fp": 17,
+            "fn": 2,
+            "unknown": 0,
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 72,
+            "fn": 39,
+            "unknown": 3,
+            "support": 40,
+            "precision": 0.0136986301369863,
+            "recall": 0.025,
+            "f1": 0.017699115044247787
+          },
+          "callback": {
+            "tp": 36,
+            "fp": 3,
+            "fn": 113,
+            "unknown": 0,
+            "support": 149,
+            "precision": 0.9230769230769231,
+            "recall": 0.24161073825503357,
+            "f1": 0.3829787234042553
+          },
+          "decorator": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 10,
+            "unknown": 0,
+            "support": 17,
+            "precision": 0.7777777777777778,
+            "recall": 0.4117647058823529,
+            "f1": 0.5384615384615384
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "source_manifest": {
+      "created_at": "2026-10-27T03:00:17.177996+00:00",
+      "repository_commit": "8c7b9ff92f018a394c6faa972e4328ad178b80b9",
+      "dataset_name": "django-helpdesk",
+      "annotation_version": "django-helpdesk-application-v1",
+      "model_alias": "jev-latest",
+      "resolved_models": [
+        "jev-1.14.0"
+      ],
+      "ground_truth": "/data/fyn/yasa/YASA-Engine/LLM-check/annotations/django-helpdesk-application-v1",
+      "prediction_run": "/data/fyn/yasa/YASA-Engine/LLM-check/runs/jev-django-helpdesk-20261026-204401",
+      "ground_truth_sha256": "d6c1355c7d291adba2b052395aa026e522d20ab2e7aed7612f4b6e3b0e29c7a7",
+      "predictions_sha256": "2da6df7e84ba18662eb6678ad7b50d85216a7309f4c841c60ce8c0e0bf1a80db",
+      "prepared_sha256": "1b00a9c374a3f23228fb6c39559061778780e88c24997fd2823af8348255d808",
+      "evaluator_sha256": "262c09a6c850e8dad782a6e1f110eed965950794da29d662935f8b83401d3f1f",
+      "ground_truth_use": "user_accepted_for_current_experiment",
+      "api_called": false,
+      "unknown_gold_policy": "exclude from scored binary/classification cohorts; retain separate rows",
+      "model_unresolved_policy": "not silently changed to no; counted separately and not recovered in all-positive recall"
+    },
+    "input_hashes": {
+      "metrics.json": "2dd28e780fca61bd695c1b045aca065b40e65df6c50270082d975200d5702d3b",
+      "details.json": "9e7551a398555b5ddd1d1da3f263938cae8a02b1b0887e11988c538c2483fd26",
+      "ground-truth.snapshot.json": "d6c1355c7d291adba2b052395aa026e522d20ab2e7aed7612f4b6e3b0e29c7a7",
+      "manifest.json": "f26e284a3adcc4364b02bb948397666f8d9872145d8b5517a5f962b7c0621326"
+    }
+  }
+]

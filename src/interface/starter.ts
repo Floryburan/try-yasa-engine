@@ -34,6 +34,7 @@ function validateIncrementalModeLazy(mode: string | undefined): import('../confi
 }
 
 const CALL_SUMMARY_MODES = ['off', 'only-preprocess', 'on'] as const
+let entryPointModeBeforeLlm: string | undefined
 
 type CallSummaryMode = (typeof CALL_SUMMARY_MODES)[number]
 type CallSummaryStageStrategy = 'bypass' | 'skip-only'
@@ -288,6 +289,11 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
 
   // load the basic configuration from e.g. 'config.json'
   resetDataflowCliConfig()
+  if (entryPointModeBeforeLlm !== undefined) {
+    Config.entryPointMode = entryPointModeBeforeLlm
+    entryPointModeBeforeLlm = undefined
+  }
+  Config.llmInputFile = undefined
   loadConfig(Config.configFilePath)
   const program = new Command()
   let reportPath = ''
@@ -343,6 +349,9 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
     })
     .option('--frameworkModeler', '使用 LLM 生成 FrameworkSpec 并注册通用框架 Checker', () => {
       Config.frameworkModeler = true
+    })
+    .option('--llmInputFile <file>', '导入模型给出的 Python 入口、source 与 sink 参数，替代原有入口/source/sink 规则', (file: string) => {
+      Config.llmInputFile = path.resolve(file)
     })
     .option('--single', '单文件模式', () => {
       Config.single = true
@@ -860,6 +869,16 @@ async function initAnalyzer(dir: any, args: any[] = [], printf?: any) {
     }
     Config.analyzer = f
     Analyzer = (analyzerEnum as any)[Config.analyzer]
+  }
+  if (Config.llmInputFile) {
+    if (Config.analyzer !== 'PythonAnalyzer' || Config.single || Config.frameworkModeler || Config.incrementalCache || Config.loadContextEnvironment || Config.saveContextEnvironment || Config.miniSaveContextEnvironment) {
+      throw new Error('--llmInputFile requires a Python repository scan without frameworkModeler, incrementalCache or saved-context save/load')
+    }
+    // Apply after all CLI/config options: option order cannot re-enable automatic
+    // collectors. Imported entries replace custom rule-config entries as well.
+    entryPointModeBeforeLlm = Config.entryPointMode
+    Config.entryPointMode = 'ONLY_CUSTOM'
+    yasaLog(`LLM entrypoint/source/sink input: ${Config.llmInputFile}`, 'init')
   }
   yasaLog(`Analysis language: ${Config.language}`, 'init')
   yasaLog(`Analysis analyzer: ${Config.analyzer}`, 'init')

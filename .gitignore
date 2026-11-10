@@ -61,3 +61,7 @@ test/php/report
 deps
 node_modules
 native/better-sqlite3/*.tar.gz
+# 本地实验仓库
+/CTFd/
+/django-helpdesk/
+/xast_benchmark/

@@ -1,0 +1,704 @@
+[
+  {
+    "repository": "CTFd",
+    "overall": {
+      "repository": "CTFd",
+      "functions_scanned": 847,
+      "scored_functions": 805,
+      "reference_unknown_excluded": 42,
+      "model_unknown": 1,
+      "accuracy": 0.8260869565217391,
+      "precision": 0.9960629921259843,
+      "recall": 0.6454081632653061,
+      "f1": 0.7832817337461301,
+      "tp": 253,
+      "fp": 1,
+      "fn_decided": 138,
+      "tn": 412
+    },
+    "purpose_end_to_end": {
+      "http": {
+        "support": 225,
+        "entrypoints_detected": 224,
+        "entrypoint_detection_recall": 0.9955555555555555,
+        "tp": 223,
+        "fp": 4,
+        "fn": 2,
+        "precision": 0.9823788546255506,
+        "recall": 0.9911111111111112,
+        "f1": 0.9867256637168141
+      },
+      "rpc": {
+        "support": 0,
+        "entrypoints_detected": 0,
+        "entrypoint_detection_recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "cli": {
+        "support": 6,
+        "entrypoints_detected": 6,
+        "entrypoint_detection_recall": 1.0,
+        "tp": 6,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75
+      },
+      "event": {
+        "support": 6,
+        "entrypoints_detected": 2,
+        "entrypoint_detection_recall": 0.3333333333333333,
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "lifecycle": {
+        "support": 28,
+        "entrypoints_detected": 17,
+        "entrypoint_detection_recall": 0.6071428571428571,
+        "tp": 13,
+        "fp": 1,
+        "fn": 15,
+        "precision": 0.9285714285714286,
+        "recall": 0.4642857142857143,
+        "f1": 0.6190476190476191
+      },
+      "other": {
+        "support": 127,
+        "entrypoints_detected": 4,
+        "entrypoint_detection_recall": 0.031496062992125984,
+        "tp": 0,
+        "fp": 0,
+        "fn": 127,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "formations_end_to_end": {
+      "registration": {
+        "tp": 3,
+        "fp": 239,
+        "fn": 31,
+        "unknown": 0,
+        "support": 34,
+        "precision": 0.012396694214876033,
+        "recall": 0.08823529411764706,
+        "f1": 0.021739130434782608,
+        "entrypoints_detected": 3,
+        "entrypoint_detection_recall": 0.08823529411764706
+      },
+      "inheritance": {
+        "tp": 146,
+        "fp": 0,
+        "fn": 55,
+        "unknown": 0,
+        "support": 201,
+        "precision": 1.0,
+        "recall": 0.7263681592039801,
+        "f1": 0.8414985590778098,
+        "entrypoints_detected": 162,
+        "entrypoint_detection_recall": 0.8059701492537313
+      },
+      "interface_implementation": {
+        "tp": 2,
+        "fp": 7,
+        "fn": 18,
+        "unknown": 0,
+        "support": 20,
+        "precision": 0.2222222222222222,
+        "recall": 0.1,
+        "f1": 0.13793103448275862,
+        "entrypoints_detected": 2,
+        "entrypoint_detection_recall": 0.1
+      },
+      "configuration": {
+        "tp": 1,
+        "fp": 201,
+        "fn": 93,
+        "unknown": 6,
+        "support": 94,
+        "precision": 0.0049504950495049506,
+        "recall": 0.010638297872340425,
+        "f1": 0.006756756756756757,
+        "entrypoints_detected": 9,
+        "entrypoint_detection_recall": 0.09574468085106383
+      },
+      "callback": {
+        "tp": 17,
+        "fp": 15,
+        "fn": 110,
+        "unknown": 0,
+        "support": 127,
+        "precision": 0.53125,
+        "recall": 0.13385826771653545,
+        "f1": 0.2138364779874214,
+        "entrypoints_detected": 18,
+        "entrypoint_detection_recall": 0.14173228346456693
+      },
+      "decorator": {
+        "tp": 234,
+        "fp": 0,
+        "fn": 22,
+        "unknown": 0,
+        "support": 256,
+        "precision": 1.0,
+        "recall": 0.9140625,
+        "f1": 0.9551020408163265,
+        "entrypoints_detected": 234,
+        "entrypoint_detection_recall": 0.9140625
+      },
+      "other": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "unknown": 0,
+        "support": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "entrypoints_detected": 1,
+        "entrypoint_detection_recall": 1.0
+      }
+    },
+    "formation_micro_end_to_end": {
+      "micro_precision": 0.4658959537572254,
+      "micro_recall": 0.5497953615279673,
+      "micro_f1": 0.5043804755944932
+    },
+    "conditional_classification_for_diagnosis_only": {
+      "true_positive_functions": 253,
+      "formation_exact_count": 1,
+      "formation_exact_on_true_positives": 0.003952569169960474,
+      "formation_exact_on_all_gold_positives": 0.002551020408163265,
+      "kind_correct_count": 242,
+      "kind_accuracy_on_true_positives": 0.9565217391304348,
+      "kind_correct_on_all_gold_positives": 0.6173469387755102,
+      "formation_conditional_on_true_positives": {
+        "counts": {
+          "tp": 403,
+          "fp": 460,
+          "fn": 26
+        },
+        "micro_precision": 0.46697566628041715,
+        "micro_recall": 0.9393939393939394,
+        "micro_f1": 0.6238390092879257,
+        "per_label": {
+          "registration": {
+            "tp": 3,
+            "fp": 238,
+            "fn": 0,
+            "unknown": 0,
+            "support": 3,
+            "precision": 0.012448132780082987,
+            "recall": 1.0,
+            "f1": 0.02459016393442623
+          },
+          "inheritance": {
+            "tp": 146,
+            "fp": 0,
+            "fn": 16,
+            "unknown": 0,
+            "support": 162,
+            "precision": 1.0,
+            "recall": 0.9012345679012346,
+            "f1": 0.948051948051948
+          },
+          "interface_implementation": {
+            "tp": 2,
+            "fp": 7,
+            "fn": 0,
+            "unknown": 0,
+            "support": 2,
+            "precision": 0.2222222222222222,
+            "recall": 1.0,
+            "f1": 0.36363636363636365
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 200,
+            "fn": 8,
+            "unknown": 6,
+            "support": 9,
+            "precision": 0.004975124378109453,
+            "recall": 0.1111111111111111,
+            "f1": 0.009523809523809525
+          },
+          "callback": {
+            "tp": 17,
+            "fp": 15,
+            "fn": 1,
+            "unknown": 0,
+            "support": 18,
+            "precision": 0.53125,
+            "recall": 0.9444444444444444,
+            "f1": 0.68
+          },
+          "decorator": {
+            "tp": 234,
+            "fp": 0,
+            "fn": 0,
+            "unknown": 0,
+            "support": 234,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "formation_end_to_end_on_binary_gold": {
+        "counts": {
+          "tp": 403,
+          "fp": 462,
+          "fn": 330
+        },
+        "micro_precision": 0.4658959537572254,
+        "micro_recall": 0.5497953615279673,
+        "micro_f1": 0.5043804755944932,
+        "per_label": {
+          "registration": {
+            "tp": 3,
+            "fp": 239,
+            "fn": 31,
+            "unknown": 0,
+            "support": 34,
+            "precision": 0.012396694214876033,
+            "recall": 0.08823529411764706,
+            "f1": 0.021739130434782608
+          },
+          "inheritance": {
+            "tp": 146,
+            "fp": 0,
+            "fn": 55,
+            "unknown": 0,
+            "support": 201,
+            "precision": 1.0,
+            "recall": 0.7263681592039801,
+            "f1": 0.8414985590778098
+          },
+          "interface_implementation": {
+            "tp": 2,
+            "fp": 7,
+            "fn": 18,
+            "unknown": 0,
+            "support": 20,
+            "precision": 0.2222222222222222,
+            "recall": 0.1,
+            "f1": 0.13793103448275862
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 201,
+            "fn": 93,
+            "unknown": 6,
+            "support": 94,
+            "precision": 0.0049504950495049506,
+            "recall": 0.010638297872340425,
+            "f1": 0.006756756756756757
+          },
+          "callback": {
+            "tp": 17,
+            "fp": 15,
+            "fn": 110,
+            "unknown": 0,
+            "support": 127,
+            "precision": 0.53125,
+            "recall": 0.13385826771653545,
+            "f1": 0.2138364779874214
+          },
+          "decorator": {
+            "tp": 234,
+            "fp": 0,
+            "fn": 22,
+            "unknown": 0,
+            "support": 256,
+            "precision": 1.0,
+            "recall": 0.9140625,
+            "f1": 0.9551020408163265
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "source_folder": "ctfd-jev-reference-v1"
+  },
+  {
+    "repository": "django-helpdesk",
+    "overall": {
+      "repository": "django-helpdesk",
+      "functions_scanned": 425,
+      "scored_functions": 421,
+      "reference_unknown_excluded": 4,
+      "model_unknown": 0,
+      "accuracy": 0.7339667458432304,
+      "precision": 0.989247311827957,
+      "recall": 0.45320197044334976,
+      "f1": 0.6216216216216216,
+      "tp": 92,
+      "fp": 1,
+      "fn_decided": 111,
+      "tn": 217
+    },
+    "purpose_end_to_end": {
+      "http": {
+        "support": 103,
+        "entrypoints_detected": 55,
+        "entrypoint_detection_recall": 0.5339805825242718,
+        "tp": 55,
+        "fp": 5,
+        "fn": 48,
+        "precision": 0.9166666666666666,
+        "recall": 0.5339805825242718,
+        "f1": 0.6748466257668712
+      },
+      "rpc": {
+        "support": 0,
+        "entrypoints_detected": 0,
+        "entrypoint_detection_recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "cli": {
+        "support": 10,
+        "entrypoints_detected": 10,
+        "entrypoint_detection_recall": 1.0,
+        "tp": 10,
+        "fp": 12,
+        "fn": 0,
+        "precision": 0.45454545454545453,
+        "recall": 1.0,
+        "f1": 0.625
+      },
+      "event": {
+        "support": 4,
+        "entrypoints_detected": 4,
+        "entrypoint_detection_recall": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "lifecycle": {
+        "support": 24,
+        "entrypoints_detected": 14,
+        "entrypoint_detection_recall": 0.5833333333333334,
+        "tp": 1,
+        "fp": 0,
+        "fn": 23,
+        "precision": 1.0,
+        "recall": 0.041666666666666664,
+        "f1": 0.08
+      },
+      "other": {
+        "support": 62,
+        "entrypoints_detected": 9,
+        "entrypoint_detection_recall": 0.14516129032258066,
+        "tp": 2,
+        "fp": 0,
+        "fn": 60,
+        "precision": 1.0,
+        "recall": 0.03225806451612903,
+        "f1": 0.0625
+      }
+    },
+    "formations_end_to_end": {
+      "registration": {
+        "tp": 68,
+        "fp": 6,
+        "fn": 54,
+        "unknown": 0,
+        "support": 122,
+        "precision": 0.918918918918919,
+        "recall": 0.5573770491803278,
+        "f1": 0.6938775510204082,
+        "entrypoints_detected": 70,
+        "entrypoint_detection_recall": 0.5737704918032787
+      },
+      "inheritance": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 82,
+        "unknown": 0,
+        "support": 104,
+        "precision": 1.0,
+        "recall": 0.21153846153846154,
+        "f1": 0.3492063492063492,
+        "entrypoints_detected": 22,
+        "entrypoint_detection_recall": 0.21153846153846154
+      },
+      "interface_implementation": {
+        "tp": 0,
+        "fp": 17,
+        "fn": 2,
+        "unknown": 0,
+        "support": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "entrypoints_detected": 0,
+        "entrypoint_detection_recall": 0.0
+      },
+      "configuration": {
+        "tp": 1,
+        "fp": 72,
+        "fn": 39,
+        "unknown": 3,
+        "support": 40,
+        "precision": 0.0136986301369863,
+        "recall": 0.025,
+        "f1": 0.017699115044247787,
+        "entrypoints_detected": 4,
+        "entrypoint_detection_recall": 0.1
+      },
+      "callback": {
+        "tp": 36,
+        "fp": 3,
+        "fn": 113,
+        "unknown": 0,
+        "support": 149,
+        "precision": 0.9230769230769231,
+        "recall": 0.24161073825503357,
+        "f1": 0.3829787234042553,
+        "entrypoints_detected": 39,
+        "entrypoint_detection_recall": 0.26174496644295303
+      },
+      "decorator": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 10,
+        "unknown": 0,
+        "support": 17,
+        "precision": 0.7777777777777778,
+        "recall": 0.4117647058823529,
+        "f1": 0.5384615384615384,
+        "entrypoints_detected": 8,
+        "entrypoint_detection_recall": 0.47058823529411764
+      },
+      "other": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "unknown": 0,
+        "support": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "entrypoints_detected": 1,
+        "entrypoint_detection_recall": 1.0
+      }
+    },
+    "formation_micro_end_to_end": {
+      "micro_precision": 0.5726495726495726,
+      "micro_recall": 0.3080459770114943,
+      "micro_f1": 0.40059790732436473
+    },
+    "conditional_classification_for_diagnosis_only": {
+      "true_positive_functions": 92,
+      "formation_exact_count": 6,
+      "formation_exact_on_true_positives": 0.06521739130434782,
+      "formation_exact_on_all_gold_positives": 0.029556650246305417,
+      "kind_correct_count": 72,
+      "kind_accuracy_on_true_positives": 0.782608695652174,
+      "kind_correct_on_all_gold_positives": 0.35467980295566504,
+      "formation_conditional_on_true_positives": {
+        "counts": {
+          "tp": 134,
+          "fp": 100,
+          "fn": 10
+        },
+        "micro_precision": 0.5726495726495726,
+        "micro_recall": 0.9305555555555556,
+        "micro_f1": 0.708994708994709,
+        "per_label": {
+          "registration": {
+            "tp": 68,
+            "fp": 6,
+            "fn": 2,
+            "unknown": 0,
+            "support": 70,
+            "precision": 0.918918918918919,
+            "recall": 0.9714285714285714,
+            "f1": 0.9444444444444444
+          },
+          "inheritance": {
+            "tp": 22,
+            "fp": 0,
+            "fn": 0,
+            "unknown": 0,
+            "support": 22,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "interface_implementation": {
+            "tp": 0,
+            "fp": 17,
+            "fn": 0,
+            "unknown": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 72,
+            "fn": 3,
+            "unknown": 2,
+            "support": 4,
+            "precision": 0.0136986301369863,
+            "recall": 0.25,
+            "f1": 0.025974025974025976
+          },
+          "callback": {
+            "tp": 36,
+            "fp": 3,
+            "fn": 3,
+            "unknown": 0,
+            "support": 39,
+            "precision": 0.9230769230769231,
+            "recall": 0.9230769230769231,
+            "f1": 0.9230769230769231
+          },
+          "decorator": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 1,
+            "unknown": 0,
+            "support": 8,
+            "precision": 0.7777777777777778,
+            "recall": 0.875,
+            "f1": 0.8235294117647058
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "formation_end_to_end_on_binary_gold": {
+        "counts": {
+          "tp": 134,
+          "fp": 100,
+          "fn": 301
+        },
+        "micro_precision": 0.5726495726495726,
+        "micro_recall": 0.3080459770114943,
+        "micro_f1": 0.40059790732436473,
+        "per_label": {
+          "registration": {
+            "tp": 68,
+            "fp": 6,
+            "fn": 54,
+            "unknown": 0,
+            "support": 122,
+            "precision": 0.918918918918919,
+            "recall": 0.5573770491803278,
+            "f1": 0.6938775510204082
+          },
+          "inheritance": {
+            "tp": 22,
+            "fp": 0,
+            "fn": 82,
+            "unknown": 0,
+            "support": 104,
+            "precision": 1.0,
+            "recall": 0.21153846153846154,
+            "f1": 0.3492063492063492
+          },
+          "interface_implementation": {
+            "tp": 0,
+            "fp": 17,
+            "fn": 2,
+            "unknown": 0,
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "configuration": {
+            "tp": 1,
+            "fp": 72,
+            "fn": 39,
+            "unknown": 3,
+            "support": 40,
+            "precision": 0.0136986301369863,
+            "recall": 0.025,
+            "f1": 0.017699115044247787
+          },
+          "callback": {
+            "tp": 36,
+            "fp": 3,
+            "fn": 113,
+            "unknown": 0,
+            "support": 149,
+            "precision": 0.9230769230769231,
+            "recall": 0.24161073825503357,
+            "f1": 0.3829787234042553
+          },
+          "decorator": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 10,
+            "unknown": 0,
+            "support": 17,
+            "precision": 0.7777777777777778,
+            "recall": 0.4117647058823529,
+            "f1": 0.5384615384615384
+          },
+          "other": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "unknown": 0,
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      }
+    },
+    "source_folder": "django-helpdesk-jev-reference-v2"
+  }
+]

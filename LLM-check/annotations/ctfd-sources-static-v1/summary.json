@@ -1,0 +1,35 @@
+{
+  "unique_candidates": 6036,
+  "labels": {
+    "no": 5027,
+    "unknown": 585,
+    "yes": 424
+  },
+  "categories": {
+    "processing_or_query_construction": 1447,
+    "unproved_database_read": 151,
+    "unresolved_call_origin": 178,
+    "library_processing": 354,
+    "application_value_or_metadata": 1846,
+    "internal_call": 858,
+    "request_carrier": 6,
+    "unresolved_attribute_receiver": 186,
+    "framework_request_read": 301,
+    "write_or_side_effect": 204,
+    "route_parameter": 110,
+    "receiver": 168,
+    "unproved_external_io": 3,
+    "internal_or_runtime_parameter": 138,
+    "unproved_request_read": 3,
+    "unproved_parameter_origin": 3,
+    "unproved_storage_read": 21,
+    "unproved_persisted_or_environment_read": 30,
+    "cli_parameter": 7,
+    "request_carrier_read": 10,
+    "deployment_or_event_parameter": 3,
+    "unreviewed_request_attribute": 5,
+    "write_only_file": 2,
+    "unproved_file_origin": 2
+  },
+  "independent_human_review": false
+}

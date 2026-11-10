@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-10-27T07:07:09.457030+00:00",
+  "report": "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-yasa-manual/report/report.sarif",
+  "report_sha256": "f2d14d467941b03c503e3586e5d1e7320e54bfa528cf98ea3cc48c04380a39cd",
+  "report_bytes": 15974042,
+  "repository": "/data/fyn/yasa/YASA-Engine/CTFd",
+  "current_repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+  "current_repository_commit_is_report_commit_proof": false,
+  "extractor_sha256": "9f1a19e60ea2a466506e806639355d27cf3581617213eb0162973759f2e1cf08",
+  "source_files_sha256": {
+    "CTFd/__init__.py": "40be61e2ba26dd8e3b57e975eb50703f09d0be3874343867eeda87bf3d2f9d9e",
+    "CTFd/admin/__init__.py": "8ba28e0233399e06d4cb76738d61890dc3416f6beed89a4d06cdaebc469f9ca1",
+    "CTFd/api/v1/challenges.py": "0ce18614419f3874fbe722c0cf0048ec70d8bad4a031b6d442b3f66d7807c53b",
+    "CTFd/api/v1/scoreboard.py": "8a52cc8374836fc1ee88c20c97b5a24d459116bd82091968a7bb0f18da417a4d",
+    "CTFd/auth.py": "e634669d68f96b11d68947cfafd49da71e5e1d8722e7fea8dcfc9406dfc2ac97",
+    "CTFd/plugins/challenges/__init__.py": "e574116cbcf6124a814b49b6697d90c39579ba7fd54d4c9cd31e2bc7cce913f3",
+    "CTFd/utils/__init__.py": "f640e9c904f88356a313bb61beafb9eb70c6e135c730bf176c6f26aae4de25ea",
+    "CTFd/utils/config/pages.py": "ec4371be9e7323f2c2a04fa18cc46ff8fd0db726c23447b8b43b875f03871878",
+    "CTFd/utils/exports/databases.py": "08dce10a566d2a02ddf6fb697faa31dd0bea10473880e77ab05b02c278e43663",
+    "CTFd/utils/initialization/__init__.py": "b63ed2916a5d5569e3065348cda8643da7405c92152303566257a711548e3733",
+    "CTFd/utils/migrations/__init__.py": "356643408b22078f883f01a36f87423353a658c9b9bbd87fc9ab921612f50a59",
+    "CTFd/utils/updates/__init__.py": "f537e8572f65e75268c49405bd445200eaf8910c25b056a0f75d60fd0e2b7d85"
+  },
+  "source_detection": "explicit SOURCE tag or structured source role; no first-step fallback",
+  "deduplication": "normalized file/URI + start/end line/column + affected expression; not nodehash or function name",
+  "limitations": [
+    "No sources absent from emitted findings can be recovered.",
+    "YASA marks are not independently confirmed attacker-controlled input.",
+    "SARIF does not identify the original source rule/tag kind here; these fields remain null.",
+    "Current-source owner/syntax enrichment does not prove the report was produced from that commit.",
+    "Entrypoint descriptors may omit class and definition location; do not treat them as exact IDs."
+  ],
+  "engine_executed": false,
+  "api_called": false
+}

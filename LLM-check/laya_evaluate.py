@@ -13,6 +13,7 @@ from context_graph import ContextGraph, fingerprint
 from laya_smoke import (compact_record, render_state, token_audit, validate_answers,
                         validate_response, write_json)
 from input_length_audit import response_audit, summarize_input_audits
+from jev_config import api_headers, api_url
 
 HERE = Path(__file__).resolve().parent
 PROMPTS = {"baseline": HERE / "prompts/entrypoint_laya_v1.json",
@@ -216,6 +217,9 @@ def _run(args):
         api_key = read_settings(getattr(args, "env_file", manifest.get("env_file", DEFAULT_ENV_FILE)), require_key=True)["api_key"]
     if api_key:
         headers["Authorization"] = "Bearer " + api_key
+    if manifest.get("provider") == "jev":
+        headers = api_headers(api_key)
+    inference_url = api_url(args.url) if manifest.get("provider") == "jev" else args.url + "/v1/systemone"
     def health(name):
         if manifest.get("provider") == "jev":
             return  # /health is a local Laya endpoint, not a Jev API contract.
@@ -258,7 +262,7 @@ def _run(args):
                     raw = candidate
             reused = raw is not None
             if raw is None:
-                req = request.Request(args.url + "/v1/systemone", headers=headers,
+                req = request.Request(inference_url, headers=headers,
                                       data=wire, method="POST")
                 request_started = time.monotonic()
                 http_status = None

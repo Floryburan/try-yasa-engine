@@ -1,0 +1,79 @@
+﻿source_id,file,start_line,start_column,end_line,end_column,expression,syntax_kind,enclosing_function,enclosing_function_start_line,finding_count,occurrences,reported_entrypoint_count,source_resolution,source_expression_text,source_text,reported_uri
+source_01d508b34541cd7e2e15,CTFd/__init__.py,212,17,212,49,app.config.get(THEME_FALLBACK),call_return_value,CTFd.create_app,187,1,1,1,located_in_current_source,"app.config.get(""THEME_FALLBACK"")","        if bool(app.config.get(""THEME_FALLBACK"")):
+",file:///CTFd/__init__.py
+source_c59d765575acee4ddf93,CTFd/__init__.py,290,25,290,56,app.config.get(REVERSE_PROXY),call_return_value,CTFd.create_app,187,2,2,1,located_in_current_source,"app.config.get(""REVERSE_PROXY"")","        reverse_proxy = app.config.get(""REVERSE_PROXY"")
+",file:///CTFd/__init__.py
+source_346ac3cf4548aed6341c,CTFd/admin/__init__.py,81,12,81,18,plugin,parameter,CTFd.admin.plugin,81,3,3,2,located_in_current_source,plugin,"def plugin(plugin):
+",file:///CTFd/admin/__init__.py
+source_5b5438a6fc0dd24e3640,CTFd/api/v1/challenges.py,321,31,321,62,CHALLENGE_CLASSES.get(class_id),call_return_value,CTFd.api.v1.challenges.ChallengeTypes.get,317,2,2,1,located_in_current_source,CHALLENGE_CLASSES.get(class_id),"            challenge_class = CHALLENGE_CLASSES.get(class_id)
+",file:///CTFd/api/v1/challenges.py
+source_38f3a80f026067cf39b8,CTFd/api/v1/challenges.py,349,19,349,31,challenge_id,parameter,CTFd.api.v1.challenges.Challenge.get,349,16,16,1,located_in_current_source,challenge_id,"    def get(self, challenge_id):
+",file:///CTFd/api/v1/challenges.py
+source_fe76ebb37473b41207cb,CTFd/api/v1/challenges.py,507,58,507,70,challenge_id,Name,CTFd.api.v1.challenges.Challenge.get,349,8,8,1,located_in_current_source,challenge_id,"                account_id=user.account_id, challenge_id=challenge_id
+",file:///CTFd/api/v1/challenges.py
+source_595eedb34d76b82a066c,CTFd/api/v1/scoreboard.py,35,17,50,14,"db.session.execute(select({0:Users.id, 1:Users.name, 2:Users.oauth_id, 3:Users.team_id, 4:Users.hidden, 5:Users.banned, 6:Users.bracket_id, 7:Brackets.name.label(bracket_name)}).where(Users.team_id.isnot(...)).join(Brackets, Users.bracket_id==Brackets.id, var isouter:any=true))",call_return_value,CTFd.api.v1.scoreboard.ScoreboardList.get,28,1,1,1,located_in_current_source,"db.session.execute(
+                select(
+                    [
+                        Users.id,
+                        Users.name,
+                        Users.oauth_id,
+                        Users.team_id,
+                        Users.hidden,
+                        Users.banned,
+                        Users.bracket_id,
+                        Brackets.name.label(""bracket_name""),
+                    ]
+                )
+                .where(Users.team_id.isnot(None))
+                .join(Brackets, Users.bracket_id == Brackets.id, isouter=True)
+            )","            r = db.session.execute(
+                select(
+                    [
+                        Users.id,
+                        Users.name,
+                        Users.oauth_id,
+                        Users.team_id,
+                        Users.hidden,
+                        Users.banned,
+                        Users.bracket_id,
+                        Brackets.name.label(""bracket_name""),
+                    ]
+                )
+                .where(Users.team_id.isnot(None))
+                .join(Brackets, Users.bracket_id == Brackets.id, isouter=True)
+            )
+",file:///CTFd/api/v1/scoreboard.py
+source_ba2628906d42d1c697ce,CTFd/auth.py,587,59,587,66,headers,Name,CTFd.auth.oauth_redirect,547,1,1,1,located_in_current_source,headers,"            api_data = requests.get(url=user_url, headers=headers, timeout=5).json()
+",file:///CTFd/auth.py
+source_51c310016eb46976511e,CTFd/plugins/challenges/__init__.py,358,11,358,42,CHALLENGE_CLASSES.get(class_id),call_return_value,CTFd.plugins.challenges.get_chal_class,351,7,7,1,located_in_current_source,CHALLENGE_CLASSES.get(class_id),"    cls = CHALLENGE_CLASSES.get(class_id)
+",file:///CTFd/plugins/challenges/__init__.py
+source_a3b9443930493c077f8d,CTFd/utils/__init__.py,46,14,48,6,db.session.execute(Configs.__table__.select().where(Configs.key==key)),call_return_value,CTFd.utils._get_config,45,1,1,1,located_in_current_source,"db.session.execute(
+        Configs.__table__.select().where(Configs.key == key)
+    )","    config = db.session.execute(
+        Configs.__table__.select().where(Configs.key == key)
+    ).fetchone()
+",file:///CTFd/utils/__init__.py
+source_eb44dc460b5fb40288f8,CTFd/utils/__init__.py,79,20,79,37,DEFAULTS.get(key),call_return_value,CTFd.utils.get_config,65,6,6,2,located_in_current_source,DEFAULTS.get(key),"            return DEFAULTS.get(key)
+",file:///CTFd/utils/__init__.py
+source_ea9c51daf3694427a340,CTFd/utils/config/pages.py,70,12,74,6,db.session.execute(Pages.__table__.select().where(Pages.route==route).where(Pages.draft.isnot(true))),call_return_value,CTFd.utils.config.pages.get_page,69,1,1,1,located_in_current_source,"db.session.execute(
+        Pages.__table__.select()
+        .where(Pages.route == route)
+        .where(Pages.draft.isnot(True))
+    )","    page = db.session.execute(
+        Pages.__table__.select()
+        .where(Pages.route == route)
+        .where(Pages.draft.isnot(True))
+    ).fetchone()
+",file:///CTFd/utils/config/pages.py
+source_d6a924ca20d7563d8ca7,CTFd/utils/exports/databases.py,8,18,8,56,db.session.execute(SELECT version()),call_return_value,CTFd.utils.exports.databases.is_database_mariadb,6,1,1,1,located_in_current_source,"db.session.execute(""SELECT version()"")","        result = db.session.execute(""SELECT version()"").fetchone()[0]
+",file:///CTFd/utils/exports/databases.py
+source_d82404e9a4bdbb97de6e,CTFd/utils/initialization/__init__.py,207,24,207,58,app.config.get(APPLICATION_ROOT),call_return_value,CTFd.utils.initialization.init_request_processors,206,1,1,1,located_in_current_source,"app.config.get(""APPLICATION_ROOT"")","    application_root = app.config.get(""APPLICATION_ROOT"")
+",file:///CTFd/utils/initialization/__init__.py
+source_60e34ffed5052897d675,CTFd/utils/migrations/__init__.py,20,15,20,47,url.set(var drivername:any=postgresql),call_return_value,CTFd.utils.migrations.create_database,17,2,2,1,located_in_current_source,"url.set(drivername=""postgresql"")","        url = url.set(drivername=""postgresql"")
+",file:///CTFd/utils/migrations/__init__.py
+source_8e36c5b190c423d189af,CTFd/utils/updates/__init__.py,58,21,60,14,"requests.get(https://versioning.ctfd.io/check, var params:any=params, var timeout:any=3)",call_return_value,CTFd.utils.updates.update_check,15,1,1,1,located_in_current_source,"requests.get(
+                ""https://versioning.ctfd.io/check"", params=params, timeout=3
+            )","            check = requests.get(
+                ""https://versioning.ctfd.io/check"", params=params, timeout=3
+            ).json()
+",file:///CTFd/utils/updates/__init__.py

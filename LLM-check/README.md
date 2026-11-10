@@ -1,5 +1,7 @@
 # 用模型逐函数判断 Python 入口
 
+文件和实验目录的用途见 [目录说明](目录说明.md)。
+
 读取 YASA 导出的 UAST 全局索引，为每个函数整理上下文，再发起一次模型 API 请求。
 入口判断由模型完成；这里不调用 YASA 原有框架入口 Checker，也不根据路由函数名直接给出判断。
 
@@ -463,6 +465,315 @@ JSON/JSONL/CSV 保存同一套函数身份、分类、完整源码证据和绑�
 位于 `../artifacts/django-helpdesk-uast/index`。重建标注运行 `build_helpdesk_reference.py`，详细命令、分类统计和边界见上述 README。
 
 ## 验证
+
+### Jev 入口之后的 source 试验
+
+全业务入口扫描可以直接读取已有 Jev 入口扫描结果，无需先准备 Laya 小样：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sources.py prepare \
+  --jev-run runs/jev-ctfd-application-bindings-v3 \
+  --out runs/jev-sources-custom-all-v1 --max-helpers 2 --batch-size 8 --max-state-chars 24000
+
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sources.py run \
+  --out runs/jev-sources-custom-all-v1 --workers 4 --retries 2 --timeout 180
+
+/data/fyn/conda_envs/laya/bin/python -B jev_sources.py summarize --out runs/jev-sources-custom-all-v1
+```
+
+CTFd 这轮全量输入位于 `runs/jev-sources-ctfd-application-v1`：
+此前业务范围 847 个函数中模型选出的 256 个入口、7,048 个候选配对、1,010 批请求。
+该范围有 185 个 Python 文件，62 个文件包含预测入口；并不表示逐函数扫描了所有非入口和测试代码。
+入口函数本体的 5,486 个候选全部纳入；另有一层本地辅助实现提供 1,562 个候选配对。
+形成方式和 source 问题保持小样口径，但每批只列当前候选，取消候选数量上限。
+
+每批完整保留目标函数和候选所在函数，超出字符预算时只移除可选证据。
+字符预算不是 Jev 的 token 限制；目标和候选函数本体过长时保留全文并标记 oversized，服务错误明确保存。
+辅助函数数量、长度、静态引用和调用深度仍有预算，`contexts/` 与 manifest 的 cases 逐项记录信息缺口。
+没有源码位置的 UAST 辅助赋值标为 unresolved，不中断其他函数，也不当作非 source。
+
+run 支持有限并发、网络/临时 HTTP 错误重试、每批保存及断点续跑。
+`usage-events/` 记录每次真实请求（含重试），`invocations/` 记录各次运行耗时与复用数。
+`entrypoint-status.json` 记录每个入口完成情况；`unique-sources.json` 按源码位置合并模型选 yes 的候选，
+保留各入口下的原始判断、概率和冲突，不投票改标签。
+统计中的 possible_sources 是入口与候选的配对数，unique_source_positions 是不同源码位置数。
+
+用相同输入切换到 Jev API：`jev_sources.py` 复用冻结的源码上下文、候选、问题与选项顺序，
+只修改模型和服务地址，移除 Laya 专用长度参数。读取本目录已有 `.env` 的 `TYPESAFE_API_KEY`，不在结果中保存密钥。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sources.py prepare \
+  --source-run runs/laya-sources-ctfd-pilot-v2 --out runs/jev-sources-custom-v1
+
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sources.py run \
+  --out runs/jev-sources-custom-v1 --timeout 180
+
+/data/fyn/conda_envs/laya/bin/python -B jev_sources.py summarize --out runs/jev-sources-custom-v1
+```
+
+本轮实际输出位于 `runs/jev-sources-ctfd-pilot-v1`。`input-equivalence.json` 记录输入一致性核对，
+`possible-sources.json` 保存模型选 yes 的候选；`candidate-results.csv`/JSON 保存全部判断、概率和服务原始 confidence。
+Jev 的 confidence 保留原值，不能按 Laya 的归一化熵定义解释，也不能当作本任务准确率。
+`summary.json` 统计响应中保存的 token 用量；缺失 usage 的回复单列，不等于账户历史计费。
+沿用的 Laya 分词审计只供参考，不作为 Jev 的实际分词数；Jev 未报告截断时也不能声称服务端已验证未截断。
+相同 run 命令可以续跑，并复用请求和原始回复哈希一致的成功记录。
+
+本次 Laya source 试验的回复、派生报告与诊断输出已按要求删除，冻结输入仍保留，便于复现这次服务切换。
+
+#### 输入构建与本地 Laya 调试
+
+`laya_sources.py` 读取已有 Jev 的 `manifest.json`、`prepared.json`、`results.json`，
+只选择模型判断为入口的函数，不重新调用 Jev，不修改入口标签或 YASA 引擎。
+当前只支持 Python。默认选 8 个样例以覆盖预测的形成方式和用途，也可以重复传入 `--function`。
+样例选择与输入构建均不读取 ground truth 或已有漏洞报告。
+
+先保留已有精简上下文的完整目标、直接使用位置、外层实现、接收对象和导入。
+注册/回调补充本地注册器实现；装饰器补充本地装饰器实现；继承/接口补充本地基类、同名方法和初始化；
+配置补充目标引用的赋值与绑定。所有入口都额外查找一层可静态解析的本地被调用函数。
+多标签执行各类取证的并集，按文件和源码行去重；预测标签错误或未解析的依赖会保留记录。
+不会读取整个依赖库或搜索所有外部配置文件，也不宣称构建了完整运行时链路。
+
+候选位置包括函数参数、调用返回值、属性读取、下标读取；嵌套函数单独看待。
+这些位置只是待判断候选，不能通过 API 名称直接标成 source。
+Laya 对候选逐项回答 yes/no/unknown，JSON 列表由客户端组装。
+source 在这轮定义为外部可控输入进入应用的起点，普通传播、内部常量、配置和数据库读取不会预先算作 source。
+因此这轮与 YASA 的较宽 source 规则口径不同，不能把漏洞报告的 source 直接当作完整真值。
+
+在本目录执行，服务接口为 `http://127.0.0.1:8001/v1/systemone`：
+
+```bash
+run_dir="runs/laya-sources-custom-$(date +%Y%m%d-%H%M%S)"
+
+PYTHONDONTWRITEBYTECODE=1 USE_TF=0 USE_TORCH=1 \
+  /data/fyn/conda_envs/laya/bin/python -B laya_sources.py prepare \
+  --jev-run runs/jev-ctfd-application-bindings-v3 \
+  --out "$run_dir" --limit 8 --max-len 3072 --batch-size 4 \
+  --max-helpers 2 --max-candidates 32
+
+PYTHONDONTWRITEBYTECODE=1 USE_TF=0 USE_TORCH=1 \
+  /data/fyn/conda_envs/laya/bin/python -B laya_sources.py run \
+  --out "$run_dir" --timeout 180
+
+/data/fyn/conda_envs/laya/bin/python -B laya_sources.py summarize --out "$run_dir"
+```
+
+prepare 使用本地 Laya tokenizer 检查真实序列长度，保留目标全文，预算不足时删除可选证据并记录遗漏。
+辅助函数不完整时，其候选不会继续发送；完整目标仍过长则报准备错误。
+这些数量/长度预算会导致覆盖缺口，不能把未判断位置当作没有 source。
+run 可用同一命令续跑：仅复用请求哈希和原始回复哈希匹配的成功结果。
+GPU 显存不足时 Laya 服务可能自行回退 CPU，客户端的 `--max-len` 和 `--batch-size` 都可以降低单次开销。
+
+输出：`RESULTS.md` 阅读版，`possible-sources.json` 模型选 yes 的候选，
+`candidate-results.json` 全部已判断候选（含 no/unknown），`contexts/` 全部证据和遗漏，
+`requests/` 实际请求内容，`responses/` 服务原始回复。
+每条记录的 `source_probability` 是 P(yes)，`model_confidence` 是服务返回的归一化熵置信度，
+`x_jev_confidence` 是另一种服务端计算值。均保留原值，不代表已验证的正确率。
+
+### 将 Jev 入口、source 和 sink 接入 YASA
+
+`export_yasa_inputs.py` 将已保存的 Jev 入口、source 和 sink 扫描结果导出为
+`yasa-llm-input/v2` JSON，不调用 API，不读取参考标注，不按概率阈值更改模型答案。
+入口只取成功且 `is_entrypoint=true` 的定义；source 只取成功且原始 `choice=yes` 的位置。
+sink 只取成功且原始 `is_sink=true` 的调用位置，保留原始分类、置信度及危险参数选择。
+`--sink-links` 可指定已生成的反查目录，进一步选择其中的 sink 和去重候选入口。
+未完成、失败、输入哈希不一致的 source 批次会阻止导出，避免把缺失结果误当成没有 source。
+导出和扫描时都校验 UAST 索引对应的源码哈希。
+
+在 `LLM-check` 目录导出（选择尚不存在的输出文件）：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B export_yasa_inputs.py \
+  --jev-run runs/jev-ctfd-application-bindings-v3 \
+  --source-run runs/jev-sources-ctfd-application-v1 \
+  --sink-run runs/jev-sinks-ctfd-application-v2 \
+  --sink-links runs/jev-sinks-ctfd-application-v2/callgraph-links-confidence-gt-0.5 \
+  --out runs/jev-sinks-ctfd-application-v2/yasa-propagation-ctfd-v2/yasa-input.json
+```
+
+上述 CTFd 反查范围为 187 个入口、276 条 source 判断、511 个 sink。
+其中 120 个 sink 没有被 Jev 选中的危险参数，保留在输入和统计里，不自动检查所有参数。
+source 若在多个入口中有不同判断，保留各入口的判断，只在关联入口的执行期间生效。
+没有 source 的入口仍会执行；不补充旧规则识别出的 source。
+历史 `yasa-llm-input/v1` 文件只有入口/source，当前严格替换模式要求重新导出 v2，防止继续使用原生 sink。
+
+在 **YASA-Engine 根目录**启动扫描：
+
+```bash
+node --max-old-space-size=16384 --require tsx/cjs src/main.ts \
+  --sourcePath CTFd \
+  --analyzer PythonAnalyzer \
+  --checkerPackIds taint-flow-python-default \
+  --ruleConfigFile resource/example-rule-config/rule_config_python.json \
+  --llmInputFile LLM-check/runs/jev-sinks-ctfd-application-v2/yasa-propagation-ctfd-v2/yasa-input.json \
+  --uastSDKPath my-release-bundle/uast4py-linux-amd64 \
+  --taintTraceOutputStrategy full \
+  --report LLM-check/runs/jev-sinks-ctfd-application-v2/yasa-propagation-ctfd-v2/report
+```
+
+必须使用当前源码启动，或重新编译后的引擎；现有打包二进制没有新参数。
+`--uastSDKPath` 可替换为本机解析器路径。报告目录使用新目录，避免清理已有实验报告。
+
+`--llmInputFile` 是显式替换模式：导入入口替代自动识别、调用图/文件入口及规则文件中的入口；
+原有 source 标记及 Python sink 匹配被关闭，YASA 的传播和框架调用模型继续工作。
+执行到导入的 sink 调用位置时，只检查 Jev 选中的位置参数、关键字参数或接收者。
+没有匹配到导入 sink 的调用，即使命中旧 sink 规则也不会由该规则产生告警。
+无法确定绑定的 `*args` / `**kwargs` 保留为未解析，不当作安全，也不回退为检查全部参数。
+不传该参数时按原有流程扫描。当前支持 Python 仓库，不与框架自动建模或分析上下文缓存的保存/加载混用。
+导入保留原始用途、形成方式和置信度；这些标签作为元数据，实际入口和 source 的绑定依据是代码位置。
+
+入口用文件、定义起止行列匹配；重名方法和 overload 分别绑定。嵌套函数创建词法函数作用域，
+不会把外层工厂额外当成入口；这不等于已经执行外层工厂、恢复了其运行时闭包变量。
+默认直接分析入口原始方法体，跳过装饰器；导出时可用 `--execute-decorators` 改为执行装饰器。
+跳过装饰器时，装饰器内部的检查和输入转换不会自动执行，应结合结果解释覆盖范围。
+
+source 按精确源码位置处理：参数在实际绑定后标记，调用返回值、属性和下标读取在对应表达式求值后标记，
+使用原有 `PYTHON_INPUT` 污点标签和 `SOURCE:` 路径，再交给引擎传播和导入 sink 参数检测。
+不会仅凭名称匹配其他函数或其他位置。同一辅助 source 只在原始 Jev 判断关联的入口下生效。
+
+扫描输出：
+
+- `report.sarif`：传播告警；`sinkInfo.llm` 保留原始 sink 判断、选中参数及其置信度。
+- `llm-input-diagnostics.json`：入口/source/sink 的匹配及执行统计、未选参数和参数绑定未解析数；每个入口结束后更新。
+- `source-to-sink.csv`：整理后包含 sink ID、原始类别、选中参数及 sink/参数置信度。
+- 日志中的 `[LLM]`：导入、位置匹配和实际 source 标记统计。
+
+“匹配到 UAST”不等于“执行到”。动态关系、未执行分支、缺失闭包绑定等仍可能使某些 source 未触发；
+这些位置保留在诊断文件中，不静默替换成旧规则或按同名位置回退。
+告警类别使用 `LLM:<原始 sink_kind>`，不依据函数名改写模型标签或自动宣称命中某个 CWE。
+当前 sink 任务没有输出各 sink 适用的 sanitizer 定义；v2 输出的是污点进入选中参数的传播告警，
+不能单凭传播命中认定已经绕过校验或证明漏洞可利用。
+
+以下为只导入入口/source、继续使用原生 sink 的历史 v1 实验，不能视为当前 v2 结果：
+全 CTFd 256/256 入口、318/318 source 位置绑定成功；小型回归覆盖四种 source、
+嵌套函数、同名方法、跳过装饰器、按入口隔离 source 及关闭导入后的原有扫描。
+CTFd 三入口小样保存于 `runs/jev-sources-ctfd-application-v1/yasa-smoke-report`：3 条 source 均成功标记，
+产生 1 条 `plugin` 参数到 `open(...)` 的路径遍历告警。这份小样不代表完整扫描结果。
+
+该历史全入口污点扫描使用 `yasa-report-v2`，日志为
+`runs/jev-sources-ctfd-application-v1/yasa-full-run-v2.log`。
+第一次尝试保留在 `yasa-full-run.log`，因空净化规则仍遍历大型 receiver 图而中断；
+修复只跳过不可能产生净化匹配的空规则遍历，不更改入口、source、sink 或净化规则。
+原尝试状态记录在 `yasa-full-attempt-v1.json`。
+
+`summarize_yasa_taint.py` 可以自动等待并整理最终报告。当前整理器已启动，输出到
+`runs/jev-sources-ctfd-application-v1/yasa-full-summary-v2`：
+
+- `status.json`：运行进度，每 30 秒更新；`running` 不代表已经完成。
+- `SUMMARY.md` / `summary.json`：扫描结束后生成的统计和导入位置核对结果。
+- `source-to-sink.csv`：每条告警的入口、source、sink，检查其 source 是否属于该入口的原始导入判断。
+- `untriggered-sources.csv`：模型判断为 source 但本轮未成功标记的位置，不能当作非 source。
+
+整理脚本不调用 API，也不修改扫描标签。完整报告尚未生成时，只保存进度，不提前宣称完成。
+重新整理已有结果可在根目录运行（等待扫描时加 `--watch`）：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B LLM-check/summarize_yasa_taint.py \
+  --input LLM-check/runs/jev-sources-ctfd-application-v1/yasa-input.json \
+  --report LLM-check/runs/jev-sources-ctfd-application-v1/yasa-report-v2 \
+  --log LLM-check/runs/jev-sources-ctfd-application-v1/yasa-full-run-v2.log \
+  --repo CTFd \
+  --out LLM-check/runs/jev-sources-ctfd-application-v1/yasa-full-summary-v2
+```
+
+### Jev 逐调用点识别 sink
+
+功能入口为 `jev_sinks.py`，上下文构建为 `sink_context.py`，提示词为 `prompts/sink_jev_v1.json`。
+每个模型目标是一处 Python 调用，输出是否为潜在 sink、操作类型、危险实参/receiver 和原始概率。
+这一步不判断输入是否可控，不直接判断漏洞，也不读取 YASA sink 规则或参考标注作为答案。
+
+长函数不会整体输入。每个调用保留完整调用表达式及参数、所属函数签名，并选取相关导入/别名、
+局部赋值、外层控制条件、少量本地被调用函数及直接使用位置。
+默认最多 16,000 字符、10 条相关赋值、2 层赋值依赖、2 个本地被调用函数（每个最多 100 行）、2 处直接调用证据。
+超出预算的辅助证据记录在 `contexts/`，完整调用不截断；必需输入本身超预算时该候选不提交。
+这是用于判断调用语义的局部上下文，不是已完成的反向污点切片。
+
+`.env` 的 `TYPESAFE_BASE_URL` 填服务根地址或以 `/v1` 结尾的基础地址；不要填完整的 `/v1/systemone` 路径。
+程序使用 Jev 的 choice 接口，实际路径为 `/v1/systemone`，并携带 `YASA-Jev-Client/1.0` 客户端标识。
+
+在 `LLM-check` 目录运行，输出目录选择尚未使用的名称：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sinks.py prepare \
+  --jev-run runs/jev-ctfd-application-bindings-v3 \
+  --out runs/jev-sinks-ctfd-application-v2
+
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sinks.py run \
+  --out runs/jev-sinks-ctfd-application-v2 --workers 4
+
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B jev_sinks.py summarize \
+  --out runs/jev-sinks-ctfd-application-v2
+```
+
+`prepare` 只提取输入。默认覆盖业务文件里的调用点，不用入口可达性做预筛选；可用 `--function`、
+`--candidate` 或 `--limit` 选择小样。`run` 先问是否为 sink，只对原始答案 yes 的候选继续询问类型和参数，
+再次执行相同 run 命令可复用已保存的回复。参数 selector 中 `positional_0` 是源码第一个位置实参，
+`keyword_N` 保留对应关键字名称，`receiver` 是方法调用的接收对象；`*args` 和 `**kwargs` 的实际展开位置未被证明。
+
+输出：`possible-sinks.csv`/JSON 为模型选 yes 的调用，`candidate-results.csv` 为全部判断，
+`results.json` 保留参数选择及原始概率，`state-text/` 为精简输入，`requests/`、`responses/` 为实际请求和回复。
+`summary.json`、`statistics.txt` 记录数量和 API 用量。模型未选出危险参数时保留原始结果，不自动补选。
+
+CTFd 已准备 7,500 个业务调用点。已完成的 8 调用小样在 `runs/jev-sinks-ctfd-pilot-v1`：
+3 个潜在 sink、5 个非 sink、0 unknown、0 失败，耗时约 6.94 秒，11 次请求，17,586 tokens。
+`open` 选中路径实参，`render_template_string` 选中模板实参；SQL execute 被判为 sink，但两个参数角色问题均回答 no。
+原始答案完整保留，不能把这 8 个样例当作全库准确率。全量扫描结果写入 `runs/jev-sinks-ctfd-application-v2`。
+本次小样命令临时指定了 `TYPESAFE_BASE_URL=https://api.site`，没有修改用户 `.env`。
+
+### 把 Jev sink、入口和 source 关联到 YASA 调用图
+
+`link_sink_candidates.py` 离线读取现有三轮结果，不调用模型。sink 扫描仍在运行时也可以执行：
+每次只使用启动时读到的已保存结果；扫描结束后重新执行同一命令，更新同一输出目录。
+在 **YASA-Engine 根目录**运行：
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /data/fyn/conda_envs/laya/bin/python -B LLM-check/link_sink_candidates.py \
+  --sink-run LLM-check/runs/jev-sinks-ctfd-application-v2 \
+  --entrypoint-run LLM-check/runs/jev-ctfd-application-bindings-v3 \
+  --source-run LLM-check/runs/jev-sources-ctfd-application-v1 \
+  --callgraph artifacts/ctfd-full-callgraph-20261026/report/callgraph.json \
+  --out LLM-check/runs/jev-sinks-ctfd-application-v2/callgraph-links
+```
+
+按 sink 置信度选择反查起点时，在命令中添加 `--sink-confidence-gt 0.5`，
+并将 `--out` 改为 `LLM-check/runs/jev-sinks-ctfd-application-v2/callgraph-links-confidence-gt-0.5`。
+该参数严格筛选原始 `sink_answer.confidence > 0.5` 的模型阳性调用点，等于 0.5 的不纳入；
+不是按 `probabilities.yes` 筛选。汇总分别记录扫描中的全部阳性 sink、本次反查数量和被阈值排除的数量。
+筛选只决定反查起点，保留模型原始判断和分数。
+
+脚本先按 UAST 中所属函数的文件及完整定义行列，匹配调用图节点；同一源码定义的多个图节点
+合并用于函数级可达性，原图节点和边仍可回查。模块/类初始化中的调用、没有匹配函数节点的 sink
+单独保留；不按重名函数回退绑定。sink 调用自身是否有对应的调用图边也单独记录。
+
+从 sink 所在函数沿所有调用者反查，不限制深度，不在遇到第一个入口时停止。每对入口/sink
+保存一条最短调用链供查看，不枚举所有可能路径；sink 位于入口本体时允许零跳关系。
+外部或缺少定义的节点也参与遍历，查看路径经过这些节点时标为待确认。
+
+关联 source 时保留它原来的入口归属，包括入口调用的其他辅助函数中的 source；不要求 source
+出现在这条最短调用链上。`upstream_source_ids` 另列所属函数位于反查范围的既有 source，
+不会把这些 source 改挂到其他入口。没有入口、source 或被选中的 sink 参数都不删除该 sink。
+
+主要输出：
+
+- `associations.csv`：每行一组 sink/候选入口，包含 sink 位置、参数及置信度、入口及置信度、
+  source 位置/表达式/置信度、调用关系与缺失信息；无入口的 sink 也保留一行。
+- `sink-links.json`：每个 sink 的完整判断、所有候选入口、source ID 和查看路径。
+- `graph-nodes.json`：查看路径节点的名称和定义位置；路径中的边 ID 对应输入调用图。
+- `entrypoints.json`、`sources.json`：原始入口和 source 信息，保留模型概率及置信度。
+- `unknown-sources.json`、`pending-calls.csv`：source 未决判断和 sink unknown/失败项；
+  尚未请求的调用数量另列在汇总中，不当作非 sink。
+- `summary.json`、`SUMMARY.md`：快照覆盖数量、关联成功数量、涉及入口数和缺失情况。
+
+这些输出表示函数级候选关系，尚未证明 source 的数据进入 sink 指定参数，也不是漏洞报告。
+各阶段模型置信度分别保留，不合成链路置信度，不应用阈值改变原始标签。
+
+### 入口识别的参考评估
+
+source 的候选级参考评测另见 [source 评测报告](evaluations/ctfd-jev-sources-static-v1/REPORT.md)
+及 [口径和错误分析](evaluations/ctfd-jev-sources-static-v1/NOTES.md)。
+使用独立的 [source 静态参考](annotations/ctfd-sources-static-v1/README.md)，不能直接套用函数级入口标签。
+它由显式静态规则生成、没有 source 预测读入、尚无独立人工逐点复核；分数只适用于给定候选集。
+585 个参考 unknown 单列排除，模型 unknown 不冒充 TN；Accuracy 同时给出全负基线和 Balanced Accuracy。
+候选和标注哈希、原始 API 回复均核对；Jev 的原始标签和概率保持不变，评测不调用 API。
 
 用户已选择 `annotations/ctfd-application-v1` 作为当前实验的 ground truth。
 用已有结果离线评估，不调用 API、不改变标注或模型输出：

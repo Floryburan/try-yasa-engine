@@ -7,6 +7,7 @@ const { lodashCloneWithTag } = require('../../../../util/clone-util')
 const AstUtil = require('../../../../util/ast-util')
 const { UndefinedValue } = require('../../../util/value-util').ValueUtil
 const _ = require('lodash')
+const Config = require('../../../../config')
 
 const GRADIO_EVENT_METHODS = new Set([
   'click', 'submit', 'change', 'input', 'select', 'upload',
@@ -133,6 +134,7 @@ function markGradioComponentSource(context: PythonFrameworkCallContext): void {
   const { node, res } = context
   if (!res?.taint || !isGradioComponentConstructor(context)) return
   ;(res as GradioComponentCarrier).__yasaGradioComponent = true
+  if (Config.llmInputFile) return
   res.taint.addTag('PYTHON_INPUT')
   if (res.taint.hasTraces()) return
   const startLine = node.loc?.start?.line
@@ -191,7 +193,7 @@ function handleGradioEventBinding(context: PythonFrameworkCallContext): void {
   for (let i = 0; i < gradioInputValues.length; i++) {
     const inputVal = gradioInputValues[i]
     const inputRecord = asRecord(inputVal)
-    if (inputRecord?.taint) {
+    if (inputRecord?.taint && !Config.llmInputFile) {
       const clonedVal = lodashCloneWithTag(inputVal) as Value
       clonedInputValues.push(clonedVal)
       clonedVal.taint.addTag('PYTHON_INPUT')

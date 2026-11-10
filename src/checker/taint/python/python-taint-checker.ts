@@ -54,6 +54,7 @@ class PythonTaintChecker extends PythonTaintAbstractChecker {
    * @param fileManager
    */
   prepareEntryPoints(analyzer: any, dir: any, moduleManager: any, fileManager: any) {
+    if (Config.llmInputFile) return
     const funCallEntryPoints: any[] = []
     const fileEntryPoints: any[] = []
     const { entrypoints: ruleConfigEntryPoints } = this.checkerRuleConfigContent

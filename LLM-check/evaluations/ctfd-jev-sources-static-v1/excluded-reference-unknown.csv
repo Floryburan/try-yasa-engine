@@ -1,0 +1,883 @@
+﻿candidate_id,case_id,entrypoint,owner,file,line,column,syntax_kind,expression,reference,prediction,category,reason,source_probability,model_confidence
+c_8ed963a3951ae0c5,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,187,16,parameter,config,unknown,unknown,deployment_or_event_parameter,部署参数/事件通道的外部控制边界未确认。,0.13,0.3
+c_525043ee7d521018,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,190,9,call_return,app.config.from_object(config),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.94
+c_f95593c2252d647d,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,195,9,call_return,cache.init_app(app),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_32326e3bc7041f59,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,212,17,call_return,"app.config.get(""THEME_FALLBACK"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.01,0.74
+c_e1b8a73fa7a229ca,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,254,9,call_return,"migrations.init_app(app, db)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_35a35441541eef4f,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,256,17,call_return,Babel(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_a8ee9cb21b917294,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,280,13,call_return,upgrade(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.77
+c_98003f88055c77a6,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,290,25,call_return,"app.config.get(""REVERSE_PROXY"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.01,0.79
+c_7d837c5ab5e82329,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,305,25,call_return,StrictVersion(version),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.91
+c_7a97122948b44344,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,305,50,call_return,StrictVersion(__version__),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_f80f64ce45743f65,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.create_app,CTFd/__init__.py,309,17,call_return,exit(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.95
+c_1d45328eb361b9eb,fn_f8728bf9c853533bb1a3919d,CTFd.create_app,CTFd.run_upgrade,CTFd/__init__.py,183,5,call_return,upgrade(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.8
+c_0559228b847c7b99,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,83,37,attribute_read,app.root_path,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_3531be1434eb76e8,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,87,25,call_return,os.listdir(plugins_path),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.95
+c_028f29edb9524c2a,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,92,27,call_return,"open(
+                os.path.join(app.root_path, ""plugins"", plugin, ""config.html"")
+            ).read()",unknown,no,unproved_external_io,网络/文件数据的外部控制边界未确认。,0.0,0.97
+c_6121531ce238b497,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,92,27,call_return,"open(
+                os.path.join(app.root_path, ""plugins"", plugin, ""config.html"")
+            )",unknown,no,unproved_file_origin,文件读取路径/控制者未确认。,0.0,0.97
+c_9f82dc3be7316a83,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,93,30,attribute_read,app.root_path,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_50c07f23c5b1bb7d,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,98,21,call_return,request.form.items(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.05,0.91
+c_41bb5b0dc311a856,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.admin.plugin,CTFd/admin/__init__.py,102,14,call_return,app.app_context(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8631cfda85ba8149,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.cache.clear_config,CTFd/cache/__init__.py,129,5,call_return,cache.delete_memoized(_get_config),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_df154a5d1237cb31,fn_c8a3d7f443d7893f48043284,CTFd.admin.plugin,CTFd.cache.clear_config,CTFd/cache/__init__.py,130,5,call_return,cache.delete_memoized(get_app_config),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_a254f3ceb3ce640b,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.admin.import_ctf,CTFd/admin/__init__.py,111,22,call_return,"cache.get(""import_start_time"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.92
+c_c7898e77bf605c0e,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.admin.import_ctf,CTFd/admin/__init__.py,112,20,call_return,"cache.get(""import_end_time"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.97
+c_7c68e20b1eb86eec,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.admin.import_ctf,CTFd/admin/__init__.py,113,25,call_return,"cache.get(""import_status"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.95
+c_e02236afb5292dae,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.admin.import_ctf,CTFd/admin/__init__.py,114,24,call_return,"cache.get(""import_error"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.97
+c_fdaf4a1f6a9720c3,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.utils.exports.background_import_ctf,CTFd/utils/exports/__init__.py,515,9,call_return,tempfile.NamedTemporaryFile(delete=False),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_e13dbcb6747f4c87,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.utils.exports.background_import_ctf,CTFd/utils/exports/__init__.py,521,22,attribute_read,app.root_path,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_ab66cb27dd2f3f0d,fn_b35c866566799b3a2cd686f2,CTFd.admin.import_ctf,CTFd.utils.exports.background_import_ctf,CTFd/utils/exports/__init__.py,522,5,call_return,"subprocess.Popen(  # noqa: S603
+        [python, manage_py, ""import_ctf"", ""--delete_import_on_finish"", f.name]
+    )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_357e9fc05165af9a,fn_fe28195cdad544073a88469c,CTFd.admin.export_ctf,CTFd.admin.export_ctf,CTFd/admin/__init__.py,131,14,call_return,export_ctf_util(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.76
+c_24d3fdbe24cfaf9a,fn_fe28195cdad544073a88469c,CTFd.admin.export_ctf,CTFd.admin.export_ctf,CTFd/admin/__init__.py,132,16,call_return,ctf_config.ctf_name(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.86
+c_f748e710ecfc2a9d,fn_dee82171e397e95f669bc0ab,CTFd.admin.import_csv,CTFd.admin.import_csv,CTFd/admin/__init__.py,153,15,call_return,StringIO(csvdata),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_bda3329000a429d5,fn_dee82171e397e95f669bc0ab,CTFd.admin.import_csv,CTFd.admin.import_csv,CTFd/admin/__init__.py,163,14,call_return,csv.DictReader(csvfile),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_530e49fc917fd3b3,fn_dee82171e397e95f669bc0ab,CTFd.admin.import_csv,CTFd.admin.import_csv,CTFd/admin/__init__.py,164,15,call_return,loader(reader),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_aa81892bb86e9d48,fn_14739e7634f55541ea92dc68,CTFd.admin.export_csv,CTFd.admin.export_csv,CTFd/admin/__init__.py,183,18,call_return,ctf_config.ctf_name(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.92
+c_329eb0855e35bbf2,fn_14739e7634f55541ea92dc68,CTFd.admin.export_csv,CTFd.utils.csv.dump_csv,CTFd/utils/csv/__init__.py,33,17,call_return,CSV_KEYS.get(name),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_74abccd1fca2b4f5,fn_14739e7634f55541ea92dc68,CTFd.admin.export_csv,CTFd.utils.csv.dump_csv,CTFd/utils/csv/__init__.py,35,16,call_return,dump_func(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.95
+c_3062ef71c24dcba6,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.admin.config,CTFd/admin/__init__.py,194,15,call_return,Configs.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.83
+c_f388e5107bd2d171,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.admin.config,CTFd/admin/__init__.py,195,16,attribute_read,c.key,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_f77f0940075f87a1,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.admin.config,CTFd/admin/__init__.py,195,34,attribute_read,c.key,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_74ac4c3c160db373,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.admin.config,CTFd/admin/__init__.py,198,17,call_return,DEFAULTS.items(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8fa6cfb4e1cfe792,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.admin.config,CTFd/admin/__init__.py,202,14,call_return,ctf_config.get_themes(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.73
+c_8ec282548d1cfdc7,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.utils.get_app_config,CTFd/utils/__init__.py,27,13,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.76
+c_59acf471c9297f0c,fn_2289e59f0f299175ce50ddba,CTFd.admin.config,CTFd.utils.get_app_config,CTFd/utils/__init__.py,27,13,call_return,"app.config.get(key, default)",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.8
+c_e20f0e4826815136,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,231,22,call_return,Pages.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_f447d329f15dec95,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,233,26,attribute_read,p.files,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_5b0a3d412d4d02d2,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,234,41,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_e8a7525555d7d562,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,242,27,call_return,Challenges.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_04ca74dd8361a163,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,244,26,attribute_read,c.files,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_870ee1f6be145972,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,245,41,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_c2c525e10554580c,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,270,13,call_return,cache.clear(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_883c9f199bc5d401,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.admin.reset,CTFd/admin/__init__.py,282,13,call_return,cache.clear(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_05915cffc63ea6b4,fn_f41f02efaa9762cd7e46c390,CTFd.admin.reset,CTFd.utils.security.auth.logout_user,CTFd/utils/security/auth.py,35,5,call_return,session.clear(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_407f660ac9ac601c,fn_c81645b942d53753d61eb4ac,CTFd.admin.audiences.audiences_listing,CTFd.admin.audiences.audiences_listing,CTFd/admin/audiences.py,19,17,call_return,Audiences.query.filter(*filters).order_by(Audiences.id.asc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_5cd43639fb768ed7,fn_cad3c174050176d3901340c8,CTFd.admin.audiences.audiences_detail,CTFd.admin.audiences.audiences_detail,CTFd/admin/audiences.py,36,9,call_return,"AudienceMembers.query.filter_by(audience_id=audience_id)
+        .options(joinedload(AudienceMembers.user), joinedload(AudienceMembers.team))
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_4dba4efdd8f71533,fn_cad3c174050176d3901340c8,CTFd.admin.audiences.audiences_detail,CTFd.admin.audiences.audiences_detail,CTFd/admin/audiences.py,41,9,call_return,"Modules.query.join(
+            ModuleAudienceAccess, ModuleAudienceAccess.module_id == Modules.id
+        )
+        .filter(ModuleAudienceAccess.audience_id == audience_id)
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_278fc5f48e9759f7,fn_cad3c174050176d3901340c8,CTFd.admin.audiences.audiences_detail,CTFd.admin.audiences.audiences_detail,CTFd/admin/audiences.py,48,26,attribute_read,m.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_dbb4d45a4657e803,fn_cad3c174050176d3901340c8,CTFd.admin.audiences.audiences_detail,CTFd.admin.audiences.audiences_detail,CTFd/admin/audiences.py,49,19,call_return,Modules.query.order_by(Modules.name.asc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_63655eb1784dacb3,fn_cad3c174050176d3901340c8,CTFd.admin.audiences.audiences_detail,CTFd.admin.audiences.audiences_detail,CTFd/admin/audiences.py,57,19,call_return,ctf_config.user_mode(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.86
+c_e2b31190cff25c09,fn_51ad8fa755c370eb9df1017a,CTFd.admin.challenges.challenges_detail,CTFd.admin.challenges.challenges_detail,CTFd/admin/challenges.py,41,9,call_return,"Challenges.query.with_entities(Challenges.id, Challenges.name).all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_356ea8bf1b2f46af,fn_51ad8fa755c370eb9df1017a,CTFd.admin.challenges.challenges_detail,CTFd.admin.challenges.challenges_detail,CTFd/admin/challenges.py,45,9,call_return,"Solves.query.filter_by(challenge_id=challenge.id)
+        .order_by(Solves.date.asc())
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_a1009009aa0f99b6,fn_51ad8fa755c370eb9df1017a,CTFd.admin.challenges.challenges_detail,CTFd.admin.challenges.challenges_detail,CTFd/admin/challenges.py,49,13,call_return,Flags.query.filter_by(challenge_id=challenge.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_4bba6cf35c51ed5f,fn_51ad8fa755c370eb9df1017a,CTFd.admin.challenges.challenges_detail,CTFd.plugins.challenges.get_chal_class,CTFd/plugins/challenges/__init__.py,358,11,call_return,CHALLENGE_CLASSES.get(class_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_c8be0ef118b10f97,fn_57bacfad7f9a91490e80912e,CTFd.admin.challenges.challenges_preview,CTFd.admin.challenges.challenges_preview,CTFd/admin/challenges.py,90,24,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_e3e9b48e34d783ce,fn_57bacfad7f9a91490e80912e,CTFd.admin.challenges.challenges_preview,CTFd.admin.challenges.challenges_preview,CTFd/admin/challenges.py,92,50,attribute_read,f.location,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.79
+c_a7d6911a4130b244,fn_57bacfad7f9a91490e80912e,CTFd.admin.challenges.challenges_preview,CTFd.admin.challenges.challenges_preview,CTFd/admin/challenges.py,95,9,subscript_read,"tag[""value""]",unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.92
+c_84372d400e9d9e33,fn_57bacfad7f9a91490e80912e,CTFd.admin.challenges.challenges_preview,CTFd.utils.security.signing.serialize,CTFd/utils/security/signing.py,18,18,subscript_read,"current_app.config[""SECRET_KEY""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.92
+c_c12332df78306db5,fn_77a7d7e9e3201edbb64b7aa9,CTFd.admin.challenges.challenges_new,CTFd.admin.challenges.challenges_new,CTFd/admin/challenges.py,119,13,call_return,CHALLENGE_CLASSES.keys(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c2a36ce7b55ecaa4,fn_55f61714b088e08577242f0c,CTFd.admin.modules.modules_listing,CTFd.admin.modules.modules_listing,CTFd/admin/modules.py,18,15,call_return,Modules.query.filter(*filters).order_by(Modules.id.asc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_9abff67c46ab9766,fn_3bee088ff7e599221ff77ad1,CTFd.admin.modules.modules_detail,CTFd.admin.modules.modules_detail,CTFd/admin/modules.py,35,9,call_return,"Audiences.query.join(
+            ModuleAudienceAccess, ModuleAudienceAccess.audience_id == Audiences.id
+        )
+        .filter(ModuleAudienceAccess.module_id == module_id)
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_d632352eb314dbf8,fn_3bee088ff7e599221ff77ad1,CTFd.admin.modules.modules_detail,CTFd.admin.modules.modules_detail,CTFd/admin/modules.py,41,28,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_015d607bd0192cea,fn_3bee088ff7e599221ff77ad1,CTFd.admin.modules.modules_detail,CTFd.admin.modules.modules_detail,CTFd/admin/modules.py,42,21,call_return,Audiences.query.order_by(Audiences.name.asc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_1a07d1e82eac9fe8,fn_3bee088ff7e599221ff77ad1,CTFd.admin.modules.modules_detail,CTFd.admin.modules.modules_detail,CTFd/admin/modules.py,44,9,call_return,"Challenges.query.filter_by(module_id=module_id)
+        .order_by(Challenges.id.asc())
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0675d7a277554dfc,fn_3bee088ff7e599221ff77ad1,CTFd.admin.modules.modules_detail,CTFd.admin.modules.modules_detail,CTFd/admin/modules.py,50,9,call_return,"Challenges.query.filter(
+            or_(Challenges.module_id.is_(None), Challenges.module_id != module_id)
+        )
+        .order_by(Challenges.category.asc(), Challenges.name.asc())
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_e5ec580576cf88ad,fn_a05d6e58bf9dbfcc68e33841,CTFd.admin.notifications.notifications,CTFd.admin.notifications.notifications,CTFd/admin/notifications.py,11,14,call_return,Notifications.query.order_by(Notifications.id.desc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.92
+c_11adb610d30c023f,fn_45e7f92b661bc7deba42be89,CTFd.admin.pages.pages_listing,CTFd.admin.pages.pages_listing,CTFd/admin/pages.py,13,13,call_return,Pages.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.88
+c_67131d1617d0dcc1,fn_22beb926916e6d288c1ae1f4,CTFd.admin.pages.pages_preview,CTFd.utils.config.pages.build_html,CTFd/utils/config/pages.py,40,9,subscript_read,"current_app.config[""HTML_SANITIZATION""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.92
+c_4e5f54c3e13ec600,fn_b735b1554f6e1b28e1733d17,CTFd.admin.pages.pages_detail,CTFd.utils.markdown,CTFd/utils/__init__.py,19,12,call_return,"cmarkgfm.markdown_to_html_with_extensions(
+        md,
+        extensions=[""autolink"", ""table"", ""strikethrough""],
+        options=Options.CMARK_OPT_UNSAFE,
+    )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_69a7ae8aa8ca38c2,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,17,24,call_return,Teams.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_e2a5fe9d2567ae4f,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,18,24,call_return,Users.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_68fb90def98bde6a,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,21,9,call_return,"Fails.query.join(Model, Fails.account_id == Model.id)
+        .filter(Model.banned == False, Model.hidden == False)
+        .count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_d55589eee80527e7,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,27,9,call_return,"Solves.query.join(Model, Solves.account_id == Model.id)
+        .filter(Model.banned == False, Model.hidden == False)
+        .count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_69f217af9a72e0ba,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,32,23,call_return,Challenges.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_f1e311363be7f843,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,35,9,call_return,"Challenges.query.with_entities(db.func.sum(Challenges.value).label(""sum""))
+        .filter_by(state=""visible"")
+        .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_c9e345c6f85fed64,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,41,16,call_return,Tracking.query.with_entities(Tracking.ip).distinct().count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.88
+c_72570b0bc3e5aab6,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,45,34,call_return,db.func.count(Solves.challenge_id),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_a6cd9a825992033d,fn_415de8b7a7ce17454c18b813,CTFd.admin.statistics.statistics,CTFd.admin.statistics.statistics,CTFd/admin/statistics.py,54,9,call_return,"db.session.query(
+            solves_sub.columns.challenge_id,
+            solves_sub.columns.solves_cnt,
+            Challenges.name,
+        )
+        .join(Challenges, solves_sub.columns.challenge_id == Challenges.id)
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_963602e20e7de7a4,fn_e89c8637a5156995d7ddd75c,CTFd.admin.submissions.submissions_listing,CTFd.admin.submissions.submissions_listing,CTFd/admin/submissions.py,36,9,call_return,"Submissions.query.filter_by(**filters_by)
+        .filter(*filters)
+        .join(Challenges)
+        .join(Model)
+        .order_by(Submissions.date.desc())
+        .paginate(page=page, per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_1045bebf88580c16,fn_4a2bc77dcbede9b307741772,CTFd.admin.teams.teams_listing,CTFd.admin.teams.teams_listing,CTFd/admin/teams.py,23,9,call_return,"Teams.query.filter(*filters)
+        .order_by(Teams.id.asc())
+        .paginate(page=page, per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_82d8cdc771b33a22,fn_82a9319c7874d0364b74c1ad,CTFd.admin.teams.teams_detail,CTFd.admin.teams.teams_detail,CTFd/admin/teams.py,54,19,attribute_read,member.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b874ced1ada66884,fn_82a9319c7874d0364b74c1ad,CTFd.admin.teams.teams_detail,CTFd.admin.teams.teams_detail,CTFd/admin/teams.py,65,18,attribute_read,s.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_3401c82698095f49,fn_82a9319c7874d0364b74c1ad,CTFd.admin.teams.teams_detail,CTFd.admin.teams.teams_detail,CTFd/admin/teams.py,66,15,call_return,Challenges.query.filter(not_(Challenges.id.in_(solve_ids))).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_eb5fc46d8f715bf8,fn_82a9319c7874d0364b74c1ad,CTFd.admin.teams.teams_detail,CTFd.admin.teams.teams_detail,CTFd/admin/teams.py,70,9,call_return,"Tracking.query.filter(Tracking.user_id.in_(member_ids))
+        .order_by(Tracking.date.desc())
+        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_23e0e65af36bf366,fn_ee700a528225fc04eca12d4a,CTFd.admin.users.users_listing,CTFd.admin.users.users_listing,CTFd/admin/users.py,27,13,call_return,"Users.query.join(Tracking, Users.id == Tracking.user_id)
+            .filter(Tracking.ip.like(""%{}%"".format(q)))
+            .order_by(Users.id.asc())
+            .paginate(page=page, per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_f2a8f09decc0aede,fn_ee700a528225fc04eca12d4a,CTFd.admin.users.users_listing,CTFd.admin.users.users_listing,CTFd/admin/users.py,34,13,call_return,"Users.query.filter(*filters)
+            .order_by(Users.id.asc())
+            .paginate(page=page, per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_aff22b95d119cc14,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.admin.users.users_detail,CTFd/admin/users.py,76,18,attribute_read,s.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_90693a70b5e2dffb,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.admin.users.users_detail,CTFd/admin/users.py,77,15,call_return,Challenges.query.filter(not_(Challenges.id.in_(solve_ids))).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2c3ca170872402dc,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.admin.users.users_detail,CTFd/admin/users.py,81,9,call_return,Tracking.query.filter_by(user_id=user_id).order_by(Tracking.date.desc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_d8607d3cf95f0952,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,67,22,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.88
+c_41b642d28704ba15,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,67,22,call_return,"app.config.get(""PRESET_CONFIGS"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.83
+c_a4367d1b691b212b,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,68,34,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.88
+c_c49db323a6620665,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,68,34,call_return,"app.config.get(""PRESET_CONFIGS"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.8
+c_8afd666c8e4b9f8a,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,69,16,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.86
+c_b90d71af906a675c,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,69,16,subscript_read,"app.config[""PRESET_CONFIGS""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.85
+c_2edf8d25d814a98e,fn_8e20ca283ac0c441f7fbe365,CTFd.admin.users.users_detail,CTFd.utils.get_config,CTFd/utils/__init__.py,79,20,call_return,DEFAULTS.get(key),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_a97ab3046a26adc0,fn_d978134627ab1a08c438ba24,CTFd.api.v1.audiences.AudienceList.get,CTFd.api.v1.audiences.AudienceList.get,CTFd/api/v1/audiences.py,41,13,call_return,"Audiences.query.filter_by(**query_args)
+            .filter(*filters)
+            .order_by(Audiences.id.asc())
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_ffd4c55b4da90378,fn_d978134627ab1a08c438ba24,CTFd.api.v1.audiences.AudienceList.get,CTFd.api.v1.helpers.request.validate_args,CTFd/api/v1/helpers/request.py,23,16,call_return,"create_model("""", **spec)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_4ffd03fa898f5590,fn_0d0b8d328e0695a4aecc5c10,CTFd.api.v1.audiences.Audience.delete,CTFd.cache.clear_accessible_module_ids,CTFd/cache/__init__.py,293,5,call_return,cache.delete_memoized(get_accessible_module_ids_for_account_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_93dc86bd2fc669ac,fn_599f5656360f1ada2e0ad01a,CTFd.api.v1.audiences.AudienceMemberList.get,CTFd.api.v1.audiences.AudienceMemberList.get,CTFd/api/v1/audiences.py,111,19,call_return,AudienceMembers.query.filter_by(audience_id=audience_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_7f819f9d76715f19,fn_332def627939b147964e92eb,CTFd.api.v1.audiences.AudienceMemberList.post,CTFd.api.v1.audiences.AudienceMemberList.post,CTFd/api/v1/audiences.py,129,18,call_return,"AudienceMembers.query.filter_by(
+            audience_id=audience_id,
+            user_id=req.get(""user_id""),
+            team_id=req.get(""team_id""),
+        ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_6626cae648db8f43,fn_4da84a67b3574173fdf47ee2,CTFd.api.v1.awards.AwardList.get,CTFd.api.v1.awards.AwardList.get,CTFd/api/v1/awards.py,81,18,call_return,Awards.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0cd4121dba3e22d8,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,150,5,call_return,cache.delete_memoized(get_standings),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_33873c17b1d62901,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,151,5,call_return,cache.delete_memoized(get_team_standings),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_a48c5ef0950b8072,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,152,5,call_return,cache.delete_memoized(get_user_standings),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_41c38ee03020d332,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,153,5,call_return,cache.delete_memoized(get_scoreboard_detail),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_d6a624863864101c,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,156,5,call_return,cache.delete_memoized(Users.get_score),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_570066522d639f72,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,157,5,call_return,cache.delete_memoized(Users.get_place),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_f1fd4e05cd11e086,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,158,5,call_return,cache.delete_memoized(Teams.get_score),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_9e9946026ac88e2c,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,159,5,call_return,cache.delete_memoized(Teams.get_place),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_973c33f3cd583a2c,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,162,5,call_return,cache.delete_memoized(get_user_score),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_abafcd2b9c3e49ad,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,163,5,call_return,cache.delete_memoized(get_user_place),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_47c395b96ffcbd6b,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,164,5,call_return,cache.delete_memoized(get_team_score),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_a81a9bf7f0b8573f,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,165,5,call_return,cache.delete_memoized(get_team_place),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_ec9ddaf5102fd20e,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,168,5,call_return,cache.delete_memoized(get_team_schema),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c430fafd3a300a60,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,169,5,call_return,cache.delete_memoized(get_user_schema),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8f56158e654a4d53,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,174,5,call_return,cache.delete_memoized(ScoreboardList.get),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_139a946473380676,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,175,5,call_return,cache.delete_memoized(ScoreboardDetail.get),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_85a6387a68083a15,fn_f900740a6e2282a992424189,CTFd.api.v1.awards.Award.delete,CTFd.cache.clear_standings,CTFd/cache/__init__.py,178,18,call_return,make_template_fragment_key(CacheKeys.PUBLIC_SCOREBOARD_TABLE),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_469ddc5776a04bac,fn_e1b58c74625e9cb9e1f5770c,CTFd.api.v1.brackets.BracketList.get,CTFd.api.v1.brackets.BracketList.get,CTFd/api/v1/brackets.py,37,20,call_return,Brackets.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0e7d00d67d51559c,fn_e1b58c74625e9cb9e1f5770c,CTFd.api.v1.brackets.BracketList.get,CTFd.utils.helpers.models.build_model_filters,CTFd/utils/helpers/models.py,14,27,call_return,"column.op(""="")(query)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_bb4329c9219563ef,fn_e1b58c74625e9cb9e1f5770c,CTFd.api.v1.brackets.BracketList.get,CTFd.utils.helpers.models.build_model_filters,CTFd/utils/helpers/models.py,22,31,call_return,"column.op(""="")(query)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_44b34aa10c216db0,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,197,20,attribute_read,c.module_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b9ebf278b9163e22,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,197,43,attribute_read,c.module_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_2a184dc07e735b80,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,206,13,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_3688f75455070c8e,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,206,27,call_return,Challenges.query.with_entities(Challenges.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.95
+c_4893a0258e051a46,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,209,16,attribute_read,challenge.requirements,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_c9291d0930f9ec89,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,210,32,attribute_read,challenge.requirements,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_5a2a6bff37a49746,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,211,29,attribute_read,challenge.requirements,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_42a794228e363835,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,222,43,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b54fbdd7a8a9892e,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,224,45,attribute_read,challenge.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_9d5976e190768c82,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,225,46,attribute_read,challenge.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_07f2037b4823592b,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,228,49,attribute_read,challenge.category,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b05251176fb7dae7,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,229,45,attribute_read,challenge.tags,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_14e0f6da4d4d1de3,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,237,43,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_ebb898793f6c38b7,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,253,49,attribute_read,challenge.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_6b79e6790307b811,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,261,27,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_d92230cbd4007e12,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,263,29,attribute_read,challenge.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_8f41a4b65f940374,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,264,30,attribute_read,challenge.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_33df2bb1f5562f85,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,265,33,attribute_read,challenge.position,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_5787f651c65dc3df,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,266,48,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_84a904ed6cf5668d,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,267,37,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_937a26f4e450cc74,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,268,33,attribute_read,challenge.category,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_502d333d1d3089d8,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,269,34,attribute_read,challenge.module_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_8ef81da951b787ca,fn_8529770025c0c9d4f8f903a6,CTFd.api.v1.challenges.ChallengeList.get,CTFd.api.v1.challenges.ChallengeList.get,CTFd/api/v1/challenges.py,270,29,attribute_read,challenge.tags,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b35dcc1358d306f8,fn_786a8a10b170840a32a51884,CTFd.api.v1.challenges.ChallengeTypes.get,CTFd.api.v1.challenges.ChallengeTypes.get,CTFd/api/v1/challenges.py,321,31,call_return,CHALLENGE_CLASSES.get(class_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_0af3bfd697eff9d5,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,369,13,subscript_read,"tag[""value""]",unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_01136362acd9390b,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,377,17,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_c6e65fede10b2fa5,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,377,31,call_return,Challenges.query.with_entities(Challenges.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_a0612cc96219356e,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,383,25,call_return,"Solves.query.with_entities(Solves.challenge_id)
+                        .filter_by(account_id=user.account_id)
+                        .order_by(Solves.challenge_id.asc())
+                        .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_35f56ddac6c4cf3e,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,452,17,attribute_read,u.target,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_9fff6eed6b88de2d,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,462,32,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_cf9892433890ea83,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,465,49,attribute_read,f.location,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_121f6ced86f96a4b,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,468,50,attribute_read,f.location,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_3cb4e0838df4bd17,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,470,21,call_return,Hints.query.filter_by(challenge_id=chal.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_7313bbfb6e0424a7,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,471,16,attribute_read,hint.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_f149cf0b595c0f79,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,474,31,attribute_read,hint.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_496b304523bfcb4d,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,475,33,attribute_read,hint.cost,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_639c6d88fb51b7a4,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,476,34,attribute_read,hint.title,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_c7db3c01a5ea82a2,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,477,36,attribute_read,hint.content,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_c87619fd04a20737,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,481,37,attribute_read,hint.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_faf6645ff68d7954,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,481,54,attribute_read,hint.cost,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_2bd7356032b8a818,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,481,74,attribute_read,hint.title,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_4efe74f27da91354,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,523,22,call_return,"Ratings.query.filter_by(
+                user_id=user.id, challenge_id=challenge_id
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_a3176e0a2bc841df,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,595,17,call_return,"Tracking.query.filter_by(
+                type=""challenges.open"", user_id=session[""id""], target=challenge_id
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_17f711b6194bef83,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,596,49,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.05,0.73
+c_e276627835426f01,fn_92ffa16079357e5301affb81,CTFd.api.v1.challenges.Challenge.get,CTFd.api.v1.challenges.Challenge.get,CTFd/api/v1/challenges.py,603,25,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.05,0.76
+c_9510b54f90a9ada8,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,673,16,attribute_read,request.is_json,unknown,no,unreviewed_request_attribute,该 Request 属性未包含在明确的数据/运行时元数据口径中。,0.02,0.95
+c_d304618a844d7b75,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,680,12,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_922c774e68a2648b,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,735,17,call_return,"Solves.query.with_entities(Solves.challenge_id)
+                .filter_by(account_id=user.account_id)
+                .order_by(Solves.challenge_id.asc())
+                .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.95
+c_a17f9ceacff8f6cb,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,743,17,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_e2640bc76714dac5,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,743,31,call_return,Challenges.query.with_entities(Challenges.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.92
+c_9fa3ff20b88e9e94,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,754,24,call_return,current_user.get_wrong_submissions_per_delta(user.account_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_e9efc01a4afbc177,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,800,40,call_return,cache.inc(acc_kpm_key),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.92
+c_0a8f222415606acb,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,808,25,call_return,"current_user.get_wrong_submissions_per_delta(
+                            user.account_id,
+                            challenge_id=challenge_id,
+                            delta=timeout_delta,
+                        )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_74ae5e5d5ef0ec77,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,816,29,call_return,"Fails.query.filter_by(
+                        account_id=user.account_id, challenge_id=challenge_id
+                    ).count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_2d0522e3b7d7f8dd,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,845,21,call_return,"cache.expire(acc_kpm_key, time_delay)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_9e0d908988c73c5c,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,871,17,call_return,"cache.expire(acc_kpm_key, time_delay)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_49260c8604387f02,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,885,13,call_return,"cache.expire(acc_kpm_key, time_delay)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_96d8c29bad55398e,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,887,22,call_return,"Solves.query.filter_by(
+                account_id=user.account_id, challenge_id=challenge_id
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2813fd39c90a4ee4,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,904,37,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_9a4682aae3272947,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,951,37,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_08151d9b51e0511d,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,972,37,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_d92562c2ee4bbdfe,fn_8b071bc0f6bff15e37adb110,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd.api.v1.challenges.ChallengeAttempt.post,CTFd/api/v1/challenges.py,1010,37,call_return,"Fails.query.filter_by(
+                                        account_id=user.account_id,
+                                        challenge_id=challenge_id,
+                                    )
+                                    .filter(Fails.date >= timeout_delta)
+                                    .order_by(Fails.id.asc())
+                                    .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_e60eedee47412363,fn_815b3621747235533048e690,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd/api/v1/challenges.py,1112,27,attribute_read,ChallengeFilesModel.query,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_153b342441bd4b7a,fn_815b3621747235533048e690,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd/api/v1/challenges.py,1119,27,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_80a14edf6ef19951,fn_815b3621747235533048e690,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd/api/v1/challenges.py,1120,29,attribute_read,f.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b63b42f4be9221b2,fn_815b3621747235533048e690,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd/api/v1/challenges.py,1121,33,attribute_read,f.location,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_6f8981ab55054252,fn_815b3621747235533048e690,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd.api.v1.challenges.ChallengeFiles.get,CTFd/api/v1/challenges.py,1122,32,attribute_read,f.sha1sum,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_a25aba445bf80f11,fn_ba793f84ace702de1dfbc89c,CTFd.api.v1.challenges.ChallengeTags.get,CTFd.api.v1.challenges.ChallengeTags.get,CTFd/api/v1/challenges.py,1134,16,call_return,Tags.query.filter_by(challenge_id=challenge_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_074645bce87f824c,fn_ba793f84ace702de1dfbc89c,CTFd.api.v1.challenges.ChallengeTags.get,CTFd.api.v1.challenges.ChallengeTags.get,CTFd/api/v1/challenges.py,1138,24,attribute_read,t.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_14937d6e1f5cd3aa,fn_ba793f84ace702de1dfbc89c,CTFd.api.v1.challenges.ChallengeTags.get,CTFd.api.v1.challenges.ChallengeTags.get,CTFd/api/v1/challenges.py,1138,46,attribute_read,t.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_27de9a283614e8c1,fn_ba793f84ace702de1dfbc89c,CTFd.api.v1.challenges.ChallengeTags.get,CTFd.api.v1.challenges.ChallengeTags.get,CTFd/api/v1/challenges.py,1138,71,attribute_read,t.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_97cc90ce896b6352,fn_ae642815e4e42de2d777b868,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd/api/v1/challenges.py,1149,18,attribute_read,ChallengeTopicsModel.query,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.92
+c_421c5931fb612fd7,fn_ae642815e4e42de2d777b868,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd/api/v1/challenges.py,1154,27,attribute_read,t.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_9fe113a1cc402550,fn_ae642815e4e42de2d777b868,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd/api/v1/challenges.py,1155,37,attribute_read,t.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_9790f1b0db96cad7,fn_ae642815e4e42de2d777b868,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd/api/v1/challenges.py,1156,33,attribute_read,t.topic_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_8cbc1959418d0f53,fn_ae642815e4e42de2d777b868,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd.api.v1.challenges.ChallengeTopics.get,CTFd/api/v1/challenges.py,1157,30,attribute_read,t.topic,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_ca2187576c303e77,fn_d0b5c5455b1683c5ec5531e1,CTFd.api.v1.challenges.ChallengeHints.get,CTFd.api.v1.challenges.ChallengeHints.get,CTFd/api/v1/challenges.py,1167,17,call_return,Hints.query.filter_by(challenge_id=challenge_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_f7a8d91da929d6a3,fn_9c7cfafa6c6fb3ee38e1e7c9,CTFd.api.v1.challenges.ChallengeFlags.get,CTFd.api.v1.challenges.ChallengeFlags.get,CTFd/api/v1/challenges.py,1181,17,call_return,Flags.query.filter_by(challenge_id=challenge_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2238ce8aa367fbc7,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,180,15,call_return,Ratings.query.filter_by(challenge_id=challenge_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_cc739db3a191e9ed,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,189,16,attribute_read,rating.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.91
+c_ab2328b6495e639b,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,190,25,attribute_read,rating.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_62b81b0498fd8b57,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,192,23,attribute_read,rating.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_7fceadfeba9f8e79,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,194,16,call_return,"Rating(up=up, down=down, count=count)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8d5fca1072f86d11,fn_488140869737ad9913ab55c2,CTFd.api.v1.challenges.ChallengeRatings.get,CTFd.utils.challenges.get_rating_average_for_challenge_id,CTFd/utils/challenges/__init__.py,196,16,call_return,"Rating(up=0, down=0, count=0)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_5f964aca4a4f3467,fn_143cf3864fceed12b6234454,CTFd.api.v1.challenges.ChallengeRatings.put,CTFd.api.v1.challenges.ChallengeRatings.put,CTFd/api/v1/challenges.py,1307,18,call_return,"Ratings.query.filter_by(
+            user_id=user.id, challenge_id=challenge_id
+        ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_5b5145cdd315551b,fn_a87f753dd8dca5152bcd0029,CTFd.api.v1.comments.CommentList.post,CTFd.api.v1.comments.CommentList.post,CTFd/api/v1/comments.py,131,28,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.89
+c_f099e86827a65eb4,fn_a87f753dd8dca5152bcd0029,CTFd.api.v1.comments.CommentList.post,CTFd.api.v1.comments.CommentList.post,CTFd/api/v1/comments.py,134,13,call_return,CommentModel(**req),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_40d69a581ae42cda,fn_e2656c713109e82718258fea,CTFd.api.v1.config.ConfigList.get,CTFd.api.v1.config.ConfigList.get,CTFd/api/v1/config.py,67,19,call_return,Configs.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_3bba46f2aa3f7523,fn_65c472318ad272a9d972ef12,CTFd.api.v1.config.Config.patch,CTFd.api.v1.config.Config.patch,CTFd/api/v1/config.py,159,18,call_return,Configs.query.filter_by(key=config_key).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_3326b4cbd123e2b3,fn_047eb10b37d41e06d0a8729e,CTFd.api.v1.config.FieldList.get,CTFd.api.v1.config.FieldList.get,CTFd/api/v1/config.py,219,18,call_return,Fields.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_7116a2e68b768d0a,fn_82eb9a71672860ee132b7e45,CTFd.api.v1.exports.ExportList.post,CTFd.api.v1.exports.ExportList.post,CTFd/api/v1/exports.py,23,15,call_return,DateTime.now(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8d45d349d8bdd4ad,fn_82eb9a71672860ee132b7e45,CTFd.api.v1.exports.ExportList.post,CTFd.api.v1.exports.ExportList.post,CTFd/api/v1/exports.py,39,22,call_return,export_ctf_util(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.82
+c_3c7679542f6538d8,fn_51e8deb433c7d717a047293c,CTFd.api.v1.files.FilesList.get,CTFd.api.v1.files.FilesList.get,CTFd/api/v1/files.py,68,17,call_return,Files.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_fe4230fc718827ec,fn_dc88450f6628b668e20edf62,CTFd.api.v1.flags.FlagList.get,CTFd.api.v1.flags.FlagList.get,CTFd/api/v1/flags.py,72,17,call_return,Flags.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_1bc30c39fe22e4c7,fn_cd4a1f27455ffbda91b001eb,CTFd.api.v1.flags.FlagTypes.get,CTFd.api.v1.flags.FlagTypes.get,CTFd/api/v1/flags.py,119,26,call_return,FLAG_CLASSES.get(class_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_0423443c672acbbd,fn_f79869897a67cca3732fccf9,CTFd.api.v1.flags.FlagType.get,CTFd.plugins.flags.get_flag_class,CTFd/plugins/flags/__init__.py,76,11,call_return,FLAG_CLASSES.get(class_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_234a567817d7df4f,fn_a3233cc895cfe0ded9817dcd,CTFd.api.v1.hints.HintList.get,CTFd.api.v1.hints.HintList.get,CTFd/api/v1/hints.py,73,17,call_return,Hints.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_a5f23c4a63f633f3,fn_20c11513f0b5802839d54af5,CTFd.api.v1.hints.Hint.get,CTFd.api.v1.hints.Hint.get,CTFd/api/v1/hints.py,162,27,call_return,HintUnlocks.query.filter_by(account_id=user.account_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_ace09a2fe07009ba,fn_20c11513f0b5802839d54af5,CTFd.api.v1.hints.Hint.get,CTFd.api.v1.hints.Hint.get,CTFd/api/v1/hints.py,163,27,attribute_read,unlock.target,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_497165a88569ca73,fn_20c11513f0b5802839d54af5,CTFd.api.v1.hints.Hint.get,CTFd.api.v1.hints.Hint.get,CTFd/api/v1/hints.py,166,29,attribute_read,h.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_51722c19601b6e1d,fn_20c11513f0b5802839d54af5,CTFd.api.v1.hints.Hint.get,CTFd.api.v1.hints.Hint.get,CTFd/api/v1/hints.py,166,43,call_return,Hints.query.with_entities(Hints.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_003a012412e0871b,fn_20c11513f0b5802839d54af5,CTFd.api.v1.hints.Hint.get,CTFd.api.v1.hints.Hint.get,CTFd/api/v1/hints.py,189,20,call_return,"HintUnlocks.query.filter_by(
+            account_id=user.account_id, target=hint.id
+        ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_f4c25d7b184819bd,fn_3107d4e8cba146bc497ca39c,CTFd.api.v1.modules.ModuleList.get,CTFd.api.v1.modules.ModuleList.get,CTFd/api/v1/modules.py,42,13,call_return,"Modules.query.filter_by(**query_args)
+            .filter(*filters)
+            .order_by(Modules.id.asc())
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_5a67bad973d97cb9,fn_f7ee39070daf563ecb2aca05,CTFd.api.v1.modules.ModuleChallengeList.get,CTFd.api.v1.modules.ModuleChallengeList.get,CTFd/api/v1/modules.py,109,22,call_return,Challenges.query.filter_by(module_id=module_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_191f8c3193f0d109,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,191,5,call_return,cache.delete_memoized(get_all_challenges),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_60699b6c84758eb0,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,192,5,call_return,cache.delete_memoized(get_solves_for_challenge_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_35a309be846a7355,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,193,5,call_return,cache.delete_memoized(get_submissions_for_user_id_for_challenge_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_17c14776836f6240,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,194,5,call_return,cache.delete_memoized(get_solve_ids_for_user_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_a56c8d3e1cd67d3e,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,195,5,call_return,cache.delete_memoized(get_solve_counts_for_challenges),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_ba749b0247267915,fn_b6a35ca48301e521198e2153,CTFd.api.v1.modules.ModuleChallengeList.post,CTFd.cache.clear_challenges,CTFd/cache/__init__.py,196,5,call_return,cache.delete_memoized(get_rating_average_for_challenge_id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_b369f5ff1395edf7,fn_8c2f1c03dfb78c1ac76fd4df,CTFd.api.v1.modules.ModuleAudienceAccessList.get,CTFd.api.v1.modules.ModuleAudienceAccessList.get,CTFd/api/v1/modules.py,143,17,call_return,ModuleAudienceAccess.query.filter_by(module_id=module_id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_1e86f1bbc95874f7,fn_e85f7fda8bf741546c07c64d,CTFd.api.v1.notifications.NotificantionList.get,CTFd.api.v1.notifications.NotificantionList.get,CTFd/api/v1/notifications.py,77,13,call_return,Notifications.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_049f237160f64b9e,fn_0679416dd49579f09442f607,CTFd.api.v1.notifications.NotificantionList.head,CTFd.api.v1.notifications.NotificantionList.head,CTFd/api/v1/notifications.py,114,13,call_return,Notifications.query.filter_by(**query_args).filter(*filters).count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_b6b1826c9a4446e3,fn_e1224514d3a325383eb83e0f,CTFd.api.v1.pages.PageList.get,CTFd.api.v1.pages.PageList.get,CTFd/api/v1/pages.py,80,17,call_return,Pages.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_7159535a7b174b25,fn_8e3ea9b778da21024781ff63,CTFd.api.v1.pages.PageDetail.patch,CTFd.cache.clear_pages,CTFd/cache/__init__.py,208,5,call_return,cache.delete_memoized(get_pages),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_1815d7f2afd6ad4f,fn_8e3ea9b778da21024781ff63,CTFd.api.v1.pages.PageDetail.patch,CTFd.cache.clear_pages,CTFd/cache/__init__.py,209,5,call_return,cache.delete_memoized(get_page),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_b1f5c3addac73478,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,35,17,call_return,"db.session.execute(
+                select(
+                    [
+                        Users.id,
+                        Users.name,
+                        Users.oauth_id,
+                        Users.team_id,
+                        Users.hidden,
+                        Users.banned,
+                        Users.bracket_id,
+                        Brackets.name.label(""bracket_name""),
+                    ]
+                )
+                .where(Users.team_id.isnot(None))
+                .join(Brackets, Users.bracket_id == Brackets.id, isouter=True)
+            )",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.92
+c_f47f53c939ba13dc,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,54,20,attribute_read,u.hidden,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_5fd248f01757db04,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,54,42,attribute_read,u.banned,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_a8114796b13b9847,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,55,32,attribute_read,u.team_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_6b3ac0fe5afe8581,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,55,43,attribute_read,u.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_1b8f0cf06b4b6bab,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,56,31,attribute_read,u.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_2292e3c19dca40b4,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,57,37,attribute_read,u.oauth_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_e2eace000888cf70,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,58,33,attribute_read,u.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.92
+c_3cf662ed7944a636,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,60,39,attribute_read,u.bracket_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_77db10aea8df82f9,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,61,41,attribute_read,u.bracket_name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_47dc36df4ccb356e,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,67,28,attribute_read,u.team_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_bcce381826c3cebb,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,67,39,attribute_read,u.user_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_4fc01b03c4508416,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,67,65,attribute_read,u.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_78c23752ca9d4dba,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,72,31,attribute_read,x.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_1d98c72d6cd4f0ec,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,73,64,attribute_read,x.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_a10697d170184f36,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,75,29,attribute_read,x.oauth_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_7065d0160c61b199,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,76,25,attribute_read,x.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_7b85ba526ad75845,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,77,30,attribute_read,x.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_4b1849d2c1882019,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,78,31,attribute_read,x.bracket_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_e41e8b347319d51d,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,79,33,attribute_read,x.bracket_name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_0f4d403c82d610a1,fn_d3590f9de3dd096006c6f59b,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd.api.v1.scoreboard.ScoreboardList.get,CTFd/api/v1/scoreboard.py,83,52,attribute_read,x.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_d525d4dda56d4c04,fn_739791305524cc8b66e82a61,CTFd.api.v1.shares.Share.post,CTFd.api.v1.shares.Share.post,CTFd/api/v1/shares.py,23,17,call_return,SocialShare(user_id=user.id),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_2d715d54c4c362ab,fn_739791305524cc8b66e82a61,CTFd.api.v1.shares.Share.post,CTFd.utils.social.get_social_share,CTFd/utils/social/__init__.py,213,12,call_return,SOCIAL_SHARES.get(type),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.94
+c_c24337dfd17d8432,fn_0a3b9a52c3c7c04b6e793cc2,CTFd.api.v1.solutions.SolutionList.get,CTFd.api.v1.solutions.SolutionList.get,CTFd/api/v1/solutions.py,87,21,call_return,Solutions.query.filter_by(**args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_fc56e2447f5a34a6,fn_92f1bcae8a56daec640503a2,CTFd.api.v1.solutions.Solution.get,CTFd.api.v1.solutions.Solution.get,CTFd/api/v1/solutions.py,189,24,call_return,"SolutionUnlocks.query.filter_by(
+                account_id=user.account_id, target=solution.id
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_7523144ac1b938f2,fn_d505b4ebd2688870511a818f,CTFd.api.v1.solutions.Solution.delete,CTFd.api.v1.solutions.Solution.delete,CTFd/api/v1/solutions.py,249,17,call_return,SolutionFiles.query.filter_by(solution_id=solution.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_80304d40b2bbfa34,fn_d505b4ebd2688870511a818f,CTFd.api.v1.solutions.Solution.delete,CTFd.api.v1.solutions.Solution.delete,CTFd/api/v1/solutions.py,251,25,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_4ebd8eb0a1e41f9c,fn_31d20a5a1ea38cbdd7d80940,CTFd.api.v1.statistics.challenges.ChallengePropertyCounts.get,CTFd.api.v1.statistics.challenges.ChallengePropertyCounts.get,CTFd/api/v1/statistics/challenges.py,30,17,call_return,"Challenges.query.with_entities(c1, cast(aggregate_func(c2), Integer))
+                .group_by(c1)
+                .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_6efebbc0079293b1,fn_31d20a5a1ea38cbdd7d80940,CTFd.api.v1.statistics.challenges.ChallengePropertyCounts.get,CTFd.api.v1.statistics.challenges.ChallengePropertyCounts.get,CTFd/api/v1/statistics/challenges.py,30,57,call_return,aggregate_func(c2),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_4bc705ef680446f6,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,45,13,call_return,"Challenges.query.filter(
+                and_(Challenges.state != ""hidden"", Challenges.state != ""locked"")
+            )
+            .order_by(Challenges.value)
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_91a70596d1e78944,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,56,38,call_return,db.func.count(Solves.challenge_id),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_29c21543e70cb7bc,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,65,13,call_return,"db.session.query(
+                solves_sub.columns.challenge_id,
+                solves_sub.columns.solves,
+                Challenges.name,
+            )
+            .join(Challenges, solves_sub.columns.challenge_id == Challenges.id)
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_b4b84fc14c2c876e,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,82,16,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_856753373bc2407b,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,83,36,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_f12de74ba646d180,fn_51b092746e35856d02e08fbc,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd.api.v1.statistics.challenges.ChallengeSolveStatistics.get,CTFd/api/v1/statistics/challenges.py,83,50,attribute_read,c.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_7b2538c81671f42f,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,95,13,call_return,"Challenges.query.add_columns(
+                Challenges.id,
+                Challenges.name,
+                Challenges.state,
+                Challenges.max_attempts,
+            )
+            .order_by(Challenges.value)
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_1a31ff83ffcdc804,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,108,13,call_return,"db.session.query(Solves.account_id)
+            .join(Model)
+            .filter(Model.banned == False, Model.hidden == False)
+            .group_by(Solves.account_id)
+            .count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_f35af25c9baa71c7,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,118,17,call_return,"Solves.query.join(Model, Solves.account_id == Model.id)
+                .filter(
+                    Solves.challenge_id == challenge.id,
+                    Model.banned == False,
+                    Model.hidden == False,
+                )
+                .count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_9d66f9beaeb8ea32,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,120,44,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_962b2f39cee2332a,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,133,24,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_1a3bdee42fad9124,fn_9e8964706c514d55df3fe5e2,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd.api.v1.statistics.challenges.ChallengeSolvePercentages.get,CTFd/api/v1/statistics/challenges.py,133,46,attribute_read,challenge.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_0a812b87aea69eed,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,23,13,call_return,"Challenges.query.filter(Challenges.state == ""visible"")
+            .order_by(
+                (
+                    Challenges.position == 0
+                ).asc(),  # Position of 0 should go to the end/bottom
+                Challenges.position.asc(),  # Ordered challenges should go first
+                Challenges.value,
+                Challenges.category,
+            )
+            .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_007d782135864688,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,35,28,attribute_read,account.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_1e5279575d5ebc16,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,40,17,call_return,"db.session.query(
+                    Solves.account_id,
+                    Solves.challenge_id,
+                )
+                .join(Challenges, Challenges.id == Solves.challenge_id)
+                .join(Model, Model.id == Solves.account_id)
+                .filter(
+                    Solves.account_id.in_(top_account_ids),
+                    Model.banned == False,
+                    Model.hidden == False,
+                    Challenges.state == ""visible"",
+                )
+                .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_fbeba07f86f2f742,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,56,17,call_return,"db.session.query(
+                    Fails.account_id,
+                    Fails.challenge_id,
+                )
+                .join(Challenges, Challenges.id == Fails.challenge_id)
+                .join(Model, Model.id == Fails.account_id)
+                .filter(
+                    Fails.account_id.in_(top_account_ids),
+                    Model.banned == False,
+                    Model.hidden == False,
+                    Challenges.state == ""visible"",
+                )
+                .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.92
+c_5a3ff50b0141b0e4,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,73,21,call_return,"db.session.query(
+                        Teams.id.label(""account_id""),
+                        Tracking.target.label(""challenge_id""),
+                    )
+                    .join(Users, Users.id == Tracking.user_id)
+                    .join(Teams, Teams.id == Users.team_id)
+                    .join(Challenges, Challenges.id == Tracking.target)
+                    .filter(
+                        Teams.id.in_(top_account_ids),
+                        Users.banned == False,
+                        Users.hidden == False,
+                        Teams.banned == False,
+                        Teams.hidden == False,
+                        Challenges.state == ""visible"",
+                        Tracking.target.isnot(None),
+                        Tracking.type == ""challenges.open"",
+                    )
+                    .distinct()
+                    .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.95
+c_770c258960401870,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,95,21,call_return,"db.session.query(
+                        Tracking.user_id.label(""account_id""),
+                        Tracking.target.label(""challenge_id""),
+                    )
+                    .join(Users, Users.id == Tracking.user_id)
+                    .join(Challenges, Challenges.id == Tracking.target)
+                    .filter(
+                        Tracking.user_id.in_(top_account_ids),
+                        Users.banned == False,
+                        Users.hidden == False,
+                        Challenges.state == ""visible"",
+                        Tracking.target.isnot(None),
+                        Tracking.type == ""challenges.open"",
+                    )
+                    .distinct()
+                    .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.89
+c_9857e25d01e14670,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,114,32,attribute_read,account.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_40c9b15cfbbe39ae,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,121,20,attribute_read,solve.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_a4bcca5ce838ac2f,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,122,36,attribute_read,solve.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_5b1ab8364c0c182e,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,123,25,attribute_read,solve.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_2945831fc46756e0,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,127,20,attribute_read,attempt.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_2d8c9b709404efbb,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,128,36,attribute_read,attempt.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_9681c8b79c8fa679,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,129,25,attribute_read,attempt.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_e7ec5f2510eb0d0c,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,133,20,attribute_read,opens.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_9d42710c702db4ee,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,134,36,attribute_read,opens.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_bdadacc11b595561,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,135,25,attribute_read,opens.challenge_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_355713a52cd13632,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,142,69,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_97900e1d41c4ffd4,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,144,69,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_926416c538ea779c,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,147,23,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b397a68f6654ce82,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,148,25,attribute_read,user.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_ab517afed979ee68,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,149,30,attribute_read,user.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_d294aba581571763,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,152,31,attribute_read,user.bracket_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_9c7ad5288bab5143,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,153,33,attribute_read,user.bracket_name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_80123ec3b726c06d,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,155,40,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_2689137003d4fb55,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,158,40,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_391436ff29679ff9,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,163,40,attribute_read,user.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_5d956357cc4b3f9a,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,173,27,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_d7d84c93c8c6850c,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,174,29,attribute_read,challenge.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_7f9b7140c82ea5d2,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,175,30,attribute_read,challenge.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_edbc8b80bd3b479d,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,176,33,attribute_read,challenge.position,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_86ae91a9dd16f723,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,177,33,attribute_read,challenge.category,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_c8166ea096651ad4,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,179,65,attribute_read,challenge.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_92a8ddd8be62ff20,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,187,23,attribute_read,bracket.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_d7fd7c617c16bbb1,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,188,25,attribute_read,bracket.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_64fbf787bc4c26e7,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,189,32,attribute_read,bracket.description,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_fdf34e0e63707b61,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,190,25,attribute_read,bracket.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_707e7d333e11527a,fn_5a4f246e4c0b88bd8b82a764,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd.api.v1.statistics.progression.ProgressionMatrix.get,CTFd/api/v1/statistics/progression.py,192,28,call_return,Brackets.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_282cc1b2e2755db8,fn_4d6de18c0ccc61ade3d65c65,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd/api/v1/statistics/scores.py,15,27,call_return,Challenges.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_5e165b9872bd20ba,fn_4d6de18c0ccc61ade3d65c65,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd/api/v1/statistics/scores.py,17,13,call_return,"Challenges.query.with_entities(db.func.sum(Challenges.value).label(""sum""))
+            .filter_by(state=""visible"")
+            .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_90275ba509228cda,fn_4d6de18c0ccc61ade3d65c65,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd/api/v1/statistics/scores.py,36,18,attribute_read,t.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_bb0dad3bd8a73139,fn_4d6de18c0ccc61ade3d65c65,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd/api/v1/statistics/scores.py,36,42,attribute_read,t.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_28f378b307e7aa73,fn_4d6de18c0ccc61ade3d65c65,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd.api.v1.statistics.scores.ScoresDistribution.get,CTFd/api/v1/statistics/scores.py,36,62,attribute_read,t.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_2fe2a8560318422f,fn_b5ce5224987128f2183cd9cd,CTFd.api.v1.statistics.submissions.SubmissionPropertyCounts.get,CTFd.api.v1.statistics.submissions.SubmissionPropertyCounts.get,CTFd/api/v1/statistics/submissions.py,16,17,call_return,"Submissions.query.with_entities(prop, func.count(prop))
+                .group_by(prop)
+                .all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_9364b894d7438420,fn_cc23b81350017dee2b06dcd5,CTFd.api.v1.statistics.teams.TeamStatistics.get,CTFd.api.v1.statistics.teams.TeamStatistics.get,CTFd/api/v1/statistics/teams.py,12,22,call_return,Teams.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_9cd2f7ce1865cbfa,fn_4f3cd6171ada4da57b9cacd6,CTFd.api.v1.statistics.users.UserStatistics.get,CTFd.api.v1.statistics.users.UserStatistics.get,CTFd/api/v1/statistics/users.py,13,22,call_return,Users.query.count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_3768ed70dda24ccf,fn_4f3cd6171ada4da57b9cacd6,CTFd.api.v1.statistics.users.UserStatistics.get,CTFd.api.v1.statistics.users.UserStatistics.get,CTFd/api/v1/statistics/users.py,14,21,call_return,Users.query.filter_by(verified=True).count(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_955b31c2f6c92454,fn_256a6423e39f0f438cc22ba2,CTFd.api.v1.statistics.users.UserPropertyCounts.get,CTFd.api.v1.statistics.users.UserPropertyCounts.get,CTFd/api/v1/statistics/users.py,26,17,call_return,"Users.query.with_entities(prop, func.count(prop)).group_by(prop).all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_b3cf27e3afa65ae9,fn_aadcc527d0f8f48e8088dc86,CTFd.api.v1.submissions.SubmissionsList.get,CTFd.api.v1.submissions.SubmissionsList.get,CTFd/api/v1/submissions.py,92,13,call_return,"Submissions.query.filter_by(**args)
+            .filter(*filters)
+            .paginate(max_per_page=100, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2ef88ca9b3e58cf0,fn_7fdf54bd437f1886e5177ac7,CTFd.api.v1.submissions.SubmissionsList.post,CTFd.api.v1.submissions.SubmissionsList.post,CTFd/api/v1/submissions.py,132,44,call_return,Model(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_94de7cde4d29ccfb,fn_8e985e011b2e92837f8297a3,CTFd.api.v1.submissions.Submission.patch,CTFd.api.v1.submissions.Submission.patch,CTFd/api/v1/submissions.py,193,30,call_return,"Solves.query.filter_by(
+                challenge_id=submission.challenge_id,
+                user_id=submission.user_id,
+                team_id=submission.team_id if submission.team_id else None,
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_3b87508a3743e1b7,fn_8e985e011b2e92837f8297a3,CTFd.api.v1.submissions.Submission.patch,CTFd.api.v1.submissions.Submission.patch,CTFd/api/v1/submissions.py,226,30,call_return,Solves.query.filter_by(id=submission_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_340bde8075697059,fn_8e985e011b2e92837f8297a3,CTFd.api.v1.submissions.Submission.patch,CTFd.api.v1.submissions.Submission.patch,CTFd/api/v1/submissions.py,238,26,call_return,Fails.query.filter_by(id=submission_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_5d108d5a1d6e5e15,fn_24ad1b6756f724a1a7bf707c,CTFd.api.v1.submissions.Submission.delete,CTFd.api.v1.submissions.Submission.delete,CTFd/api/v1/submissions.py,270,9,call_return,"cache.expire(acc_kpm_key, 0)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c05ff85418e59da8,fn_4c450d40b0f58937a82dafd8,CTFd.api.v1.tags.TagList.get,CTFd.api.v1.tags.TagList.get,CTFd/api/v1/tags.py,68,16,call_return,Tags.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0d3ac2c62a912303,fn_e578cd0545ec805176f18f25,CTFd.api.v1.teams.TeamList.get,CTFd.api.v1.teams.TeamList.get,CTFd/api/v1/teams.py,115,17,call_return,"Teams.query.filter_by(**query_args)
+                .filter(*filters)
+                .paginate(per_page=50, max_per_page=100, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_d71da6c5bafbc132,fn_e578cd0545ec805176f18f25,CTFd.api.v1.teams.TeamList.get,CTFd.api.v1.teams.TeamList.get,CTFd/api/v1/teams.py,121,17,call_return,"Teams.query.filter_by(hidden=False, banned=False, **query_args)
+                .filter(*filters)
+                .paginate(per_page=50, max_per_page=100, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_5d1b80cc14b36dde,fn_301f2f88e6dc9dc44b31bb4f,CTFd.api.v1.teams.TeamPublic.patch,CTFd.cache.clear_team_session,CTFd/cache/__init__.py,269,5,call_return,"cache.delete_memoized(get_team_attrs, team_id=team_id)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_52e0525f48595763,fn_301f2f88e6dc9dc44b31bb4f,CTFd.api.v1.teams.TeamPublic.patch,CTFd.cache.clear_team_session,CTFd/cache/__init__.py,270,5,call_return,"cache.delete_memoized(get_team_place, team_id=team_id)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_25b378674a458381,fn_301f2f88e6dc9dc44b31bb4f,CTFd.api.v1.teams.TeamPublic.patch,CTFd.cache.clear_team_session,CTFd/cache/__init__.py,271,5,call_return,"cache.delete_memoized(get_team_score, team_id=team_id)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c22ddc4c2f5b82f5,fn_301f2f88e6dc9dc44b31bb4f,CTFd.api.v1.teams.TeamPublic.patch,CTFd.cache.clear_team_session,CTFd/cache/__init__.py,272,5,call_return,"cache.delete_memoized(get_team_schema, team_id=team_id, user_type=""user"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_2a0d7613b0eef675,fn_301f2f88e6dc9dc44b31bb4f,CTFd.api.v1.teams.TeamPublic.patch,CTFd.cache.clear_team_session,CTFd/cache/__init__.py,273,5,call_return,"cache.delete_memoized(get_team_schema, team_id=team_id, user_type=""admin"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_1fe9d3657c6eb707,fn_c51f1630aea49db7de79306f,CTFd.api.v1.teams.TeamPublic.delete,CTFd.api.v1.teams.TeamPublic.delete,CTFd/api/v1/teams.py,257,40,attribute_read,member.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_76b6de323c84b7ef,fn_c8d4772aefd9b983487498d7,CTFd.api.v1.teams.TeamPrivate.patch,CTFd.api.v1.teams.TeamPrivate.patch,CTFd/api/v1/teams.py,316,31,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.8
+c_15abeaac3419bda1,fn_4aa66568d603eed3a9aa4c56,CTFd.api.v1.teams.TeamPrivate.delete,CTFd.api.v1.teams.TeamPrivate.delete,CTFd/api/v1/teams.py,357,31,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.04,0.73
+c_42a89aa0dc6311e9,fn_4aa66568d603eed3a9aa4c56,CTFd.api.v1.teams.TeamPrivate.delete,CTFd.api.v1.teams.TeamPrivate.delete,CTFd/api/v1/teams.py,372,17,call_return,Submissions.query.filter_by(team_id=team.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.95
+c_8fd16c374c48c085,fn_4aa66568d603eed3a9aa4c56,CTFd.api.v1.teams.TeamPrivate.delete,CTFd.api.v1.teams.TeamPrivate.delete,CTFd/api/v1/teams.py,373,17,call_return,Unlocks.query.filter_by(team_id=team.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_0345f51953a15317,fn_4aa66568d603eed3a9aa4c56,CTFd.api.v1.teams.TeamPrivate.delete,CTFd.api.v1.teams.TeamPrivate.delete,CTFd/api/v1/teams.py,393,40,attribute_read,member.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_69403cae19d219e2,fn_6e6c00ec3306c91fd0d75f2d,CTFd.api.v1.teams.TeamPrivateMembers.post,CTFd.api.v1.teams.TeamPrivateMembers.post,CTFd/api/v1/teams.py,415,31,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.85
+c_22ee7d48c7770b17,fn_43e97826842f5d44974a8613,CTFd.api.v1.tokens.TokenDetail.get,CTFd.api.v1.tokens.TokenDetail.get,CTFd/api/v1/tokens.py,127,38,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.04,0.82
+c_1c97b405741ebd54,fn_ac97177f7cfad8d091ca6f8b,CTFd.api.v1.topics.TopicList.get,CTFd.api.v1.topics.TopicList.get,CTFd/api/v1/topics.py,66,18,call_return,Topics.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_9be96015b3015ce3,fn_22f4bc20ac4bd07361c1e5d9,CTFd.api.v1.topics.TopicList.post,CTFd.api.v1.topics.TopicList.post,CTFd/api/v1/topics.py,91,21,call_return,Topics.query.filter_by(value=value).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_1800b335d9fa4091,fn_0780dce853e0039f3fb96761,CTFd.api.v1.unlocks.UnlockList.get,CTFd.api.v1.unlocks.UnlockList.get,CTFd/api/v1/unlocks.py,90,19,call_return,Unlocks.query.filter_by(**query_args).filter(*filters).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_24f970d1c3500d12,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,152,21,attribute_read,c.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_c0022f0b691d4607,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,152,35,call_return,Challenges.query.with_entities(Challenges.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_1997f37499596732,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,161,21,attribute_read,u.target,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_c9dba08af30c6fd0,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,162,30,call_return,"HintUnlocks.query.filter_by(
+                        account_id=user.account_id
+                    ).all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_8ea182576a365e3b,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,166,33,attribute_read,h.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b5c91b0dc292cc99,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,166,47,call_return,Hints.query.with_entities(Hints.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_055e48ec0228b76b,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,195,24,call_return,"Unlocks.query.filter(
+                Unlocks.target == req[""target""],
+                Unlocks.type == req[""type""],
+                Unlocks.account_id == user.account_id,
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_5661abcb9b6e5201,fn_fcb4a6e2f9f6e36212150d1b,CTFd.api.v1.unlocks.UnlockList.post,CTFd.api.v1.unlocks.UnlockList.post,CTFd/api/v1/unlocks.py,255,24,call_return,"Unlocks.query.filter(
+                Unlocks.target == req[""target""],
+                Unlocks.type == req[""type""],
+                Unlocks.account_id == user.account_id,
+            ).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_e1d5fc60db1a1636,fn_3300f1a8130cec7be9f9ac67,CTFd.api.v1.users.UserList.get,CTFd.api.v1.users.UserList.get,CTFd/api/v1/users.py,120,17,call_return,"Users.query.filter_by(**query_args)
+                .filter(*filters)
+                .paginate(per_page=50, max_per_page=100, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0720ed7b3be94f04,fn_3300f1a8130cec7be9f9ac67,CTFd.api.v1.users.UserList.get,CTFd.api.v1.users.UserList.get,CTFd/api/v1/users.py,126,17,call_return,"Users.query.filter_by(banned=False, hidden=False, **query_args)
+                .filter(*filters)
+                .paginate(per_page=50, max_per_page=100, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_2f6d62d7e58a4daa,fn_0e9df0c80597633860f21648,CTFd.api.v1.users.UserPublic.patch,CTFd.api.v1.users.UserPublic.patch,CTFd/api/v1/users.py,239,26,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.89
+c_8799689c5dc8cb99,fn_970a3269f41372b0b48c833b,CTFd.api.v1.users.UserPublic.delete,CTFd.api.v1.users.UserPublic.delete,CTFd/api/v1/users.py,273,23,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.86
+c_952e597bcdf91fc0,fn_64bb1129c4d975be11ce04eb,CTFd.api.v1.users.UserPrivate.get,CTFd.utils.user.get_current_user,CTFd/utils/user/__init__.py,20,16,call_return,"Users.query.filter_by(id=session[""id""]).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_db1faf3cbc56aa3c,fn_64bb1129c4d975be11ce04eb,CTFd.api.v1.users.UserPrivate.get,CTFd.utils.user.get_current_user,CTFd/utils/user/__init__.py,20,41,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.03,0.56
+c_3e678dda03cd34e5,fn_64bb1129c4d975be11ce04eb,CTFd.api.v1.users.UserPrivate.get,CTFd.utils.user.get_current_user,CTFd/utils/user/__init__.py,23,24,call_return,"session.get(""hash"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.03,0.66
+c_4cf07f2004b9adb8,fn_64bb1129c4d975be11ce04eb,CTFd.api.v1.users.UserPrivate.get,CTFd.utils.user.get_current_user,CTFd/utils/user/__init__.py,27,20,attribute_read,request.is_json,unknown,no,unreviewed_request_attribute,该 Request 属性未包含在明确的数据/运行时元数据口径中。,0.05,0.89
+c_8f23c9114d99b5eb,fn_1527c620615c64c00f0fd5e6,CTFd.api.v1.users.UserPrivateSubmissions.get,CTFd.utils.challenges.get_submissions_for_user_id_for_challenge_id,CTFd/utils/challenges/__init__.py,121,12,call_return,Users.query.filter_by(id=user_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_5cfd78619d3687f6,fn_58bcfd372b114a7849c94f3a,CTFd.auth.confirm,CTFd.auth.confirm,CTFd/auth.py,88,12,call_return,current_user.authed(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_e5b9893a2c74e08b,fn_58bcfd372b114a7849c94f3a,CTFd.auth.confirm,CTFd.auth.confirm,CTFd/auth.py,93,8,call_return,current_user.authed(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_5ca6d1a3f9749660,fn_58bcfd372b114a7849c94f3a,CTFd.auth.confirm,CTFd.auth.confirm,CTFd/auth.py,96,37,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.73
+c_be2249ddf03546af,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,156,52,call_return,"_l(""Please pick a longer password"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_9bc4e197580f0c69,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,165,25,call_return,"_l(
+                            f""Password must be at least {password_min_length} characters""
+                        )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_2a0d59020c25a83e,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,187,16,call_return,Users.query.filter_by(email=email_address).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_3f6bc5d98bd73179,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,195,21,call_return,"_l(
+                        ""If that account exists you will receive an email, please check your inbox""
+                    )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_d3ca21e7e34e43f2,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,205,21,call_return,"_l(
+                        ""The email address associated with this account was registered via an authentication provider and does not have an associated password. Please login via your authentication provider.""
+                    )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_275a9903a6dd61aa,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,212,17,call_return,"cache.inc(f""reset_password_attempt_user_{user.id}"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_bf79be67a012c264,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,213,9,call_return,"cache.expire(f""reset_password_attempt_user_{user.id}"", 180)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c6dfbd275c3c548c,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,218,21,call_return,"_l(""Too many password reset attempts. Please try again later."")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_8701620a6817b4aa,fn_b6bec2a90da44d3602339637,CTFd.auth.reset_password,CTFd.auth.reset_password,CTFd/auth.py,226,17,call_return,"_l(
+                    ""If that account exists you will receive an email, please check your inbox""
+                )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_bc05b4e071cb11ba,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,239,8,call_return,current_user.authed(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_8bff620651460f7c,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,243,17,call_return,"Users.query.filter_by(banned=False, hidden=False).count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_5c23cfbcee899ee9,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,263,13,call_return,"Users.query.add_columns(Users.name, Users.id).filter_by(name=name).first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_7de22f018aae212c,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,266,13,call_return,"Users.query.add_columns(Users.email, Users.id)
+            .filter_by(email=email_address)
+            .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_920547887ac8f352,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,283,31,call_return,"_l(""The registration code you entered was incorrect"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_48f0cf4cc7c2af6d,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,287,22,call_return,UserFields.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_a4d972863c3986fd,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,288,20,attribute_read,field.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_b17214edda55c6d2,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,293,16,attribute_read,field.required,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_49bc7791d2cac07c,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,294,31,call_return,"_l(""Please provide all required fields"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_30dc081a76b8b730,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,297,16,attribute_read,field.field_type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_fefd7ac6aec9c94d,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,323,17,call_return,"Brackets.query.filter_by(id=bracket_id, type=""users"").first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_d149ec5f0b8974c4,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,326,16,call_return,"Brackets.query.filter_by(type=""users"").count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_20c6329f79a4b1d8,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,332,27,call_return,"_l(""Please enter a valid email address"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_618d2d4b23af18a9,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,334,27,call_return,"_l(""Your email address is not from an allowed domain"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_070c9711ab90b0f8,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,336,27,call_return,"_l(""Your email address is not from an allowed domain"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_55cc95bc4d6afa3a,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,338,27,call_return,"_l(""That user name is already taken"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_40af93c939c564d6,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,340,27,call_return,"_l(""Your user name cannot be an email address"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_6d0325f090dd6f6f,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,342,27,call_return,"_l(""That email has already been used"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_07d121f73f7f644b,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,344,27,call_return,"_l(""Pick a longer password"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_cec7f7060767b48b,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,347,17,call_return,"_l(f""Password must be at least {password_min_length} characters"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_85cbc63c36bc19d2,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,350,27,call_return,"_l(""Pick a shorter password"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_fe41eaa1bdd5f576,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,352,27,call_return,"_l(""Pick a longer user name"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_7215f413ffb4d0cf,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,355,17,call_return,"_l(""Websites must be a proper URL starting with http or https"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_25c1996d0ef88c93,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,358,27,call_return,"_l(""Invalid country"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_2961c3d6e53b9ff8,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,360,27,call_return,"_l(""Please provide a shorter affiliation"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_1f62e85f54e12f66,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,362,27,call_return,"_l(""Please provide a valid bracket"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_047599b0a213f9ca,fn_512e0c210275044aac2c8c1a,CTFd.auth.register,CTFd.auth.register,CTFd/auth.py,373,18,call_return,app.app_context(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_ce0ba26faa9fdd36,fn_020cc33186f7bc9e4d29d2dd,CTFd.auth.login,CTFd.auth.login,CTFd/auth.py,470,20,call_return,Users.query.filter_by(email=name).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_e780f946c0b2531a,fn_020cc33186f7bc9e4d29d2dd,CTFd.auth.login,CTFd.auth.login,CTFd/auth.py,472,20,call_return,Users.query.filter_by(name=name).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_dbbd11c86fc45ff7,fn_020cc33186f7bc9e4d29d2dd,CTFd.auth.login,CTFd.auth.login,CTFd/auth.py,483,17,call_return,session.regenerate(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_cfd4d2f896af54d8,fn_020cc33186f7bc9e4d29d2dd,CTFd.auth.login,CTFd.utils.crypto.verify_password,CTFd/utils/crypto/__init__.py,13,12,call_return,"bcrypt_sha256.verify(plaintext, ciphertext)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_79780b7190c4dfe8,fn_1d2705337ff53fca409ba5bf,CTFd.auth.oauth_login,CTFd.auth.oauth_login,CTFd/auth.py,540,68,subscript_read,"session[""nonce""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.09,0.52
+c_292f5c37380622f5,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,550,8,subscript_read,"session[""nonce""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.88
+c_eb56e838cdd0fb7c,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,573,25,call_return,"requests.post(url, data=data, headers=headers, timeout=5)",unknown,no,unproved_external_io,网络/文件数据的外部控制边界未确认。,0.0,0.98
+c_6ef03d1762efc9e2,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,587,24,call_return,"requests.get(url=user_url, headers=headers, timeout=5)",unknown,no,unproved_external_io,网络/文件数据的外部控制边界未确认。,0.03,0.74
+c_2e21b2285389af10,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,593,20,call_return,Users.query.filter_by(email=user_email).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_4f050085963ddc47,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,597,29,call_return,"Users.query.filter_by(banned=False, hidden=False).count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_a1132f7d03ba4281,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,626,24,call_return,Teams.query.filter_by(oauth_id=team_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_694568541c740dfc,fn_e757c8518f3d09362e5dea32,CTFd.auth.oauth_redirect,CTFd.auth.oauth_redirect,CTFd/auth.py,629,33,call_return,"Teams.query.filter_by(
+                        banned=False, hidden=False
+                    ).count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_904a8a409550d087,fn_86cdaf940c2f86c5ebc66bf7,CTFd.auth.logout,CTFd.auth.logout,CTFd/auth.py,678,8,call_return,current_user.authed(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_289256344c5271ee,fn_e849710afe54a5f01b926477,CTFd.challenges.listing,CTFd.challenges.listing,CTFd/challenges.py,38,22,call_return,"_l(""Challenge Visibility is set to Admins Only"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_594e60c2890a3739,fn_e849710afe54a5f01b926477,CTFd.challenges.listing,CTFd.challenges.listing,CTFd/challenges.py,41,23,call_return,"_l(""%(ctf_name)s has not started yet"", ctf_name=Configs.ctf_name)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_6db2333f4d68a843,fn_e849710afe54a5f01b926477,CTFd.challenges.listing,CTFd.challenges.listing,CTFd/challenges.py,44,22,call_return,"_l(""%(ctf_name)s is paused"", ctf_name=Configs.ctf_name)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_ae6aa60a895eeab9,fn_e849710afe54a5f01b926477,CTFd.challenges.listing,CTFd.challenges.listing,CTFd/challenges.py,47,22,call_return,"_l(""%(ctf_name)s has ended"", ctf_name=Configs.ctf_name)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_7ca79a055e5b9ccb,fn_4d932a5423cad709e36e37c1,CTFd.cli.jsenums,CTFd.cli.jsenums,CTFd/cli/__init__.py,26,10,call_return,"open(path, ""w+"")",unknown,no,unproved_file_origin,文件读取路径/控制者未确认。,0.0,0.97
+c_1ca78577ef0856a6,fn_4d932a5423cad709e36e37c1,CTFd.cli.jsenums,CTFd.cli.jsenums,CTFd/cli/__init__.py,27,21,call_return,JS_ENUMS.items(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_f3d846c5897e010e,fn_36fc8fd5e4c4fa47abac0e0b,CTFd.cli.get_config,CTFd.cli.get_config,CTFd/cli/__init__.py,37,11,call_return,get_config_util(key),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_fe00d319f7dc5380,fn_013696e5b5b0bbd06a9c66b3,CTFd.cli.set_config,CTFd.cli.set_config,CTFd/cli/__init__.py,44,11,call_return,"set_config_util(key, value)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_192efa29fb399e8a,fn_845500dc512fd65f5d067a54,CTFd.cli.build,CTFd.cli.build,CTFd/cli/__init__.py,50,11,call_return,BUILD_COMMANDS.get(cmd),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_080af377810d6024,fn_845500dc512fd65f5d067a54,CTFd.cli.build,CTFd.cli.build,CTFd/cli/__init__.py,51,5,call_return,cmd(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.94
+c_347631f70043d5a1,fn_7dd104aa32778bcf735d8e13,CTFd.cli.export_ctf,CTFd.cli.export_ctf,CTFd/cli/__init__.py,57,14,call_return,export_ctf_util(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.74
+c_17096248f7dbad79,fn_7dd104aa32778bcf735d8e13,CTFd.cli.export_ctf,CTFd.cli.export_ctf,CTFd/cli/__init__.py,61,13,call_return,"shutil.copyfileobj(backup, target)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_aa2634c10e91827e,fn_7dd104aa32778bcf735d8e13,CTFd.cli.export_ctf,CTFd.cli.export_ctf,CTFd/cli/__init__.py,68,13,call_return,"shutil.copyfileobj(backup, target)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_d9279e458558e9a5,fn_24f32a9f2e58958845af89fa,CTFd.cli.import_ctf,CTFd.cli.import_ctf,CTFd/cli/__init__.py,83,9,call_return,import_ctf_util(path),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_c76be62d6dc62a8d,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd/plugins/challenges/__init__.py,233,17,call_return,Flags.query.filter_by(challenge_id=challenge.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.89
+c_b05229e33aa77bcd,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_any,CTFd/plugins/challenges/logic.py,12,31,attribute_read,flag.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_2b01b29bc8a7c117,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,32,16,call_return,"Partials.query.filter_by(
+        account_id=user.account_id, challenge_id=challenge.id
+    ).all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_e925512a00d6c28c,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,35,18,attribute_read,partial.provided,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.89
+c_3e3a1ac9734cddbe,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,38,25,attribute_read,flag.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_9e9697257cea0414,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,43,12,attribute_read,flag.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_57cb7581207a6869,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,45,37,attribute_read,flag.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_4612e03d66b58c7f,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,48,42,attribute_read,flag.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_dfe51ed1ef9d0125,fn_6ae20752e3ba77e1ad94d7c2,CTFd.plugins.challenges.BaseChallenge.attempt,CTFd.plugins.challenges.logic.challenge_attempt_all,CTFd/plugins/challenges/logic.py,59,27,attribute_read,flag.type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_137fba059a176e97,fn_8a11eb2dd2e832ad8a417ae1,CTFd.plugins.dynamic_challenges.DynamicValueChallenge.update,CTFd.plugins.dynamic_challenges.DynamicValueChallenge.calculate_value,CTFd/plugins/dynamic_challenges/__init__.py,91,13,call_return,"DECAY_FUNCTIONS.get(challenge.function, logarithmic)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_7e5a0fbc4821d51c,fn_8a11eb2dd2e832ad8a417ae1,CTFd.plugins.dynamic_challenges.DynamicValueChallenge.update,CTFd.plugins.dynamic_challenges.DynamicValueChallenge.calculate_value,CTFd/plugins/dynamic_challenges/__init__.py,92,17,call_return,f(challenge),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_d5eea8b69e400405,fn_74c96aa8ba286466860d1b53,CTFd.plugins.dynamic_challenges.load,CTFd.plugins.migrations.upgrade,CTFd/plugins/migrations.py,53,20,call_return,"current_app.config.get(""SQLALCHEMY_DATABASE_URI"")",unknown,unknown,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.25
+c_af7f98740e9aa1d3,fn_74c96aa8ba286466860d1b53,CTFd.plugins.dynamic_challenges.load,CTFd.plugins.migrations.upgrade,CTFd/plugins/migrations.py,111,17,attribute_read,r.module,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.77
+c_df23a97e23b6d0ed,fn_74c96aa8ba286466860d1b53,CTFd.plugins.dynamic_challenges.load,CTFd.plugins.migrations.upgrade,CTFd/plugins/migrations.py,114,58,attribute_read,r.revision,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.88
+c_510ab4f61155afc2,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,28,13,call_return,"sa.Column(""dynamic_initial"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_a7a6b43314b989d3,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,28,42,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_072203b85e47fbb5,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,33,13,call_return,"sa.Column(""dynamic_minimum"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_70d9b0b76861fc87,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,33,42,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_9ffb9bcc75f80a85,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,37,34,call_return,"sa.Column(""dynamic_decay"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_0ef1126caa3a3024,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,37,61,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_6d01a83554b68ad3,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,42,13,call_return,"sa.Column(""dynamic_function"", sa.String(length=32), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_2b6c861377ff8957,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,42,43,call_return,sa.String(length=32),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_4d58761f4bfee59e,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,50,13,call_return,"sa.text(
+                """"""
+                UPDATE dynamic_challenge
+                SET dynamic_initial = initial,
+                    dynamic_minimum = minimum,
+                    dynamic_decay = decay,
+                    dynamic_function = function
+            """"""
+            )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.95
+c_ee908acb8afd0746,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,62,13,call_return,"sa.text(
+                """"""
+                UPDATE dynamic_challenge
+                SET dynamic_initial = initial,
+                    dynamic_minimum = minimum,
+                    dynamic_decay = decay,
+                    dynamic_function = `function`
+            """"""
+            )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_72ec80066a6051c3,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.migrations.get_columns_for_table,CTFd/plugins/migrations.py,29,17,call_return,SQLAInspect(op.get_bind()),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.92
+c_a624f5129ef8bb13,fn_b80c7fb69f1a9cff26d57955,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.upgrade,CTFd.plugins.migrations.get_columns_for_table,CTFd/plugins/migrations.py,32,20,subscript_read,"c[""name""]",unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_4b5eb747574a0a61,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,84,15,parameter,op,unknown,no,unproved_parameter_origin,缺少可靠的外部数据参数绑定证明。,0.01,0.45
+c_0334e7420ca21c93,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,91,34,call_return,"sa.Column(""decay"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_22d02b71e3b14725,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,91,53,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_e7c7786dc1fba2e0,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,96,13,call_return,"sa.Column(""function"", sa.String(length=32), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_df5e5745c83fd8d4,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,96,35,call_return,sa.String(length=32),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_1e251685501f8cdf,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,100,34,call_return,"sa.Column(""initial"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_495a3abf02c6fbcd,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,100,55,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c904382dbb63eb69,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,104,34,call_return,"sa.Column(""minimum"", sa.Integer(), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_3f828d16358c9f8e,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,104,55,call_return,sa.Integer(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_aaafde02b0e5c328,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,112,13,call_return,"sa.text(
+                """"""
+                UPDATE dynamic_challenge
+                SET initial = dynamic_initial,
+                    minimum = dynamic_minimum,
+                    decay = dynamic_decay,
+                    function = dynamic_function
+            """"""
+            )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_1b70057addf1aee2,fn_def60d5c6f9409d447d40c94,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd.plugins.dynamic_challenges.migrations.93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.downgrade,CTFd/plugins/dynamic_challenges/migrations/93284ed9c099_add_dynamic_prefix_to_dynamic_challenge_.py,124,13,call_return,"sa.text(
+                """"""
+                UPDATE dynamic_challenge
+                SET initial = dynamic_initial,
+                    minimum = dynamic_minimum,
+                    decay = dynamic_decay,
+                    `function` = dynamic_function
+            """"""
+            )",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_2ccadb811787f417,fn_1e90e747f7ab33972ece825f,CTFd.plugins.dynamic_challenges.migrations.b37fb68807ea_add_cascading_delete_to_dynamic_.downgrade,CTFd.plugins.dynamic_challenges.migrations.b37fb68807ea_add_cascading_delete_to_dynamic_.downgrade,CTFd/plugins/dynamic_challenges/migrations/b37fb68807ea_add_cascading_delete_to_dynamic_.py,41,15,parameter,op,unknown,no,unproved_parameter_origin,缺少可靠的外部数据参数绑定证明。,0.01,0.38
+c_4c6c7622db400d12,fn_6434bfed2c4a8259c978d3f6,CTFd.plugins.dynamic_challenges.migrations.eb68f277ab61_add_func_column_to_dynamic_challenges.upgrade,CTFd.plugins.dynamic_challenges.migrations.eb68f277ab61_add_func_column_to_dynamic_challenges.upgrade,CTFd/plugins/dynamic_challenges/migrations/eb68f277ab61_add_func_column_to_dynamic_challenges.py,26,13,call_return,"sa.Column(""function"", sa.String(length=32), nullable=True)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_5891d4746352bd48,fn_6434bfed2c4a8259c978d3f6,CTFd.plugins.dynamic_challenges.migrations.eb68f277ab61_add_func_column_to_dynamic_challenges.upgrade,CTFd.plugins.dynamic_challenges.migrations.eb68f277ab61_add_func_column_to_dynamic_challenges.upgrade,CTFd/plugins/dynamic_challenges/migrations/eb68f277ab61_add_func_column_to_dynamic_challenges.py,26,35,call_return,sa.String(length=32),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_14df2dc61856f867,fn_3651cba94c68b67338ca6fe2,CTFd.share.assets,CTFd.share.assets,CTFd/share.py,17,9,call_return,SocialShare(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_98a7c424f00a4c94,fn_5e20f03f61342439e1742721,CTFd.share.share,CTFd.share.share,CTFd/share.py,32,9,call_return,SocialShare(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_681819c4485bb355,fn_edb41135604a406b2c6e0e1f,CTFd.teams.listing,CTFd.teams.listing,CTFd/teams.py,37,9,call_return,"Teams.query.filter_by(hidden=False, banned=False)
+        .filter(*filters)
+        .order_by(Teams.id.asc())
+        .paginate(per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_4a340581b3f9c601,fn_bb275f29ed4d69fcb68c2262,CTFd.teams.join,CTFd.teams.join,CTFd/teams.py,151,16,call_return,Teams.query.filter_by(name=teamname).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_dec98c6889198b1d,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,202,17,call_return,"Teams.query.filter_by(banned=False, hidden=False).count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_8166d293f3aca008,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,235,25,call_return,Teams.query.filter_by(name=teamname).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_55ae6b6bb1af569c,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,243,22,call_return,TeamFields.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_3b301978ce0d275c,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,244,20,attribute_read,field.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,1.0
+c_70e90f286803f1ab,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,249,16,attribute_read,field.required,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_d31880aa8569a066,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,253,16,attribute_read,field.field_type,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_983c4f6013c94f5e,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,270,17,call_return,"Brackets.query.filter_by(id=bracket_id, type=""teams"").first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2a654b9f170fb6b9,fn_f47415c5d7e21bd4c658f4a7,CTFd.teams.new,CTFd.teams.new,CTFd/teams.py,273,16,call_return,"Brackets.query.filter_by(type=""teams"").count()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_2689b19abcc86f32,fn_880703175209b3d3abcb91ef,CTFd.users.listing,CTFd.users.listing,CTFd/users.py,29,9,call_return,"Users.query.filter_by(banned=False, hidden=False)
+        .filter(*filters)
+        .order_by(Users.id.asc())
+        .paginate(per_page=50, error_out=False)",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_6aaeec3f527b002d,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,44,12,call_return,StringIO(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_2d82a6f1644206b4,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,45,14,call_return,csv.writer(temp),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_b0161c24075ebc89,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,50,19,call_return,UserFields.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.88
+c_890e111b159ae5d5,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,51,23,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_26eef2882028023b,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,52,25,attribute_read,f.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.92
+c_42cb8f21f1b1e7de,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,55,23,call_return,TeamFields.query.all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_8337c2b0d0dc5ff3,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,56,27,attribute_read,f.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_50290afb4388b8f2,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,57,29,attribute_read,f.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_629a4450c12fea6f,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,80,20,call_return,Teams.query.filter_by(id=standing.account_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_9e81e1eb14643219,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,80,45,attribute_read,standing.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_c6d9f93e2a773a4c,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,83,35,attribute_read,f.field_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_abd7fdf795d8efab,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,83,47,attribute_read,f.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.86
+c_f16eb9c36ac50aab,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,93,21,attribute_read,standing.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_bde3d81bf96c1b4d,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,110,39,attribute_read,f.field_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_0b0cbec0f52193ff,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,110,51,attribute_read,f.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.74
+c_d6713e076ca58649,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,110,68,attribute_read,member.field_entries,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_80aeab31b8b5cb08,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,121,25,attribute_read,member.name,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.92
+c_7e33b9dc9da96bda,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,122,25,attribute_read,member.id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_10f1fb74f37d0553,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,123,25,attribute_read,member.email,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.94
+c_d4deac06afbe2cf4,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,124,25,attribute_read,member.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_7fc74adc9e1d3832,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,127,25,attribute_read,member.bracket_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_e86b84f2cb56e006,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,128,25,attribute_read,member.bracket,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_048809872976e8e3,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,128,48,attribute_read,member.bracket,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_ba6200b1f6c74c4e,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,147,20,call_return,Users.query.filter_by(id=standing.account_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_0b06822872ecef7b,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,147,45,attribute_read,standing.account_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_56df4430258afdbe,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,150,35,attribute_read,f.field_id,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_7fd526a42bc4954f,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,150,47,attribute_read,f.value,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.01,0.77
+c_ef6fb1c71045ef16,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,159,17,attribute_read,standing.score,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_9095b6467f191927,fn_d7101287f0f3d30238f38953,CTFd.utils.csv.dump_scoreboard_csv,CTFd.utils.csv.dump_scoreboard_csv,CTFd/utils/csv/__init__.py,166,14,call_return,BytesIO(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_3d5026e06a44f2c0,fn_7ff8293ff213428831a94742,CTFd.utils.events.EventManager.subscribe,CTFd.utils.events.EventManager.subscribe,CTFd/utils/events/__init__.py,53,25,parameter,channel,unknown,unknown,deployment_or_event_parameter,部署参数/事件通道的外部控制边界未确认。,0.05,0.27
+c_a7c7d50e0136509e,fn_7ff8293ff213428831a94742,CTFd.utils.events.EventManager.subscribe,CTFd.utils.events.EventManager.subscribe,CTFd/utils/events/__init__.py,61,22,call_return,"Timeout(5, False)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_ea2fb7e41903fa74,fn_b05f03e358da3360478927c3,CTFd.utils.events.RedisEventManager.subscribe,CTFd.utils.events.RedisEventManager.subscribe,CTFd/utils/events/__init__.py,102,25,parameter,channel,unknown,no,deployment_or_event_parameter,部署参数/事件通道的外部控制边界未确认。,0.03,0.38
+c_702973da3c15be98,fn_b05f03e358da3360478927c3,CTFd.utils.events.RedisEventManager.subscribe,CTFd.utils.events.RedisEventManager.subscribe,CTFd/utils/events/__init__.py,110,22,call_return,"Timeout(5, False)",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_97f58dc78f753bf0,fn_5f356c1aca21607a2130bfb0,CTFd.utils.initialization.init_request_processors.force_subdirectory_redirect,CTFd.utils.initialization.init_request_processors.force_subdirectory_redirect,CTFd/utils/initialization/__init__.py,212,16,call_return,request.path.startswith(application_root),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.01,0.97
+c_c289df418219578b,fn_5f356c1aca21607a2130bfb0,CTFd.utils.initialization.init_request_processors.force_subdirectory_redirect,CTFd.utils.initialization.init_request_processors.force_subdirectory_redirect,CTFd/utils/initialization/__init__.py,214,40,attribute_read,request.script_root,unknown,no,unreviewed_request_attribute,该 Request 属性未包含在明确的数据/运行时元数据口径中。,0.24,0.58
+c_3d336b5f6daebe00,fn_bcbf298ea638f8e8724b0232,CTFd.utils.initialization.init_request_processors.needs_setup,CTFd.utils.import_in_progress,CTFd/utils/__init__.py,103,21,call_return,"cache.get(key=""import_status"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.46
+c_170b2dc06329039f,fn_bcbf298ea638f8e8724b0232,CTFd.utils.initialization.init_request_processors.needs_setup,CTFd.utils.import_in_progress,CTFd/utils/__init__.py,104,20,call_return,"cache.get(key=""import_error"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.41
+c_a674b1b876eeb152,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,271,26,call_return,"Tracking.query.filter_by(
+                    type=None,
+                    ip=ip,
+                    user_agent=user_agent,
+                    user_id=session[""id""],
+                ).all()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.97
+c_1b23988eb7a1f091,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,275,29,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.8
+c_698a6647d6726605,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,277,52,attribute_read,t.user_agent,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.95
+c_941ba7e1eed6fe0f,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,285,33,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.04,0.8
+c_9a4de9cdf4b7da38,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,297,51,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.88
+c_d460a5f43b48dd55,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.initialization.init_request_processors.tracker,CTFd/utils/initialization/__init__.py,298,56,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.89
+c_65fddcb6fe3ec8c6,fn_2d65b79e9abbba5c3da07306,CTFd.utils.initialization.init_request_processors.tracker,CTFd.utils.user.authed,CTFd/utils/user/__init__.py,200,17,call_return,"session.get(""id"", False)",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.02,0.85
+c_c0e685039c04e527,fn_ed966fead322c7767b638970,CTFd.utils.initialization.init_request_processors.banned,CTFd.utils.user.get_current_user_attrs,CTFd/utils/user/__init__.py,41,43,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.76
+c_a7177c8af41cc123,fn_ed966fead322c7767b638970,CTFd.utils.initialization.init_request_processors.banned,CTFd.utils.user.get_current_user_attrs,CTFd/utils/user/__init__.py,43,40,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.01,0.79
+c_c114185d1b0fbd23,fn_ed966fead322c7767b638970,CTFd.utils.initialization.init_request_processors.banned,CTFd.utils.user.get_current_user_attrs,CTFd/utils/user/__init__.py,44,43,subscript_read,"session[""id""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.02,0.69
+c_8a29f000c8b47a51,fn_be67f3f7dbf742f13f81a033,CTFd.utils.initialization.init_request_processors.change_password,CTFd.utils.initialization.init_request_processors.change_password,CTFd/utils/initialization/__init__.py,340,31,call_return,"session.get(""reset_password"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.11,0.53
+c_957d5fd67bc6d0c2,fn_be67f3f7dbf742f13f81a033,CTFd.utils.initialization.init_request_processors.change_password,CTFd.utils.initialization.init_request_processors.change_password,CTFd/utils/initialization/__init__.py,348,25,call_return,"session.pop(""reset_password"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.98
+c_0c9f810ac4639eaa,fn_be67f3f7dbf742f13f81a033,CTFd.utils.initialization.init_request_processors.change_password,CTFd.utils.security.email.generate_password_reset_token,CTFd/utils/security/email.py,29,23,call_return,os.urandom(32),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_71f4ed67975fb193,fn_b84edc1aa999553d00412e50,CTFd.utils.initialization.init_request_processors.tokens,CTFd.utils.initialization.init_request_processors.tokens,CTFd/utils/initialization/__init__.py,361,13,attribute_read,request.is_json,unknown,no,unreviewed_request_attribute,该 Request 属性未包含在明确的数据/运行时元数据口径中。,0.03,0.94
+c_e27e1894916e31e7,fn_b84edc1aa999553d00412e50,CTFd.utils.initialization.init_request_processors.tokens,CTFd.utils.security.auth.lookup_user_token,CTFd/utils/security/auth.py,93,13,call_return,UserTokens.query.filter_by(value=token).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_b210d30b035fb91e,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.initialization.init_request_processors.csrf,CTFd/utils/initialization/__init__.py,390,20,attribute_read,app.view_functions,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_0d22927e9c667995,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.initialization.init_request_processors.csrf,CTFd/utils/initialization/__init__.py,411,16,call_return,"session.get(""nonce"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.02,0.79
+c_be1ccdabc6fc9c31,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.initialization.init_request_processors.csrf,CTFd/utils/initialization/__init__.py,414,16,attribute_read,request.is_json,unknown,no,unreviewed_request_attribute,该 Request 属性未包含在明确的数据/运行时元数据口径中。,0.05,0.91
+c_e23ff7a78619c435,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.initialization.init_request_processors.csrf,CTFd/utils/initialization/__init__.py,416,20,subscript_read,"session[""nonce""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.94
+c_a3393b4425964f6b,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.initialization.init_request_processors.csrf,CTFd/utils/initialization/__init__.py,420,20,subscript_read,"session[""nonce""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.94
+c_c4e5f78ecafab5bb,fn_99e3a5210712f1b4febdbfd9,CTFd.utils.initialization.init_request_processors.csrf,CTFd.utils.security.csrf.generate_nonce,CTFd/utils/security/csrf.py,7,22,call_return,os.urandom(32),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_c9bfeec038beef30,fn_59c8a37d6dd2dc7ccd1f3eeb,CTFd.utils.sessions.CachingSessionInterface.open_session,CTFd.utils.sessions.CachingSessionInterface.open_session,CTFd/utils/sessions/__init__.py,82,15,call_return,cache.get(self.key_prefix + sid),unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.86
+c_9f3c6555bcf3934c,fn_59c8a37d6dd2dc7ccd1f3eeb,CTFd.utils.sessions.CachingSessionInterface.open_session,CTFd.utils.security.signing.unsign,CTFd/utils/security/signing.py,39,18,subscript_read,"current_app.config[""SECRET_KEY""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.95
+c_ce86103ff41ec8b6,fn_80358e53c571ed3780846613,CTFd.views.setup,CTFd.views.setup,CTFd/views.py,69,16,call_return,"session.get(""nonce"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.08,0.76
+c_d8fd5b17a2c12ea3,fn_80358e53c571ed3780846613,CTFd.views.setup,CTFd.views.setup,CTFd/views.py,146,17,call_return,"Users.query.add_columns(Users.name, Users.id)
+                .filter_by(name=name)
+                .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_8d945976b935efc0,fn_80358e53c571ed3780846613,CTFd.views.setup,CTFd.views.setup,CTFd/views.py,151,17,call_return,"Users.query.add_columns(Users.email, Users.id)
+                .filter_by(email=email)
+                .first()",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_32f5c8caa071a25e,fn_80358e53c571ed3780846613,CTFd.views.setup,CTFd.views.setup,CTFd/views.py,259,18,call_return,app.app_context(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_52b315a701bbaf9f,fn_80358e53c571ed3780846613,CTFd.views.setup,CTFd.views.setup,CTFd/views.py,260,17,call_return,cache.clear(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,1.0
+c_0ddb0dfae955d22d,fn_e8a1d5a38da8bec85394c377,CTFd.views.integrations,CTFd.utils.security.signing.unserialize,CTFd/utils/security/signing.py,25,18,subscript_read,"current_app.config[""SECRET_KEY""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.94
+c_9cc61ead8b85bf48,fn_698e52f66e53d0bc63fb4106,CTFd.views.notifications,CTFd.views.notifications,CTFd/views.py,302,21,call_return,Notifications.query.order_by(Notifications.id.desc()).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.91
+c_800786620f2db8ae,fn_b077d5c1f118a8dff0c4ff2a,CTFd.views.settings,CTFd.views.settings,CTFd/views.py,322,14,call_return,UserTokens.query.filter_by(user_id=user.id).all(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.94
+c_d209899109933ce7,fn_4f12ff23f1e111948ee805ef,CTFd.views.static_html,CTFd.utils.config.pages.get_page,CTFd/utils/config/pages.py,70,12,call_return,"db.session.execute(
+        Pages.__table__.select()
+        .where(Pages.route == route)
+        .where(Pages.draft.isnot(True))
+    )",unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.95
+c_ba97e82efb96f035,fn_89899656c1dbeb257bf60ae6,CTFd.views.tos,CTFd.utils.config.pages.build_markdown,CTFd/utils/config/pages.py,52,9,subscript_read,"current_app.config[""HTML_SANITIZATION""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.88
+c_7b51cc0803e10361,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.views.files,CTFd/views.py,403,16,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_93cdf3288f345c79,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.views.files,CTFd/views.py,430,20,call_return,Users.query.filter_by(id=user_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,1.0
+c_0edd7b14efab9788,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.views.files,CTFd/views.py,431,20,call_return,Teams.query.filter_by(id=team_id).first(),unknown,no,unproved_database_read,数据库读取的外部可控性未确认，不能当作确定正例或负例。,0.0,0.98
+c_9b3875c86e008514,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.views.files,CTFd/views.py,478,16,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.97
+c_003ab83340c23e40,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.views.files,CTFd/views.py,483,12,call_return,current_user.is_admin(),unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.98
+c_08a216da593e6ab6,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.utils.uploads.get_uploader,CTFd/utils/uploads/__init__.py,13,12,call_return,"UPLOADERS.get(get_app_config(""UPLOAD_PROVIDER"") or ""filesystem"")()",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.91
+c_dff0afdf1d7137e2,fn_73a394dfbdddcb8da29981ce,CTFd.views.files,CTFd.utils.uploads.get_uploader,CTFd/utils/uploads/__init__.py,13,12,call_return,"UPLOADERS.get(get_app_config(""UPLOAD_PROVIDER"") or ""filesystem"")",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.88
+c_f0da7ceac8ac0b6a,fn_bd85c8ab86deaeb504cf36ca,CTFd.views.themes,CTFd.views.themes,CTFd/views.py,504,19,attribute_read,app.root_path,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.97
+c_4c8282598dc0cb2a,fn_07d25bb96832338ed3b1eca0,CTFd.views.themes_beta,CTFd.views.themes_beta,CTFd/views.py,527,19,attribute_read,app.root_path,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.98
+c_232a8b8d621c6134,fn_463520d8290e2fe7429a5574,CTFd.views.healthcheck,CTFd.utils.health.check_database,CTFd/utils/health/__init__.py,11,12,call_return,"database_exists(current_app.config[""SQLALCHEMY_DATABASE_URI""])",unknown,no,unresolved_call_origin,调用实现/接收对象未解析，不能证明数据首次进入的位置。,0.0,0.88
+c_8b5b638ad620ac89,fn_463520d8290e2fe7429a5574,CTFd.views.healthcheck,CTFd.utils.health.check_database,CTFd/utils/health/__init__.py,11,28,subscript_read,"current_app.config[""SQLALCHEMY_DATABASE_URI""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.86
+c_f859a7bf0b4ddef9,fn_463520d8290e2fe7429a5574,CTFd.views.healthcheck,CTFd.utils.health.check_config,CTFd/utils/health/__init__.py,19,12,call_return,cache.get(key),unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.88
+c_ef654d34ac85a112,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.views.debug,CTFd/views.py,551,8,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.86
+c_1d437021220c6e5d,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.views.debug,CTFd/views.py,551,8,call_return,"app.config.get(""SAFE_MODE"")",unknown,no,unproved_storage_read,配置/环境/会话/缓存读边界未确认。,0.0,0.95
+c_0b48b9214bb4379b,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,224,12,parameter,req,unknown,no,unproved_parameter_origin,缺少可靠的外部数据参数绑定证明。,0.02,0.82
+c_7bcc3e16b8a904ba,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,237,23,attribute_read,app.config,unknown,no,unresolved_attribute_receiver,属性/下标接收对象来源未解析。,0.0,0.83
+c_81151e5b8d0c2a12,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,237,23,subscript_read,"app.config[""TRUSTED_PROXIES""]",unknown,no,unproved_persisted_or_environment_read,配置、环境或会话读取的控制者/信任边界未确认。,0.0,0.82
+c_98e9fae36feb1e7a,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,239,13,attribute_read,req.access_route,unknown,no,unproved_request_read,对象的请求类型/传入绑定不能充分证明。,0.26,0.46
+c_caf144af82936626,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,239,33,attribute_read,req.remote_addr,unknown,no,unproved_request_read,对象的请求类型/传入绑定不能充分证明。,0.43,0.27
+c_0874ae1b7c6d9a3b,fn_866221bd175d2ef021efd593,CTFd.views.debug,CTFd.utils.user.get_ip,CTFd/utils/user/__init__.py,245,23,attribute_read,req.remote_addr,unknown,no,unproved_request_read,对象的请求类型/传入绑定不能充分证明。,0.27,0.51

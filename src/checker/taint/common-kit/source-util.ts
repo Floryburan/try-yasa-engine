@@ -8,6 +8,7 @@ const BasicRuleHandler = require('../../common/rules-basic-handler')
 const Scope = require('../../../engine/analyzer/common/scope')
 const QidUnifyUtil = require('../../../util/qid-unify-util')
 const entryPointConfig = require('../../../engine/analyzer/common/entrypoint/current-entrypoint')
+const Config = require('../../../config')
 
 import type { TraceItem } from '../../../util/finding-util'
 import { SymbolValue } from '../../../engine/analyzer/common/value/symbolic'
@@ -67,8 +68,11 @@ function setTaint(res: any, tagType: any): void {
  */
 function markTaintSource(
   unit: any,
-  { path, kind, replaceInheritedSource = false }: { path: any; kind: any; replaceInheritedSource?: boolean }
+  { path, kind, replaceInheritedSource = false, origin }: { path: any; kind: any; replaceInheritedSource?: boolean; origin?: 'llm' }
 ): void {
+  // In imported-input experiments native source recognizers must not silently
+  // seed additional inputs. Propagation, sanitizers and sink rules still run.
+  if (Config.llmInputFile && origin !== 'llm') return
   if (!BasicRuleHandler.getPreprocessReady()) {
     return
   }

@@ -1,0 +1,29 @@
+{
+  "repository": "/data/fyn/yasa/YASA-Engine/CTFd",
+  "repository_commit": "a751d1773df7f16341801831481eeb7b1ded18c2",
+  "index_directory": "/data/fyn/yasa/YASA-Engine/artifacts/ctfd-uast/index",
+  "index_hashes": {
+    "files": "9914629676bc77e6d9c29c4580165d10f05a6ccce3fd1dc9d3b65394e195a84e",
+    "functions": "f8cd267d582dc38fc364d382c6e2e62eef7669c6772b5507c06b320cf25bde71",
+    "classes": "3add8cc95ff6557b13bb73b72c025a49871fd67440fa772fd54e8aec1e833b9a",
+    "imports": "6912038401582f289ffa060c11337308b616fd732fb7ba13f31a4b9572e5d1bb",
+    "calls": "39800e32dd8e76bbefdc072107ee924913605e5ff7a332c70ef2fd768f01980a",
+    "assignments": "dde7fbb85ceda52b67fc915a91e2aa5607edf68f0e4aa27d0f4b16b245da9d7b"
+  },
+  "source_run": "/data/fyn/yasa/YASA-Engine/LLM-check/runs/jev-sources-ctfd-application-v1",
+  "source_prepared_sha256": "f9ac477d6cb3590daaf6ea9be2a9cfffe06aea678251ff6079f9ba4c01f216c0",
+  "unique_candidates": 6036,
+  "candidate_pairs": 7048,
+  "source_verdicts_read": false,
+  "scope_note": "Candidate scope is conditional on the preceding Jev entrypoint scan; source judgments/scores excluded.",
+  "created_at": "2026-10-27T14:14:27.373738+00:00",
+  "policy": "source-origin-only-static-v1",
+  "annotation_origin": "agent_static_review_with_explicit_source_rules",
+  "independent_human_review": false,
+  "source_predictions_read": false,
+  "inventory_sha256": "61e2fc23f6dfaf5988833e4a8e820dcae1004bf8f9f6546c352f2264489e2138",
+  "entrypoint_reference_sha256": "a600ea7b09788326a5fb0944b399a687554c4afbcf75dfab144dafd3c22969d1",
+  "annotations_sha256": "23f8fc26448697b84f4290cf0738ca06b629cd82c77ee85cf8a7a7c68e21a24f",
+  "policy_sha256": "e31a01ded11241a6e06b7d17135cb82c78ccf4de3dfe6adc21eefdd0741f4cfd",
+  "implementation_sha256": "7ce2eab3e44a2f34890caddf3f43d971356db87335a6f50b2187474115e90f03"
+}

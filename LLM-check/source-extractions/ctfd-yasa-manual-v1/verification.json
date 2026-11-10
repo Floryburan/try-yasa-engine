@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-27T07:08:27.943749+00:00",
+  "report_hash_verified": true,
+  "source_records": 16,
+  "occurrence_records": 54,
+  "findings": 54,
+  "all_findings_have_explicit_sources": true,
+  "report_source_lines_match_current_source": 39,
+  "source_file_hashes_verified": true,
+  "csv_rows_match_json": true,
+  "unit_tests": {
+    "tests": 65,
+    "result": "passed",
+    "log": "unittest.log"
+  },
+  "artifact_sha256": {
+    "sources.json": "603bb7a74bb9c32c454b9392afdcddf8925e8ad564d0ce1e38e2e564cbfe9486",
+    "sources.jsonl": "1fa98bab58e10537656e70dd3cae784152d7106d8ea6b82f81d0c8275df1e469",
+    "sources.csv": "9fccad345b1c2119e075decb9767822b6bbe47897dc5355d9024a89bd2592df7",
+    "source-finding-links.csv": "b29b4a00d00385738e3d78b143fbf3424619b2e702ebd3168120c421edfda609",
+    "source-occurrences.json": "424ee1bb505005a66032a19133aa83539be3713ca60773c37654e3ae3dd0c3c4",
+    "findings.json": "37ad88a0ce8723330564c691eee01fdea0a8a40cf08720c91bca9383553c8423"
+  },
+  "api_called": false,
+  "engine_executed": false
+}

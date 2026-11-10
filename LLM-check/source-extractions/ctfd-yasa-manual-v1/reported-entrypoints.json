@@ -1,0 +1,58 @@
+{
+  "reported_ep_4b372a5ec0e4daed5590": {
+    "type": "functionCall",
+    "functionName": "plugin",
+    "filePath": "/CTFd/admin/__init__.py",
+    "attribute": "HTTP",
+    "funcReceiverType": ""
+  },
+  "reported_ep_73ecd62dd45ab68dde53": {
+    "type": "functionCall",
+    "functionName": "export_ctf",
+    "filePath": "/CTFd/admin/__init__.py",
+    "attribute": "HTTP",
+    "funcReceiverType": ""
+  },
+  "reported_ep_8617cba4296c4790f6f3": {
+    "type": "functionCall",
+    "functionName": "config",
+    "filePath": "/CTFd/admin/__init__.py",
+    "attribute": "HTTP",
+    "funcReceiverType": ""
+  },
+  "reported_ep_80d165f40a3bac91e36a": {
+    "type": "functionCall",
+    "functionName": "reset",
+    "filePath": "/CTFd/admin/__init__.py",
+    "attribute": "HTTP",
+    "funcReceiverType": ""
+  },
+  "reported_ep_37b74e71b77c1bdf838e": {
+    "type": "functionCall",
+    "functionName": "get",
+    "filePath": "/CTFd/api/v1/challenges.py",
+    "attribute": "HTTP",
+    "funcReceiverType": ""
+  },
+  "reported_ep_5944b6a312af121d4db6": {
+    "type": "functionCall",
+    "functionName": "plugin",
+    "filePath": "/CTFd/admin/__init__.py",
+    "attribute": "fullCallGraphMade",
+    "funcReceiverType": ""
+  },
+  "reported_ep_81d5c9713fe8991acded": {
+    "type": "functionCall",
+    "functionName": "oauth_redirect",
+    "filePath": "/CTFd/auth.py",
+    "attribute": "fullCallGraphMade",
+    "funcReceiverType": ""
+  },
+  "reported_ep_fc13586d788455ab5fbf": {
+    "type": "functionCall",
+    "functionName": "test_JinjaEnum",
+    "filePath": "/tests/constants/test_constants.py",
+    "attribute": "fullCallGraphMade",
+    "funcReceiverType": ""
+  }
+}

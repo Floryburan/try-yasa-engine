@@ -8,6 +8,21 @@ DEFAULT_ENV_FILE = Path(__file__).resolve().parent / ".env"
 NAMES = ("TYPESAFE_API_KEY", "TYPESAFE_BASE_URL", "TYPESAFE_DEFAULT_MODEL")
 
 
+def api_url(base_url, resource="systemone"):
+    """Accept either the service root or an SDK-style /v1 base URL."""
+    if resource not in {"systemone", "models"}:
+        raise ValueError("Unsupported Jev API resource")
+    base = base_url.rstrip("/")
+    return base + ("/" if urlparse(base).path.endswith("/v1") else "/v1/") + resource
+
+
+def api_headers(api_key):
+    # Use an honest application identifier. Some gateways reject urllib's
+    # default Python client signature before the inference request is handled.
+    return {"Content-Type": "application/json", "Authorization": "Bearer " + api_key,
+            "User-Agent": "YASA-Jev-Client/1.0"}
+
+
 def read_settings(env_file=DEFAULT_ENV_FILE, require_key=False):
     values = {}
     path = Path(env_file)

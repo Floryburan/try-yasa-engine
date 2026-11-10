@@ -661,7 +661,11 @@ class SanitizerChecker extends Checker {
       return tags && SanitizerChecker.findMatchedSanitizerTag(Configs, tags)?.length > 0
     }
 
-    const sanitizerNd = satisfy(fclos, fConfig, undefined, undefined, multiMatch, 30, undefined)
+    // No configuration sanitizer can match an empty rule set. Walking a large
+    // receiver graph in that case can dominate an otherwise short sink check.
+    const sanitizerNd = Configs.length > 0
+      ? satisfy(fclos, fConfig, undefined, undefined, multiMatch, 30, undefined)
+      : null
     if (sanitizerNd) {
       if (Array.isArray(sanitizerNd)) {
         for (const n of sanitizerNd) {

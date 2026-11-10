@@ -1,0 +1,23 @@
+{
+  "findings": 54,
+  "findings_with_source": 54,
+  "threads": 54,
+  "threads_without_explicit_source": 0,
+  "source_occurrences": 54,
+  "unique_sources": 16,
+  "source_files": 12,
+  "source_resolution_counts": {
+    "located_in_current_source": 16
+  },
+  "source_syntax_counts": {
+    "call_return_value": 12,
+    "parameter": 2,
+    "Name": 2
+  },
+  "reported_entrypoint_descriptors": 8,
+  "reported_entrypoints_are_exact_function_ids": false,
+  "scope": "sources explicitly marked in this SARIF report only; not all sources in the repository",
+  "independently_validated_untrusted_inputs": false,
+  "engine_executed": false,
+  "api_called": false
+}

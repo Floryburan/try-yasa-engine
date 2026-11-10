@@ -1,0 +1,1892 @@
+[
+  {
+    "finding_id": "finding_6878450568d7acb50b68",
+    "run_index": 0,
+    "result_index": 0,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/admin/__init__.py",
+      "start_line": 92,
+      "start_column": 27,
+      "end_line": 94,
+      "end_column": 14,
+      "expression": "",
+      "report_snippet": "open(os.path.join(app.root_path, plugins, plugin, config.html))",
+      "node_hash": "67a5b62add90f911c83bcc3168660655",
+      "file": "CTFd/admin/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_4b372a5ec0e4daed5590",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "plugin",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_346ac3cf4548aed6341c"
+    ]
+  },
+  {
+    "finding_id": "finding_ef78ef38437eb1aae965",
+    "run_index": 0,
+    "result_index": 1,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/__init__.py",
+      "start_line": 46,
+      "start_column": 14,
+      "end_line": 48,
+      "end_column": 6,
+      "expression": "",
+      "report_snippet": "db.session.execute(Configs.__table__.select().where(Configs.key==key))",
+      "node_hash": "c6f9a7a2c701034accd508ccb606a73a",
+      "file": "CTFd/utils/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_4b372a5ec0e4daed5590",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "plugin",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_a3b9443930493c077f8d"
+    ]
+  },
+  {
+    "finding_id": "finding_3d98e6bb99393b3f48d0",
+    "run_index": 0,
+    "result_index": 2,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/admin/__init__.py",
+      "start_line": 92,
+      "start_column": 27,
+      "end_line": 94,
+      "end_column": 14,
+      "expression": "",
+      "report_snippet": "open(os.path.join(app.root_path, plugins, plugin, config.html))",
+      "node_hash": "67a5b62add90f911c83bcc3168660655",
+      "file": "CTFd/admin/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_4b372a5ec0e4daed5590",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "plugin",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_346ac3cf4548aed6341c"
+    ]
+  },
+  {
+    "finding_id": "finding_703278ae392ce5016492",
+    "run_index": 0,
+    "result_index": 3,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/exports/databases.py",
+      "start_line": 8,
+      "start_column": 18,
+      "end_line": 8,
+      "end_column": 56,
+      "expression": "",
+      "report_snippet": "db.session.execute(SELECT version())",
+      "node_hash": "b64e055d7c6037e717f4cadb33ef9eb1",
+      "file": "CTFd/utils/exports/databases.py"
+    },
+    "reported_entrypoint_id": "reported_ep_73ecd62dd45ab68dde53",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "export_ctf",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_d6a924ca20d7563d8ca7"
+    ]
+  },
+  {
+    "finding_id": "finding_af96d96f23fa9e2d6f2a",
+    "run_index": 0,
+    "result_index": 4,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/__init__.py",
+      "start_line": 46,
+      "start_column": 14,
+      "end_line": 48,
+      "end_column": 6,
+      "expression": "",
+      "report_snippet": "db.session.execute(Configs.__table__.select().where(Configs.key==key))",
+      "node_hash": "c6f9a7a2c701034accd508ccb606a73a",
+      "file": "CTFd/utils/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_8617cba4296c4790f6f3",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "config",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_9374c007f95e1ad36b97",
+    "run_index": 0,
+    "result_index": 5,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/__init__.py",
+      "start_line": 46,
+      "start_column": 14,
+      "end_line": 48,
+      "end_column": 6,
+      "expression": "",
+      "report_snippet": "db.session.execute(Configs.__table__.select().where(Configs.key==key))",
+      "node_hash": "c6f9a7a2c701034accd508ccb606a73a",
+      "file": "CTFd/utils/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_8617cba4296c4790f6f3",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "config",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_0f58ba52de1f787be30e",
+    "run_index": 0,
+    "result_index": 6,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/config/pages.py",
+      "start_line": 70,
+      "start_column": 12,
+      "end_line": 74,
+      "end_column": 6,
+      "expression": "",
+      "report_snippet": "db.session.execute(Pages.__table__.select().where(Pages.route==route).where(Pages.draft.isnot(true)))",
+      "node_hash": "348ec499d44beaf783931eb539470ea1",
+      "file": "CTFd/utils/config/pages.py"
+    },
+    "reported_entrypoint_id": "reported_ep_80d165f40a3bac91e36a",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "reset",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_ea9c51daf3694427a340"
+    ]
+  },
+  {
+    "finding_id": "finding_814c8ee1b82e05e12611",
+    "run_index": 0,
+    "result_index": 7,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "session.execute",
+      "sinkAttribute": [
+        "PythonSqlInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/scoreboard.py",
+      "start_line": 35,
+      "start_column": 17,
+      "end_line": 50,
+      "end_column": 14,
+      "expression": "",
+      "report_snippet": "db.session.execute(select({0:Users.id, 1:Users.name, 2:Users.oauth_id, 3:Users.team_id, 4:Users.hidden, 5:Users.banned, 6:Users.bracket_id, 7:Brackets.name.label(bracket_name)}).where(Users.team_id.isnot(...)).join(Brackets, Users.bracket_id==Brackets.id, var isouter:any=true))",
+      "node_hash": "2ec247ca9c1d8da048478e3a2eeb7af2",
+      "file": "CTFd/api/v1/scoreboard.py"
+    },
+    "reported_entrypoint_id": "reported_ep_80d165f40a3bac91e36a",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "reset",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_595eedb34d76b82a066c"
+    ]
+  },
+  {
+    "finding_id": "finding_e8a8cb2198c9485d88ed",
+    "run_index": 0,
+    "result_index": 8,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 327,
+      "start_column": 27,
+      "end_line": 329,
+      "end_column": 18,
+      "expression": "",
+      "report_snippet": "render_template(challenge_class.templates.create.lstrip(/))",
+      "node_hash": "0286965b77425062b846cee4085bd0de",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_5b5438a6fc0dd24e3640"
+    ]
+  },
+  {
+    "finding_id": "finding_5e83cd686a0f1c9643bf",
+    "run_index": 0,
+    "result_index": 9,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 327,
+      "start_column": 27,
+      "end_line": 329,
+      "end_column": 18,
+      "expression": "",
+      "report_snippet": "render_template(challenge_class.templates.create.lstrip(/))",
+      "node_hash": "0286965b77425062b846cee4085bd0de",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_5b5438a6fc0dd24e3640"
+    ]
+  },
+  {
+    "finding_id": "finding_c49d7484e43cac535b77",
+    "run_index": 0,
+    "result_index": 10,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_7763581e49aa585e60bf",
+    "run_index": 0,
+    "result_index": 11,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_789316489e1074d7a6f7",
+    "run_index": 0,
+    "result_index": 12,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_4f5139c64a910074d71f",
+    "run_index": 0,
+    "result_index": 13,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_6fed408f87a25334dd43",
+    "run_index": 0,
+    "result_index": 14,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_7bb6af934e5188710624",
+    "run_index": 0,
+    "result_index": 15,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_c037aee2df7e32ad0f49",
+    "run_index": 0,
+    "result_index": 16,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_1bdfeba5163f41afa819",
+    "run_index": 0,
+    "result_index": 17,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_40f65d3904f9b51ed81c",
+    "run_index": 0,
+    "result_index": 18,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_72e3caf1e2a5ff8755ea",
+    "run_index": 0,
+    "result_index": 19,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_ce28d226486a66e9f44a",
+    "run_index": 0,
+    "result_index": 20,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_1f58afce19b4052a2c74",
+    "run_index": 0,
+    "result_index": 21,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_ce8a5692b9a015878358",
+    "run_index": 0,
+    "result_index": 22,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_dcfa9e4bef077a6e28a8",
+    "run_index": 0,
+    "result_index": 23,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_153e09e9af0e700876dc",
+    "run_index": 0,
+    "result_index": 24,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_5eb1563f920e3340f317",
+    "run_index": 0,
+    "result_index": 25,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_40cd2159646431808275",
+    "run_index": 0,
+    "result_index": 26,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_254dfdf3152168baca8a",
+    "run_index": 0,
+    "result_index": 27,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_2c1f9a3598b7852217a6",
+    "run_index": 0,
+    "result_index": 28,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_f8205015b7ec498fea6b",
+    "run_index": 0,
+    "result_index": 29,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_1ea40e209bc4f5b8a9c7",
+    "run_index": 0,
+    "result_index": 30,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_293ddab4fa9d0daa1691",
+    "run_index": 0,
+    "result_index": 31,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_3f545ad001ff641dd7f4",
+    "run_index": 0,
+    "result_index": 32,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_279d6d1f43ce5906d849",
+    "run_index": 0,
+    "result_index": 33,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_9a1f0cc0a6ba67837707",
+    "run_index": 0,
+    "result_index": 34,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_3399335dcdc3d42e53b2",
+    "run_index": 0,
+    "result_index": 35,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_463c02a1b195eccf7fbf",
+    "run_index": 0,
+    "result_index": 36,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_06a2a2488d92c2450ef3",
+    "run_index": 0,
+    "result_index": 37,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_51c310016eb46976511e"
+    ]
+  },
+  {
+    "finding_id": "finding_8f5b74047ba375adbfd2",
+    "run_index": 0,
+    "result_index": 38,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_fe76ebb37473b41207cb"
+    ]
+  },
+  {
+    "finding_id": "finding_bb3c434cad3be1334286",
+    "run_index": 0,
+    "result_index": 39,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_29aaa3e45bb7f4862df2",
+    "run_index": 0,
+    "result_index": 40,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "flask.render_template",
+      "sinkAttribute": [
+        "PythonTemplateInjection"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/api/v1/challenges.py",
+      "start_line": 578,
+      "start_column": 28,
+      "end_line": 590,
+      "end_column": 10,
+      "expression": "",
+      "report_snippet": "render_template(chal_class.templates.view.lstrip(/), var solves:any=solve_count, var solved_by_me:any=solved_by_user, var files:any=files, var tags:any=tags, var hints:any=(var __tmp8__:any, for(, h : hints){{__tmp8__pushHints(with(h))}}, __tmp8__), var rating:any=rating, var ratings:any=rating_info, var max_attempts:any=chal.max_attempts, var attempts:any=attempts, var challenge:any=chal)",
+      "node_hash": "f5a662d1473f8525a1ddbf8e4f316a91",
+      "file": "CTFd/api/v1/challenges.py"
+    },
+    "reported_entrypoint_id": "reported_ep_37b74e71b77c1bdf838e",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "get",
+      "filePath": "/CTFd/api/v1/challenges.py",
+      "attribute": "HTTP",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_38f3a80f026067cf39b8"
+    ]
+  },
+  {
+    "finding_id": "finding_da17b05d24c602855aea",
+    "run_index": 0,
+    "result_index": 41,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/admin/__init__.py",
+      "start_line": 92,
+      "start_column": 27,
+      "end_line": 94,
+      "end_column": 14,
+      "expression": "",
+      "report_snippet": "open(os.path.join(app.root_path, plugins, plugin, config.html))",
+      "node_hash": "67a5b62add90f911c83bcc3168660655",
+      "file": "CTFd/admin/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_5944b6a312af121d4db6",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "plugin",
+      "filePath": "/CTFd/admin/__init__.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_346ac3cf4548aed6341c"
+    ]
+  },
+  {
+    "finding_id": "finding_928d3ab3d03e6b606502",
+    "run_index": 0,
+    "result_index": 42,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.post",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/auth.py",
+      "start_line": 573,
+      "start_column": 25,
+      "end_line": 573,
+      "end_column": 82,
+      "expression": "",
+      "report_snippet": "requests.post(url, var data:any=data, var headers:any=headers, var timeout:any=5)",
+      "node_hash": "231a1968888493945af076e3f2c17876",
+      "file": "CTFd/auth.py"
+    },
+    "reported_entrypoint_id": "reported_ep_81d5c9713fe8991acded",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "oauth_redirect",
+      "filePath": "/CTFd/auth.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_abff552d631a8ad2e09c",
+    "run_index": 0,
+    "result_index": 43,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.post",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/auth.py",
+      "start_line": 573,
+      "start_column": 25,
+      "end_line": 573,
+      "end_column": 82,
+      "expression": "",
+      "report_snippet": "requests.post(url, var data:any=data, var headers:any=headers, var timeout:any=5)",
+      "node_hash": "231a1968888493945af076e3f2c17876",
+      "file": "CTFd/auth.py"
+    },
+    "reported_entrypoint_id": "reported_ep_81d5c9713fe8991acded",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "oauth_redirect",
+      "filePath": "/CTFd/auth.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_f47520855baa3f581217",
+    "run_index": 0,
+    "result_index": 44,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.get",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/auth.py",
+      "start_line": 587,
+      "start_column": 24,
+      "end_line": 587,
+      "end_column": 78,
+      "expression": "",
+      "report_snippet": "requests.get(var url:any=user_url, var headers:any=headers, var timeout:any=5)",
+      "node_hash": "83189a169afcee9be4274b524ad03a9d",
+      "file": "CTFd/auth.py"
+    },
+    "reported_entrypoint_id": "reported_ep_81d5c9713fe8991acded",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "oauth_redirect",
+      "filePath": "/CTFd/auth.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_ba2628906d42d1c697ce"
+    ]
+  },
+  {
+    "finding_id": "finding_a58adc88bd01b7872953",
+    "run_index": 0,
+    "result_index": 45,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.get",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/auth.py",
+      "start_line": 587,
+      "start_column": 24,
+      "end_line": 587,
+      "end_column": 78,
+      "expression": "",
+      "report_snippet": "requests.get(var url:any=user_url, var headers:any=headers, var timeout:any=5)",
+      "node_hash": "83189a169afcee9be4274b524ad03a9d",
+      "file": "CTFd/auth.py"
+    },
+    "reported_entrypoint_id": "reported_ep_81d5c9713fe8991acded",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "oauth_redirect",
+      "filePath": "/CTFd/auth.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_532c4a3657bd5d0a5fa0",
+    "run_index": 0,
+    "result_index": 46,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.get",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/auth.py",
+      "start_line": 587,
+      "start_column": 24,
+      "end_line": 587,
+      "end_column": 78,
+      "expression": "",
+      "report_snippet": "requests.get(var url:any=user_url, var headers:any=headers, var timeout:any=5)",
+      "node_hash": "83189a169afcee9be4274b524ad03a9d",
+      "file": "CTFd/auth.py"
+    },
+    "reported_entrypoint_id": "reported_ep_81d5c9713fe8991acded",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "oauth_redirect",
+      "filePath": "/CTFd/auth.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_eb44dc460b5fb40288f8"
+    ]
+  },
+  {
+    "finding_id": "finding_df243d89675d223a01ef",
+    "run_index": 0,
+    "result_index": 47,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "requests.get",
+      "sinkAttribute": [
+        "PythonSSRF"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/updates/__init__.py",
+      "start_line": 58,
+      "start_column": 21,
+      "end_line": 60,
+      "end_column": 14,
+      "expression": "",
+      "report_snippet": "requests.get(https://versioning.ctfd.io/check, var params:any=params, var timeout:any=3)",
+      "node_hash": "e8c8d6ff608d4e0dec8c537b997a3d59",
+      "file": "CTFd/utils/updates/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_8e36c5b190c423d189af"
+    ]
+  },
+  {
+    "finding_id": "finding_63e02789d23e008efa2a",
+    "run_index": 0,
+    "result_index": 48,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_c59d765575acee4ddf93"
+    ]
+  },
+  {
+    "finding_id": "finding_febd10662e271b7c9fc0",
+    "run_index": 0,
+    "result_index": 49,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_c59d765575acee4ddf93"
+    ]
+  },
+  {
+    "finding_id": "finding_4d773ab894e6f6f8a034",
+    "run_index": 0,
+    "result_index": 50,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_60e34ffed5052897d675"
+    ]
+  },
+  {
+    "finding_id": "finding_22bffcd355c9c24a58cd",
+    "run_index": 0,
+    "result_index": 51,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_60e34ffed5052897d675"
+    ]
+  },
+  {
+    "finding_id": "finding_3d233efabdc3dff551fe",
+    "run_index": 0,
+    "result_index": 52,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_01d508b34541cd7e2e15"
+    ]
+  },
+  {
+    "finding_id": "finding_c125c54b2db591c41a1d",
+    "run_index": 0,
+    "result_index": 53,
+    "rule_id": null,
+    "message": "Python污点分析checker，会使用CallGraph边界制作entrypoint",
+    "sink_info": {
+      "sinkRule": "open",
+      "sinkAttribute": [
+        "PythonPathTraversal"
+      ]
+    },
+    "sink": {
+      "reported_uri": "/data/fyn/yasa/YASA-Engine/CTFd/CTFd/utils/initialization/__init__.py",
+      "start_line": 167,
+      "start_column": 17,
+      "end_line": 167,
+      "end_column": 31,
+      "expression": "",
+      "report_snippet": "open(log, a)",
+      "node_hash": "6589148b2f4c14f86ea0d213a3f136de",
+      "file": "CTFd/utils/initialization/__init__.py"
+    },
+    "reported_entrypoint_id": "reported_ep_fc13586d788455ab5fbf",
+    "entrypoint": {
+      "type": "functionCall",
+      "functionName": "test_JinjaEnum",
+      "filePath": "/tests/constants/test_constants.py",
+      "attribute": "fullCallGraphMade",
+      "funcReceiverType": ""
+    },
+    "source_ids": [
+      "source_d82404e9a4bdbb97de6e"
+    ]
+  }
+]

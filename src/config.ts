@@ -49,6 +49,7 @@ export interface IConfig {
   uastSDKPath?: string
   frameworkModeler?: boolean
   generatedChecker?: string // 本次分析显式装载的生成 checker 文件
+  llmInputFile?: string // 已冻结的模型入口/source/sink 及危险参数；显式替代原有识别规则
 
   // Subject
   ignoredDirs?: string[]
